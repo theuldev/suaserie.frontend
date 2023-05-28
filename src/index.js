@@ -1,10 +1,35 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import App from './App.js';
+import './index.css'
 
-import App from './App';
+// Rotas da aplicação:
+// Ainda não aplciadas 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Páginas
+import InitialPage from './pages/InitialPage/InitialPage.jsx';
+import Login from './pages/Login/Login.jsx';
+// -------
 
-root.render(<React.StrictMode>
-    <App />
-</React.StrictMode>);
+// Rotas:
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <InitialPage />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  },
+
+
+
+]);
+
+
+ReactDOM.render(<RouterProvider router={router} />, document.getElementById('root'));
+
+
+
+
