@@ -1,8 +1,7 @@
-import React from 'react'
-
+import Login from "./pages/login"
 const App = () => {
-  return (
-    <div>Projeto Só Séries</div>
+  return (<Login></Login>
+   
   )
 }
 
