@@ -17,16 +17,16 @@ const InitialPage = () => (
     <div className="body-initial">
       <div className="ContainerEsquerdo">
         <div className="logo">
-          <img src={logos.logoLightTwo} />
+          <img src={logos.logoLight} />
         </div>
-        <hr className="divisao" />
+
 
         <div className="mensagem">
-          <h2>Crie e gerencie as</h2>
-          <h2> listas das suas séries favoritas</h2>
-          <h2>em um só lugar !</h2>
+          <h2>Crie e gerencie</h2>
+          <h2>as listas das suas séries favoritas</h2>
+          <h2>em um só lugar!</h2>
         </div>
-        <hr className="divisao" />
+
         <div className="ilustracao">
           <span className="material-symbols-outlined">
             <MdOutlineMovieFilter />
@@ -39,7 +39,7 @@ const InitialPage = () => (
 
         <div className="wrapper-buttons">
 
-          <Link className="button-wrapper" to={'/login'}>
+          <Link className="button-wrapper-entrar" to={'/login'}>
 
             <button id="btn-entrar" className="btnEntrar"  >
 
@@ -53,8 +53,14 @@ const InitialPage = () => (
 
           <span>Ou</span>
 
+          <Link className="button-wrapper-cadastrar" to={'/cadastro'}>
 
-          <button id="btn-cadastrar" className="btnCadastrar">Cadastre-se</button>
+            <button id="btn-cadastrar" className="btnCadastrar">
+
+              Cadastre-se
+
+            </button>
+          </Link>
 
 
 

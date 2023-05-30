@@ -10,30 +10,29 @@
   height: 100vh;
   background-color: antiquewhite;
   image-rendering: "https://img.freepik.com/fotos-premium/gradiente-de-tom-pastel-rosa-azul-roxo-desfocado-foto-abstrata-linhas-suaves-pantone-cor-de-fundo_49683-4059.jpg";
+
   display: flex;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
-
 }
 
 .ContainerEsquerdo {
-  background: rgb(36, 38, 41);
-  width: 35%;
+  background-color: #242629;
+  width: 25%;
   margin-top: none;
   height: 100vh;
+  border-right: solid 1px #ffd86d;
 }
 
-
-img {
+.logo img {
   align-items: center;
   display: grid;
   width: auto;
-  height: 30vh;
+  height: 25vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1%;
+  margin-top: 0vh;
 }
 .ilustracao {
   display: flex;
@@ -43,13 +42,14 @@ img {
 .ilustracao span {
   margin-top: 15%;
 
-  color: #f1f1f1;
+  color: #ffd86d;
 
   font-size: 10rem;
   font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 200, "opsz" 48;
 }
 .mensagem {
-  margin-top: 5%;
+  margin-top: 25%;
+  margin-bottom: 10%;
   display: grid;
   margin-left: auto;
   margin-right: auto;
@@ -57,7 +57,10 @@ img {
   text-align: center;
   font-size: 1.3rem;
   padding: 0 1rem;
-  
+}
+
+.mensagem h2 {
+  font-weight: 700;
 }
 .divisao {
   margin-top: 5%;
@@ -69,14 +72,16 @@ img {
 }
 .ContainerDireito {
   background-image: linear-gradient(
-      to bottom,
-      rgba(153, 126, 51, 0.75),
-      rgba(36, 38, 41) 90%
+      rgba(36, 38, 41, 0.95) 99%,
+      rgb(36, 38, 41, 0.95) 99%
     ),
-    url("../../assets/images/fundoGeral.jpg");
+    url("../../assets/images/fundoGeral.png");
+  background-size: 45rem;
+
+  background-attachment: fixed;
 
   display: flex;
-  width: 65%;
+  width: 75%;
   height: 100vh;
   flex-direction: column;
 }
@@ -88,8 +93,10 @@ img {
   justify-content: center;
   align-items: center;
 
-  gap: 6vh;
+  gap: 10vh;
   width: 100%;
+
+  margin: 0 auto;
 }
 .wrapper-buttons span {
   font-size: 2.5rem;
@@ -102,7 +109,7 @@ button {
   cursor: pointer;
   align-items: center;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
@@ -113,62 +120,52 @@ button {
   align-items: center;
   justify-content: center;
   background: transparent;
-  border-radius: 1rem !important;
+  border-radius: 2rem !important;
   border-color: transparent;
-  
 }
 button:hover {
   transition: all 0.3s;
 }
 
-.border-Radius {
-  border-radius: 1rem !important;
-
-}
-
-.button-wrapper {
-  width: 100%;
+/* Estilização do Link da paginação React. */
+.button-wrapper-entrar {
+  width: 30%;
   text-decoration: none;
+  height: 3.5rem;
 }
 
 .btnEntrar {
-  width:45%;
-  height: 3.8rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2%;
-  margin-top: 7.5rem;
-  border: 4px solid #ffd86d;
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid #ffd86d;
   color: #ffd86d;
   max-width: 20rem;
 }
 
-.btnEntrar:hover {
-  background-color: #242629;
-  color: #ffd86d;
-  border: 2px solid #ffd86d;
+.button-wrapper-cadastrar {
+  width: 45%;
+  height: 3.5rem;
+  text-decoration: none;
 }
+
 .btnCadastrar {
-  width: 65%;
-  height: 3.8rem;
+  width: 100%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
   background-color: transparent;
   color: #f1f1f1;
-  border: 4px solid #f1f1f1;
+  border: 2px solid #f1f1f1;
   max-width: 35rem;
-
-}
-.btnCadastrar a{
-  max-width: 35rem;
-  width: 20%;
 }
 
-.btnCadastrar:hover {
+.btnCadastrar:hover,
+.btnEntrar:hover {
   background-color: #ffd86d;
   color: #242629;
-  border: 4px solid #242629;
+  border: 2px solid #242629;
 }
 
 span {
@@ -179,7 +176,7 @@ span {
   font-size: 25px;
   color: #f1f1f1;
 }
-@media (max-width:950px){
+@media (max-width: 950px) {
   * {
     margin: 0;
     padding: 0;
@@ -187,17 +184,14 @@ span {
     font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
   }
-  .body-initial{
+  .body-initial {
     display: flex;
     width: 100%;
     height: 100vh;
     align-items: center;
     flex-direction: column;
- 
-
-  
   }
-  .ContainerEsquerdo{
+  .ContainerEsquerdo {
     align-items: center;
     width: 100%;
     display: flex;
@@ -205,65 +199,55 @@ span {
     align-items: center;
     height: 50vh;
     justify-content: space-around;
+    border-bottom: solid 1px #ffd86d;
+    border-right: none;
   }
-  .logo{
-    
+  .logo {
     width: 100%;
     
   }
-  img{
-   
-    width: 142px;
-    height: 50%;
+  .logo img {
+    width: 40vw;
+
     margin-top: 2%;
-    margin-bottom: 10%;
+    
     height: auto;
-    margin-bottom: 1%;
-    
-    /* background-color: #701158; */
-    
+    margin-bottom: 0%;
   }
- 
-  .mensagem{
+
+  .mensagem {
     display: grid;
-    
-    font-size: clamp(0.5em,1.7vw + 1vh, 1.1em);
-    margin-top: 2%;
-    /* background-color: #d300b7; */
+    margin-top: 0vh;
+    font-size: clamp(0.5em, 1.7vw + 1vh, 1.1em);
+    margin-bottom: 2vh;
     width: 100%;
     height: auto;
   }
-  .ilustracao{
-   width: 30%;
-   
-    display:grid;
+  .ilustracao {
+    width: 30%;
+
+    display: grid;
     margin-left: auto;
     margin-right: auto;
-    /* background-color: aqua; */
-   
+
     height: auto;
     align-items: center;
-  
   }
   .ilustracao span {
-
-    /* background-color: #07c951; */
     color: #f1f1f1;
-    margin: 5% auto 10%  auto;
+    margin: 5% auto 10% auto;
     font-size: 100px;
     font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 200, "opsz" 48;
   }
   .divisao {
-    
     margin-top: 2%;
-    
+
     width: 85%;
     border: 1px solid #f1f1f1;
     opacity: 0.1;
-    
-    /* background-color: #f700ff; */
   }
-  .ContainerDireito{
+  .ContainerDireito {
+    padding-top: 5vh;
     align-items: center;
     background-color: #ffd86d;
     width: 100%;
@@ -273,7 +257,7 @@ span {
     align-content: space-between;
     height: 50%;
   }
-  .wrapper-buttons{
+  .wrapper-buttons {
     width: 100%;
     height: 50%;
     display: flex;
@@ -281,33 +265,35 @@ span {
     align-items: center;
     align-items: center;
     justify-content: space-around;
-    
   }
 
-  .btnEntrar{
-    margin-top: 5%;
-    margin-bottom: 0%;
-    height: 3.8rem;
-    font-size: clamp(1em,5vw + 2vh, 2.5em);
-    padding-top:10px;
+  .button-wrapper-entrar {
+    height: 2.8rem;
+  }
+
+  .btnEntrar {
+    font-size: 1.5rem;
+    padding-top: 10px;
     padding-bottom: 10px;
   }
-  .btnCadastrar{
+  .btnCadastrar {
     margin-bottom: 7.7vh;
-    font-size: clamp(0.5em,4vw + 2vh, 2.5em);
-    padding-top:10px;
+    font-size: 1.5rem;
+    padding-top: 10px;
     padding-bottom: 10px;
-    
+  }
+
+  .ilustracao {
+    display: none;
   }
   .wrapper-buttons span {
     margin-top: auto;
     margin-bottom: auto;
-    font-size: clamp(1em,5vw + 2vh, 2.5em);
+    font-size: clamp(1em, 5vw + 2vh, 2.5em);
     width: 100%;
     height: 100%;
-   
+
     color: #ffd86d;
     font-weight: 700;
   }
-
 }

@@ -1,23 +1,21 @@
-html {
-  width: 100%;
-  height: 100%;
-}
-
-body {
+.body-login {
   background-image: linear-gradient(
       to bottom,
-      rgba(36, 38, 41, 0.9) 85%,
-      rgb(206, 180, 107, 0.8) 105%
+      rgba(36, 38, 41, 0.95) 85%,
+      rgba(36, 38, 41, 0.95) 105%
     ),
-    url("../../assets/images/fundoGeral.jpg");
-  width: 100%;
-  height: 100%;
+    url("../../assets/images/fundoGeral.png");
+  background-size: 45rem;
+
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
 }
 
-.container {
+.container-login {
   width: 100%;
   height: 100%;
   display: grid;
@@ -41,22 +39,29 @@ body {
   width: 420px;
   height: 600px;
   margin: 0 auto;
-  background-color: #242629;
-  -webkit-box-shadow: 3px -10px 56px -6px rgba(2, 66, 98, 0.55);
-  -moz-box-shadow: 3px -10px 56px -6px rgba(2, 66, 98, 0.55);
-  box-shadow: 3px -10px 56px -6px rgba(2, 66, 98, 0.55);
+  
+  -webkit-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
+  -moz-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
+  box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-.header-logo {
+.header-logo-login {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0px;
   margin: 30px 0px 0px;
+  background-color: #dab95f;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+  display: flex;
+  justify-content: center;
 }
 
-.img-logo {
+.img-logo-login {
   width: 120px;
   height: 120px;
 }
@@ -232,12 +237,12 @@ body {
   font-style: italic;
 }
 
-.sign-up span a {
+.sign-up span .sign-up-link {
   color: #ffe9ac;
   text-decoration: none;
 }
 
-.sign-up span a:hover {
+.sign-up span .sign-up-link:hover {
   transition: all 0.3s;
   font-size: 1rem;
   color: #ffd86d;
