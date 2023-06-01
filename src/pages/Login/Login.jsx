@@ -7,8 +7,9 @@ import logos from '../../constants/logos';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { Link } from "react-router-dom";
 
-const Login = () => (
 
+const Login = () => (
+  
   <div className="body-login">
     <Helmet>
       <title>Só Séries - Login</title>
@@ -24,7 +25,7 @@ const Login = () => (
           <div className="login_box">
             <div className="login_header">
               <div className="header-logo-login">
-                <img className="img-logo-login" src={logos.logoDark}
+                <img className="img-logo-login" src={logos.logoLight}
                   alt="Projeto SóSeries" />
 
               </div>

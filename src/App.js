@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import InitialPage from './pages/InitialPage/InitialPage.jsx';
 import Login from './pages/Login/Login.jsx';
 import Register from './pages/Register/Register.jsx';
+import Profile from "./pages/Profile/Profile";
 // -------
 
 // Rotas:
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     path: '/cadastro',
     element: <Register />
   },
+  {
+    path: '/profile',
+    element: <Profile/>
+  }
 
 
 ]);

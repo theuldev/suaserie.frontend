@@ -123,17 +123,24 @@ img {
 .input-box input:focus-visible {
   outline: 1px solid #ffffff;
 }
+.profile-pic{
+  margin-bottom:30px;
 
+}
 .profile-input-form {
   display: flex;
 
   border: solid 1px #ffd86d;
   justify-content: center;
 
-  margin: 0 0 1rem;
-  border-radius: 7.5rem;
-}
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  justify-content: center;
+    margin: 0 auto;
 
+
+}
 .profile-input-form .wrapper-profile {
   background-color: #242629;
   height: 13.5rem;
