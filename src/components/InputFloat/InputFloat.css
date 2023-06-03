@@ -1,15 +1,15 @@
 .input-form .inputFloat {
   width: 100%;
-  height: 5vh;
+  height: 5.7vh;
 
-  border-radius: 30px;
+   border-radius: 15px;
 
-  padding-left: 20px;
+  padding-left: 30px;
+  padding-top: 10px;
   background-color: #363636;
   color: #f1f1f1;
   border: 1px solid #ffd86d;
 }
-
 
 .input-form {
   margin-bottom: 2.25rem;
@@ -17,31 +17,33 @@
   color: #f1f1f1;
 }
 
-
 /* Animação no input */
 
 .inputBox {
   position: relative;
+}
+.inputBox:focus-within label{
+    color: #ffd86d;
+  transform: translateX(-1px) translateY(5px) scale(0.75);  
+  padding: 0 1rem;
+
   
 }
 
 .inputBox label {
-  transition: all .3s;
+  transition: all 0.3s;
   position: absolute;
   left: 5%;
+  top: 8%;
   padding: 1rem 0.625rem 0;
   pointer-events: none;
   /* background-color: #645252; */
-  color: rgb(255, 216, 109, 0.25);
+  color: #ffd86d;
+  transform-origin: top left;
 }
 
-
-
-
-.inputBox .active{
-  color: #f1f1f1;
-  transform: translateX(-25px) translateY(-20px);
- 
-  padding: 0 .625rem;
- 
+.inputBox .active {
+  color: #ffd86d;
+  transform: translateX(-1px) translateY(5px) scale(0.75);  
+  padding: 0 1rem;  
 }

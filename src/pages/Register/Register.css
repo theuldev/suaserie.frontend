@@ -1,3 +1,16 @@
+
+body,html {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(36, 38, 41, 0.95) 85%,
+      rgba(36, 38, 41, 0.95) 105%
+    ),
+    url("../../assets/images/fundoGeral.png");
+}
+
+
 .body-register {
   width: auto;
   height: auto;
@@ -5,12 +18,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: linear-gradient(
-      to bottom,
-      rgba(36, 38, 41, 0.95) 85%,
-      rgba(36, 38, 41, 0.95) 105%
-    ),
-    url("../../assets/images/fundoGeral.png");
+
   background-size: 45rem;
 
   background-attachment: fixed;
@@ -20,10 +28,10 @@
 
 .container {
   margin-top: 2%;
-  width: 90%;
+  width: 100%;
   height: 200%;
   display: flex;
- 
+
   border-radius: 15px;
   -webkit-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
   -moz-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
@@ -58,7 +66,7 @@ img {
   justify-content: center;
   margin-top: px;
   margin-bottom: 10px;
-  
+
   max-height: 30%;
   background-color: #dab95f;
   border-radius: 15px;
@@ -99,33 +107,31 @@ img {
   justify-content: space-between;
 }
 .input-box {
+  width: 30%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  margin: 10px;
 }
-
+.input-box .inputFloat {
+  width: 100%;
+}
+/*
 .input-box input {
-  margin: 0.6rem 0;
-  padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 15px;
   box-shadow: 1px 1px 6px #eb54031c;
-  width: 200px;
   background-color: #363636;
   border: 1px solid #ffd86d;
   color: #f1f1f1;
   font-size: auto;
 }
-.input-box input:hover {
+*/
+.input-box input:focus {
   transition: all 0.3s;
-  background-color: #bdbdbd;
+  background-color: #242629;
 }
-.input-box input:focus-visible {
-  outline: 1px solid #ffffff;
-}
-.profile-pic{
-  margin-bottom:30px;
-
+.profile-pic {
+  margin-bottom: 30px;
 }
 .profile-input-form {
   display: flex;
@@ -137,9 +143,7 @@ img {
   width: 250px;
   height: 250px;
   justify-content: center;
-    margin: 0 auto;
-
-
+  margin: 0 auto;
 }
 .profile-input-form .wrapper-profile {
   background-color: #242629;
@@ -227,10 +231,7 @@ img {
 
 @media (max-width: 600px) {
   .input-box input {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
     border: none;
-    border-radius: 10px;
     box-shadow: 1px 1px 6px #eb54031c;
     width: auto;
     justify-content: center;
@@ -270,7 +271,7 @@ img {
     width: 90%;
     height: 200%;
     display: flex;
-    
+
     margin-bottom: 10%;
   }
 }

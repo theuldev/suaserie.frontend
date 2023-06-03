@@ -39,7 +39,7 @@
   width: 420px;
   height: 600px;
   margin: 0 auto;
-
+  background-color: #242629;
   -webkit-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
   -moz-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
   box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
@@ -55,7 +55,6 @@
   border-radius: 15px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: #ffd86d;
   display: flex;
   justify-content: center;
 }
@@ -211,7 +210,7 @@
  
   padding: 0 .625rem;
  
-} */
+} 
 
 
 
