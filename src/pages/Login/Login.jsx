@@ -6,6 +6,7 @@ import logos from "../../constants/logos";
 // ícones:
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+// Componentes:
 import InputFloat from "../../components/InputFloat/InputFloat";
 
 const Login = () => {

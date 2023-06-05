@@ -1,12 +1,13 @@
-import {React} from "react";
+import { React } from "react";
 import { Helmet } from "react-helmet";
 import "./Register.css";
 import logos from "../../constants/logos";
 import images from "../../constants/images";
 
-// ícones:
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+
+
 import { Link } from "react-router-dom";
+// Componentes:
 import InputFloat from "../../components/InputFloat/InputFloat";
 
 
@@ -43,30 +44,30 @@ const Register = () => (
 
           <div className="input-group">
             <div className="input-box">
-              <InputFloat inputType="Text" inputName="Primeiro Nome" />
+              <InputFloat inputType="text" inputName="Primeiro Nome" />
             </div>
 
             <div className="input-box">
-              <InputFloat inputType="Text" inputName="Ultimo Nome" />
+              <InputFloat inputType="text" inputName="Ultimo Nome" />
             </div>
 
             <div className="input-box">
               <InputFloat
-                inputType="Email"
+                inputType="email"
                 inputName="E-mail"
               />
             </div>
             <div className="input-box">
-                 <InputFloat inputType="Text" inputName="Apelido" />
+              <InputFloat inputType="text" inputName="Apelido" />
             </div>
 
             <div className="input-box">
-                 <InputFloat inputType="Password" id="input-password" inputName="Senha" />
+              <InputFloat inputType="password" id="input-password" inputName="Senha" />
             </div>
 
             <div className="input-box">
-    
-                 <InputFloat inputType="Password" inputName="Confirme sua Senha" />
+
+              <InputFloat inputType="password" inputName="Confirme sua Senha" />
             </div>
           </div>
           <div className="continue-button">

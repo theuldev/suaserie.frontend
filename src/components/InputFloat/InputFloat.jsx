@@ -4,11 +4,6 @@ import './InputFloat.css'
 
 
 
-
-
-
-
-
 const InputFloat = (props) => {
 
   // Input animation
