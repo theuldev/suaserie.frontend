@@ -126,17 +126,13 @@ img {
   font-size: auto;
 }
 */
-.input-box input:focus {
-  transition: all 0.3s;
-  background-color: #242629;
-}
+
 .profile-pic {
   margin-bottom: 30px;
 }
 .profile-input-form {
   display: flex;
-
-  border: solid 1px #ffd86d;
+  
   justify-content: center;
 
   border-radius: 50%;
@@ -146,7 +142,7 @@ img {
   margin: 0 auto;
 }
 .profile-input-form .wrapper-profile {
-  background-color: #242629;
+  border: 1px solid #dab95f;
   height: 13.5rem;
   width: 13.5rem;
   border-radius: 7.5rem;
@@ -178,6 +174,8 @@ img {
   text-align: center;
   font-weight: 700;
   cursor: pointer;
+  position: relative;
+  bottom:10px
 }
 
 #uploadPicBtn:hover {
@@ -192,7 +190,7 @@ img {
   margin-bottom: 50px;
 }
 .continue-button button {
-  width: 100%;
+  width: 50%;
   height: 2.5rem;
   border: none;
   border-radius: 1.5rem;

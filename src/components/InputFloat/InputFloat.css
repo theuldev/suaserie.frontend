@@ -47,3 +47,7 @@
   transform: translateX(-1px) translateY(5px) scale(0.75);  
   padding: 0 1rem;  
 }
+.inputBox input:focus {
+  transition: all 0.3s;
+  background-color: #242629;
+}

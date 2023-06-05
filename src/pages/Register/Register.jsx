@@ -69,7 +69,6 @@ const Register = () => (
                  <InputFloat inputType="Password" inputName="Confirme sua Senha" />
             </div>
           </div>
-
           <div className="continue-button">
             <button id="continue-btn">Criar Conta</button>
           </div>

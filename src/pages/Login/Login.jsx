@@ -40,6 +40,8 @@ const Login = () => {
                 <div className="form-btn-login">
                   <button className="btn-login">
                     <span className="material-symbols-outlined">
+                       <Link className="my-list-link" to={"/"}>
+                      </Link>
                       <BsFillArrowRightCircleFill />
                     </span>
                   </button>
