@@ -8,8 +8,11 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 // Componentes:
 import InputFloat from "../../components/InputFloat/InputFloat";
+import userEvent from "@testing-library/user-event";
 
 const Login = () => {
+
+
   return (
     <div className="body-login">
       <Helmet>
@@ -25,15 +28,23 @@ const Login = () => {
                 <div className="header-logo-login">
                   <img
                     className="img-logo-login"
-                    src={logos.logoLight}
+                    src={logos.logoDark}
                     alt="Projeto SóSeries"
                   />
                 </div>
                 <h1>Login</h1>
               </div>
               <form className="form_login">
-                <InputFloat inputType="email" inputName="E-mail" />
-                <InputFloat inputType="password" inputName="Senha" />
+                <InputFloat
+                  inputType="email"
+                  inputName="E-mail"
+                  placeholder="example@soseries.com"
+                />
+                <InputFloat
+                  inputType="password"
+                  inputName="Senha"
+                  placeholder="***************"
+                />
 
                 <div className="password_recovery">
                   <a href="#">Esqueceu a senha?</a>
@@ -41,8 +52,7 @@ const Login = () => {
                 <div className="form-btn-login">
                   <button className="btn-login">
                     <span className="material-symbols-outlined">
-                       <Link className="my-list-link" to={"/"}>
-                      </Link>
+                      <Link className="my-list-link" to={"/"}></Link>
                       <BsFillArrowRightCircleFill />
                     </span>
                   </button>

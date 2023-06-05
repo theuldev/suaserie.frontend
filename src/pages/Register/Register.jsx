@@ -44,30 +44,33 @@ const Register = () => (
 
           <div className="input-group">
             <div className="input-box">
-              <InputFloat inputType="text" inputName="Primeiro Nome" />
+              <InputFloat inputType="text" inputName="Primeiro Nome"
+              placeholder="Primeiro Nome" />
             </div>
 
             <div className="input-box">
-              <InputFloat inputType="text" inputName="Ultimo Nome" />
+              <InputFloat inputType="text" inputName="Ultimo Nome"
+              placeholder="Ultimo Nome" />
             </div>
 
             <div className="input-box">
               <InputFloat
                 inputType="email"
                 inputName="E-mail"
+                placeholder="example@soseries.com"
               />
             </div>
             <div className="input-box">
-              <InputFloat inputType="text" inputName="Apelido" />
+              <InputFloat inputType="text" inputName="Apelido" placeholder="Apelido" />
             </div>
 
             <div className="input-box">
-              <InputFloat inputType="password" id="input-password" inputName="Senha" />
+              <InputFloat inputType="password" id="input-password" inputName="Senha" placeholder="*****************" />
             </div>
 
             <div className="input-box">
 
-              <InputFloat inputType="password" inputName="Confirme sua Senha" />
+              <InputFloat inputType="password" inputName="Confirme sua Senha" placeholder="Confirme sua Senha" />
             </div>
           </div>
           <div className="continue-button">

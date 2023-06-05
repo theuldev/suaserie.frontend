@@ -2,7 +2,7 @@
   width: 100%;
   height: 5.7vh;
 
-   border-radius: 15px;
+  border-radius: 15px;
 
   padding-left: 30px;
   padding-top: 10px;
@@ -22,12 +22,10 @@
 .inputBox {
   position: relative;
 }
-.inputBox:focus-within label{
-    color: #ffd86d;
-  transform: translateX(-1px) translateY(5px) scale(0.75);  
+.inputBox:focus-within label {
+  color: #ffd86d;
+  transform: translateX(-1px) translateY(5px) scale(0.75);
   padding: 0 1rem;
-
-  
 }
 
 .inputBox label {
@@ -41,13 +39,19 @@
   color: #ffd86d;
   transform-origin: top left;
 }
-
 .inputBox .active {
   color: #ffd86d;
-  transform: translateX(-1px) translateY(5px) scale(0.75);  
-  padding: 0 1rem;  
+  transform: translateX(-1px) translateY(5px) scale(0.75);
+  padding: 0 1rem;
 }
-.inputBox input:focus {
+.inputBox input::-webkit-input-placeholder{
+  opacity: 0;
+}
+.inputBox input:focus{
   transition: all 0.3s;
   background-color: #242629;
+ 
+}
+.inputBox input:focus::-webkit-input-placeholder {
+ opacity: 1;
 }
