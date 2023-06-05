@@ -1,0 +1,94 @@
+.body-error {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(36, 38, 41, 0.95) 85%,
+      rgba(36, 38, 41, 0.95) 105%
+    ),
+    url("../../assets/images/fundoGeral.png");
+  background-size: 45rem;
+
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-box {
+  height: 60vh;
+  width: 75vw;
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-box img {
+ width: 110px;
+position: absolute;
+top: 1%;
+}
+
+.error-box .warning-msg {
+  background-color: var(--secondary-color);
+  height: 22vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.error-box .warning-msg span {
+  font-size: 3vh;
+  font-weight: 700;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 325px;
+}
+.error-box .warning-msg .icon {
+  margin-top: -25px;
+  text-align: center;
+  color: var(--tertiary-color);
+  margin-bottom: -30px;
+}
+
+.error-box p {
+  color: var(--secondary-color);
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2vh;
+  background-color: var(--primary-color);
+  padding: .5rem;
+  border-radius: 15px;
+  margin-top: 4vw;
+  margin-bottom: 6vw;
+}
+
+.error-box button {
+  color: var(--primary-color);
+  border: 2px solid var(--tertiary-color);
+
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+.error-box button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: all 0.3s;
+}

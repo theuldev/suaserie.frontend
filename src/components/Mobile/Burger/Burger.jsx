@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import './BurgerMobile.css'
+import './Burger.css'
 
 
 
-const BurgerMobile = (props) => {
+const Burger = (props) => {
 
   // Input animation
   const [isActive, setIsActive] = useState(false);
@@ -30,4 +30,4 @@ const BurgerMobile = (props) => {
 
 
 
-export default BurgerMobile;
+export default Burger;

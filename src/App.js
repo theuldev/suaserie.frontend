@@ -4,36 +4,13 @@ import './App.css';
 
 
 // Rotas da aplicação:
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import { router } from "./Router";
 
-// Páginas
-import InitialPage from './pages/InitialPage/InitialPage.jsx';
-import Login from './pages/Login/Login.jsx';
-import Register from './pages/Register/Register.jsx';
-import Profile from "./pages/Profile/Profile";
+
 // -------
 
-// Rotas:
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <InitialPage />
-  },
-  {
-    path: '/login',
-    element: <Login />
-  },
-  {
-    path: '/cadastro',
-    element: <Register />
-  },
-  {
-    path: '/profile',
-    element: <Profile/>
-  }
 
-
-]);
 
 
 

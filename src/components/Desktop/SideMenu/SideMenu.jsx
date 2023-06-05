@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import './SideMenuWeb.css'
+import './SideMenu.css'
 
 
 
-const SideMenuWeb = (props) => {
+const SideMenu = (props) => {
 
   // Input animation
   const [isActive, setIsActive] = useState(false);
@@ -30,4 +30,4 @@ const SideMenuWeb = (props) => {
 
 
 
-export default SideMenuWeb;
+export default SideMenu;
