@@ -23,7 +23,7 @@ const ErrorPage = () => {
 
       <div className="error-box">
         <div className="warning-msg">
-      <img src={logos.logoLight}  alt="Logomarca Só Séries"/>
+          <img src={logos.logoLight} alt="Logomarca Só Séries" />
           <div className="icon">
 
             <TbError404 size={170} />

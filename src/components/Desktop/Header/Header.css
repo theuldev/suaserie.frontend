@@ -1,0 +1,81 @@
+header {
+  background-color: var(--secondary-color);
+
+  color: var(--primary-color);
+  grid-area: head;
+  position: fixed;
+
+  top: 0;
+  width: 83.5%;
+  height: 5vh;
+  left: 16.5vw;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  align-items: end;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.link .header-item {
+  font-size: 1rem;
+  margin-left: -15px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  align-items: end;
+  height: 100%;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  width: 10rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  height: 100%;
+}
+
+nav div .link {
+  text-decoration: none !important;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.6rem;
+  color: var(--tertiary-color);
+  border-bottom: solid 3px var(--tertiary-color);
+}
+
+nav div .link:hover {
+  transition: all 0.2s;
+  color: var(--secondary-color);
+  border-bottom: solid 3px var(--tertiary-color);
+  background-color: #ffd86d;
+}
+
+nav div .link:hover span {
+  transition: all 0.2s;
+  color: var(--secondary-color);
+}

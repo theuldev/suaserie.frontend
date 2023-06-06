@@ -8,6 +8,7 @@ import logos from "../../constants/logos";
 import Burger from "../../components/Mobile/Burger/Burger";
 import SideMenu from "../../components/Desktop/SideMenu/SideMenu";
 import { Outlet } from "react-router-dom";
+import Header from "../../components/Desktop/Header/Header";
 
 // ícones:
 
@@ -16,7 +17,7 @@ import { Outlet } from "react-router-dom";
 
 const Series = () => {
 
-  let screenSize = 650;
+  let screenMobile = 650;
 
 
   return (
@@ -25,19 +26,22 @@ const Series = () => {
 
       {/* Header Web + burger Menu  Mobile*/}
 
-
+      {/* DESKTOP */}
       {/* Side Menu Desktop */}
-      <MediaQuery minWidth={screenSize + 1}>
-        <SideMenu />
+      <MediaQuery minWidth={screenMobile + 1}>
+      <Header/>
+        {/* <SideMenu /> */}
       </MediaQuery>
       {/* Lista de séries - Content */}
+
+{/* MOBILE */}
 
       <Helmet>
         <title>Só Séries - Séries</title>
       </Helmet>
       <Outlet />
       {/*  Fim do content ---------------- */}
-      <MediaQuery maxWidth={screenSize} >
+      <MediaQuery maxWidth={screenMobile} >
         <Burger />
 
 
