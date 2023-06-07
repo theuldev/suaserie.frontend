@@ -1,10 +1,8 @@
-
-body,html {
+body,
+html {
   width: 100%;
   height: 100%;
-
 }
-
 
 .body-register {
   width: auto;
@@ -12,7 +10,6 @@ body,html {
   display: flex;
   justify-content: center;
   align-items: center;
-
 
   background-size: 45rem;
 
@@ -39,7 +36,7 @@ body,html {
   padding: auto;
   padding-top: 0;
   margin-bottom: 3%;
-    background-color: #242629;
+  background-color: #242629;
 }
 img {
   width: auto;
@@ -93,8 +90,12 @@ img {
   margin-top: 2%;
   font-size: 50%;
   display: flex;
-  margin-left: 3%;
+
   text-decoration: none;
+}
+
+.form-header h1 {
+  font-size: 3vh;
 }
 
 .input-group {
@@ -103,49 +104,33 @@ img {
   justify-content: space-between;
 }
 .input-box {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
 }
-.input-box .inputFloat {
-  width: 100%;
-}
-/*
-.input-box input {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 1px 1px 6px #eb54031c;
-  background-color: #363636;
-  border: 1px solid #ffd86d;
-  color: #f1f1f1;
-  font-size: auto;
-}
-*/
 
 .profile-pic {
   margin-bottom: 30px;
 }
 .profile-input-form {
   display: flex;
-  
-  justify-content: center;
 
+  align-items: center;
+  background-color: #363636;
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   justify-content: center;
   margin: 0 auto;
 }
 .profile-input-form .wrapper-profile {
-  height: 13.5rem;
-  width: 13.5rem;
+  height: 15rem;
+  width: 100%;
   border-radius: 7.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
+  text-align: center;
 }
 
 #photo {
@@ -153,12 +138,13 @@ img {
   border-radius: 50%;
   height: 8rem;
   width: 8rem;
-     border: solid 2px #ffd86d;
+  border: solid 2px #ffd86d;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 #file {
   display: none;
-
 }
 
 #uploadPicBtn {
@@ -173,19 +159,19 @@ img {
   font-weight: 700;
   cursor: pointer;
   position: relative;
-  bottom:10px;
+  bottom: -15px;
 }
 
 #uploadPicBtn:hover {
   transition: all 0.3s;
   border: solid 1px #f1f1f1;
-  color: #f1f1f1;
 }
 
 .continue-button {
   display: grid;
   align-items: center;
   margin-bottom: 50px;
+  margin-top: 2vh;
 }
 .continue-button button {
   width: 50%;
@@ -210,22 +196,32 @@ img {
 }
 
 .conexao {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conexao span {
+  font-size: 1rem;
 }
 .conexao .conexao-link {
   color: #ffd86d;
   text-decoration: none;
   font-style: italic;
   font-weight: 600;
+  font-size: 15px;
+  height: 2rem;
 }
 
 .conexao a:hover {
   transition: all 0.3s;
-
+  font-size: 1rem;
   color: #ebab29;
+  text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .input-box input {
     border: none;
     box-shadow: 1px 1px 6px #eb54031c;

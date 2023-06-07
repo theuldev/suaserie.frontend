@@ -132,11 +132,14 @@ button:hover {
   width: 30%;
   text-decoration: none;
   height: 3.5rem;
+ 
+ 
 }
 
 .btnEntrar {
   width: 100%;
   height: 100%;
+  font-size: 2rem ;
 
   border: 2px solid #ffd86d;
   color: #ffd86d;
@@ -159,6 +162,8 @@ button:hover {
   color: #f1f1f1;
   border: 2px solid #f1f1f1;
   max-width: 35rem;
+  font-size: 2rem ;
+
 }
 
 .btnCadastrar:hover,

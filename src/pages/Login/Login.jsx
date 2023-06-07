@@ -4,7 +4,7 @@ import "./Login.css";
 import logos from "../../constants/logos";
 
 // ícones:
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 // Componentes:
 import InputFloat from "../../components/InputFloat/InputFloat";
@@ -35,33 +35,43 @@ const Login = () => {
                 <h1>Login</h1>
               </div>
               <form className="form_login">
+
+              <div className="inputs">
+
                 <InputFloat
                   inputType="email"
                   inputName="E-mail"
-                  placeholder="example@soseries.com"
+                  placeholder="soseries@series.com"
+
                 />
                 <InputFloat
                   inputType="password"
                   inputName="Senha"
-                  placeholder="***************"
+                  placeholder="* * * * * * * * *"
                 />
+
+              </div>
 
                 <div className="password_recovery">
                   <a href="#">Esqueceu a senha?</a>
                 </div>
-                <div className="form-btn-login">
-                  <button className="btn-login">
-                    <span className="material-symbols-outlined">
-                      <Link className="my-list-link" to={"/"}></Link>
-                      <BsFillArrowRightCircleFill />
-                    </span>
-                  </button>
-                </div>
+                  <Link className="form-btn-login" to={"/series"}>
+               
+
+                    <button className="btn-login">
+                     
+                        <FiArrowRight  className="icon-login" />
+                     
+
+                    </button>
+                
+                  </Link>
+
                 <div className="sign-up">
                   <span>
                     Ainda não possui nenhuma conta?{" "}
                     <Link className="sign-up-link" to={"/cadastro"}>
-                      Crie uma nova conta
+                      Crie uma nova conta!
                     </Link>
                   </span>
                 </div>

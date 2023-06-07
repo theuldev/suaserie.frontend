@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./InputFloat.css";
 
 const InputFloat = (props) => {
-  // Input animation
+  // Input animation deles
   const [isActive, setIsActive] = useState(false);
   const [value, setValue] = useState("");
 
@@ -26,7 +26,7 @@ const InputFloat = (props) => {
         onChange={(e) => handleTextChange(e.target.value)}
         placeholder={props.placeholder}
         required
-  
+
       />
       <label className={isActive ? "active" : ""} htmlFor="inputFloat">
         {props.inputName}
