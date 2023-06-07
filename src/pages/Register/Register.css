@@ -2,12 +2,7 @@
 body,html {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(36, 38, 41, 0.95) 85%,
-      rgba(36, 38, 41, 0.95) 105%
-    ),
-    url("../../assets/images/fundoGeral.png");
+
 }
 
 
@@ -143,7 +138,6 @@ img {
   margin: 0 auto;
 }
 .profile-input-form .wrapper-profile {
-  border: 1px solid #dab95f;
   height: 13.5rem;
   width: 13.5rem;
   border-radius: 7.5rem;
@@ -159,10 +153,12 @@ img {
   border-radius: 50%;
   height: 8rem;
   width: 8rem;
+     border: solid 2px #ffd86d;
 }
 
 #file {
   display: none;
+
 }
 
 #uploadPicBtn {
@@ -177,7 +173,7 @@ img {
   font-weight: 700;
   cursor: pointer;
   position: relative;
-  bottom:10px
+  bottom:10px;
 }
 
 #uploadPicBtn:hover {

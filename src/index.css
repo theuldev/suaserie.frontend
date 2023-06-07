@@ -11,7 +11,12 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 16px;  background-image: linear-gradient(
+      to bottom,
+      rgba(36, 38, 41, 0.95) 85%,
+      rgba(36, 38, 41, 0.95) 105%
+    ),
+    url("../src/assets/images/fundoGeral.png");
 }
 
 *,

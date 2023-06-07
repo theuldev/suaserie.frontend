@@ -57,14 +57,13 @@
   border-bottom-left-radius: 0;
   display: flex;
   justify-content: center;
-  background-color: #ffd86d;
+  background-color: #dab95f;
 }
 
 .img-logo-login {
   width: 120px;
   height: 120px;
 }
-
 
 @media screen and (max-width: 600px) {
   .login_box {
@@ -148,6 +147,8 @@
 }
 
 .form-btn-login .btn-login {
+  width: 100%;
+  height: 100%;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;

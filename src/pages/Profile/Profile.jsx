@@ -1,7 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-
+import "./Profile.css"
+import {SlArrowRight } from "react-icons/sl"
+import {IoArrowBackCircleSharp} from "react-icons/io5"
 const Profile = () => (
+
+  
   <div className="body-profile">
     <Helmet>SóSeries</Helmet>
     
@@ -18,12 +22,12 @@ const Profile = () => (
         </div>
 
         <div className="profile-username">
-          <span className="material-symbols-outlined"> navigate_next </span>
+          <span className="material-symbols-outlined"><SlArrowRight /></span>
           <span className="nickname">Apelido</span>
         </div>
 
         <button id="btn-back" onclick="goBack()">
-          <span className="material-icons"> arrow_back </span>
+          <span className="material-icons"><IoArrowBackCircleSharp/> </span>
           Voltar
         </button>
       </div>
