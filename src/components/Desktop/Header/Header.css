@@ -1,14 +1,21 @@
 header {
   background-color: var(--secondary-color);
-
+position: absolute;
   color: var(--primary-color);
   grid-area: head;
-  position: fixed;
+
+top: 0;
+width: 83.5%;
+height: 5vh;
+left: 16.5vw; 
+
+
+  /* position: fixed;
 
   top: 0;
   width: 83.5%;
   height: 5vh;
-  left: 16.5vw;
+  left: 16.5vw; */
 }
 
 .navbar {
