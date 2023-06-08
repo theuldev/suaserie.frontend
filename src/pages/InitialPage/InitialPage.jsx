@@ -6,6 +6,7 @@ import logos from '../../constants/logos';
 // ícones:
 import { MdOutlineMovieFilter } from 'react-icons/md';
 import { Link } from "react-router-dom";
+import BigButton from "../../components/General/BigButton/BigButton";
 
 const InitialPage = () => (
 
@@ -39,28 +40,13 @@ const InitialPage = () => (
 
         <div className="wrapper-buttons">
 
-          <Link className="button-wrapper-entrar" to={'/login'}>
-
-            <button id="btn-entrar" className="btnEntrar"  >
-
-              Entre
-
-
-            </button>
-          </Link>
+          <BigButton buttonText={"Entre"} linkTo={"/login"} />
 
 
 
           <span>Ou</span>
 
-          <Link className="button-wrapper-cadastrar" to={'/cadastro'}>
-
-            <button id="btn-cadastrar" className="btnCadastrar">
-
-              Cadastre-se
-
-            </button>
-          </Link>
+          <BigButton buttonText={"Cadastre-se"} linkTo={"/cadastro"} />
 
 
 

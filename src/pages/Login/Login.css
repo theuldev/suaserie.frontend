@@ -37,7 +37,7 @@
 .login_box {
   border-radius: 15px;
   width: 400px;
-  height: 700px;
+  height: 620px;
   margin: 0 auto;
   background-color: #242629;
   -webkit-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
@@ -194,25 +194,4 @@
   color: #ffe9ac;
 }
 
-.sign-up {
-  text-align: center;
-}
 
-.sign-up span {
-  color: #f1f1f1;
-
-  font-size: 15px;
-  font-style: italic;
-}
-
-.sign-up span .sign-up-link {
-  color: #ffe9ac;
-  text-decoration: none;
-}
-
-.sign-up span .sign-up-link:hover {
-  transition: all 0.3s;
-  font-size: 1rem;
-  color: #ffd86d;
-  text-decoration: underline;
-}

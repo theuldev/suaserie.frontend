@@ -22,7 +22,7 @@
   width: 25%;
   margin-top: none;
   height: 100vh;
-  
+  border-right: solid 1px #ffd86d;
 }
 
 .logo img {
@@ -84,12 +84,13 @@
   width: 75%;
   height: 100vh;
   flex-direction: column;
+  justify-content: center;
 }
 
 .wrapper-buttons {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 80%;
   justify-content: center;
   align-items: center;
 
@@ -97,6 +98,7 @@
   width: 100%;
 
   margin: 0 auto;
+  margin-top: 15vh;
 }
 .wrapper-buttons span {
   font-size: 2.5rem;
@@ -104,83 +106,6 @@
   font-weight: 700;
 }
 
-button {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  text-align: center;
-  font-size: 2rem;
-  justify-content: space-around;
-  margin-left: auto;
-  margin-right: auto;
-  color: #f1f1f1;
-  font-weight: 700;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border-radius: 2rem !important;
-  border-color: transparent;
-}
-button:hover {
-  transition: all 0.3s;
-}
-
-/* Estilização do Link da paginação React. */
-.button-wrapper-entrar {
-  width: 30%;
-  text-decoration: none;
-  height: 3.5rem;
- 
- 
-}
-
-.btnEntrar {
-  width: 100%;
-  height: 100%;
-  font-size: 2rem ;
-
-  border: 2px solid #ffd86d;
-  color: #ffd86d;
-  max-width: 20rem;
-}
-
-.button-wrapper-cadastrar {
-  width: 45%;
-  height: 3.5rem;
-  text-decoration: none;
-}
-
-.btnCadastrar {
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%;
-  background-color: transparent;
-  color: #f1f1f1;
-  border: 2px solid #f1f1f1;
-  max-width: 35rem;
-  font-size: 2rem ;
-
-}
-
-.btnCadastrar:hover,
-.btnEntrar:hover {
-  background-color: #ffd86d;
-  color: #242629;
-  border: 2px solid #242629;
-}
-
-span {
-  margin-bottom: 2%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-size: 25px;
-  color: #f1f1f1;
-}
 @media (max-width: 950px) {
   * {
     margin: 0;
@@ -204,18 +129,17 @@ span {
     align-items: center;
     height: 50vh;
     justify-content: space-around;
-    border-bottom: solid 1px #ffd86d;
-    border-right: none;
+
+    border: none;
   }
   .logo {
     width: 100%;
-    
   }
   .logo img {
     width: 40vw;
 
     margin-top: 2%;
-    
+
     height: auto;
     margin-bottom: 0%;
   }
@@ -252,51 +176,40 @@ span {
     opacity: 0.1;
   }
   .ContainerDireito {
-    padding-top: 5vh;
     align-items: center;
-    background-color: #ffd86d;
+
     width: 100%;
     display: grid;
     flex-direction: column;
     align-items: center;
     align-content: space-between;
     height: 50%;
+    margin-top: 0;
   }
   .wrapper-buttons {
-    width: 100%;
-    height: 50%;
+    background-color: rgb(255, 216, 109, 0.05);
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-items: center;
-    justify-content: space-around;
-  }
+    justify-content: space-between;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding: 1.5vh 0;
+    margin-top: 5vh;
 
-  .button-wrapper-entrar {
-    height: 2.8rem;
-  }
-
-  .btnEntrar {
-    font-size: 1.5rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .btnCadastrar {
-    margin-bottom: 7.7vh;
-    font-size: 1.5rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-top: solid 1px var(--primary-color);
+    border-bottom: solid 1px var(--primary-color);
   }
 
   .ilustracao {
     display: none;
   }
   .wrapper-buttons span {
-    margin-top: auto;
-    margin-bottom: auto;
     font-size: clamp(1em, 5vw + 2vh, 2.5em);
-    width: 100%;
-    height: 100%;
 
     color: #ffd86d;
     font-weight: 700;

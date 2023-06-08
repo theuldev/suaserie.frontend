@@ -1,0 +1,49 @@
+.button-wrapper:hover {
+  transition: all 0.3s;
+  background-color: #ffd86d;
+  color: #242629;
+  border: 2px solid #242629;
+}
+
+.button-wrapper {
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+  color: #f1f1f1;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 2rem !important;
+  border-color: transparent;
+
+  height: 3.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: transparent;
+  border: 2px solid #f1f1f1;
+  width: 45%;
+  max-width: 35rem;
+  font-size: 2rem;
+}
+
+.button-wrapper a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.button-wrapper:hover a {
+  transition: all 0.3s;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 950px) {
+  .button-wrapper {
+    font-size: 1.2rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 2.5rem;
+  }
+}

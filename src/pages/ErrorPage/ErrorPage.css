@@ -32,7 +32,7 @@
 .error-box img {
   width: 80px;
   position: absolute;
-  top: 1%;
+  top: 0%;
 }
 
 .error-box .warning-msg {
@@ -50,11 +50,11 @@
   font-size: 3vh;
   font-weight: 700;
   display: flex;
-
+  color: var(--tertiary-color);
   align-items: center;
   justify-content: space-between;
-
-  max-width: 325px;
+  
+  max-width: 335px;
 }
 .error-box .warning-msg .icon {
   margin-top: -25px;
@@ -64,6 +64,8 @@
 }
 
 .error-box p {
+  line-height: 1.5rem;
+
   color: var(--secondary-color);
   width: 55%;
   max-width: 400px;
@@ -74,7 +76,7 @@
   text-align: center;
   font-size: 2vh;
   background-color: var(--primary-color);
-  padding: 0.5rem;
+  padding: 0.3rem;
   border-radius: 15px;
   margin-top: 4vw;
   margin-bottom: 6vw;
@@ -83,9 +85,9 @@
 .error-box button {
   color: var(--primary-color);
   border: 2px solid var(--tertiary-color);
-
-  font-size: 1.2rem;
-  padding: 0.7rem;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.3rem;
   display: flex;
   gap: 0.5vw;
   font-weight: 700;
@@ -95,4 +97,29 @@
   background-color: var(--primary-color);
   color: var(--secondary-color);
   transition: all 0.3s;
+}
+
+@media (max-width: 700px) {
+  .error-box .warning-msg span {
+    font-size: 1rem;
+  }
+
+  .error-box button {
+    font-size: 0.8rem;
+    border: 1px solid var(--tertiary-color);
+  }
+
+  .error-box {
+    margin-top: 5vh;
+    height: 65vh;
+  }
+
+  .error-box p {
+    width: 75%;
+    line-height: 1.5rem;
+    margin-top: 5vh;
+   
+   
+   
+  }
 }

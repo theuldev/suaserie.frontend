@@ -8,7 +8,8 @@ import images from "../../constants/images";
 
 import { Link } from "react-router-dom";
 // Componentes:
-import InputFloat from "../../components/InputFloat/InputFloat";
+import InputFloat from "../../components/General/InputFloat/InputFloat";
+import LinkPage from "../../components/General/LinkPage/LinkPage";
 
 
 
@@ -18,20 +19,13 @@ const Register = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
-
-
   useEffect(() => {
     if (selectedImage) {
       setImageUrl(URL.createObjectURL(selectedImage));
 
-
     }
 
-
   }, [selectedImage]);
-
-
-
 
 
   function dynammicPhoto(e) {
@@ -63,12 +57,8 @@ const Register = () => {
               <div className="profile-input-form">
                 <div className="wrapper-profile">
 
-
                   {imageUrl && selectedImage ? (<img src={imageUrl} alt={selectedImage.name} id="photo" />) : (<img src={images.user} alt="Foto do usuário" id="photo" />)
                   }
-
-
-
 
                   <input type="file" id="file"
                     accept="image/*"
@@ -84,13 +74,15 @@ const Register = () => {
             <div className="input-group">
 
               <div className="input-box">
-                <InputFloat inputType="text" inputName="Primeiro Nome"
+                <InputFloat inputType="text"
+                 inputName="Primeiro Nome"
                   placeholder="Primeiro Nome" />
               </div>
 
 
               <div className="input-box">
-                <InputFloat inputType="text" inputName="Ultimo Nome"
+                <InputFloat inputType="text" 
+                inputName="Ultimo Nome"
                   placeholder="Ultimo Nome" />
               </div>
 
@@ -106,35 +98,37 @@ const Register = () => {
 
 
               <div className="input-box">
-                <InputFloat inputType="text" inputName="Apelido" placeholder="Apelido" />
+                <InputFloat inputType="text" 
+                inputName="Apelido"
+                 placeholder="Apelido" />
               </div>
 
 
 
               <div className="input-box">
-                <InputFloat inputType="password" id="input-password" inputName="Senha" placeholder="* * * * * * * * *" />
+                <InputFloat inputType="password" 
+                inputName="Senha"
+                 placeholder="* * * * * * * * *" />
               </div>
 
 
 
 
               <div className="input-box">
-                <InputFloat inputType="password" inputName="Confirme sua Senha" placeholder="Confirme sua Senha" />
+                <InputFloat inputType="password"
+                 inputName="Confirme sua Senha" 
+                 placeholder="Confirme sua Senha" />
               </div>
 
             </div>
             <div className="continue-button">
               <button id="continue-btn">Criar Conta</button>
             </div>
-            <div className="conexao">
-            <span>
-              Já possui uma conta? {" "}
+      
+            <LinkPage  text={"Já possui uma conta?"} linkTo={"/login"} linkText={"Conecte-se!"} /> 
 
-            </span>
-              <Link to={"/login"} className="conexao-link">
-                Conecte-se.
-              </Link>
-            </div>
+
+            
           </form>
         </div>
       </div>

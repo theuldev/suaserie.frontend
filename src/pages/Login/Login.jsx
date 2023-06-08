@@ -7,8 +7,9 @@ import logos from "../../constants/logos";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 // Componentes:
-import InputFloat from "../../components/InputFloat/InputFloat";
+import InputFloat from "../../components/General/InputFloat/InputFloat";
 import userEvent from "@testing-library/user-event";
+import LinkPage from "../../components/General/LinkPage/LinkPage";
 
 const Login = () => {
 
@@ -36,45 +37,43 @@ const Login = () => {
               </div>
               <form className="form_login">
 
-              <div className="inputs">
+                <div className="inputs">
 
-                <InputFloat
-                  inputType="email"
-                  inputName="E-mail"
-                  placeholder="soseries@series.com"
+                  <InputFloat
+                    inputType="email"
+                    inputName="E-mail"
+                    placeholder="soseries@series.com"
 
-                />
-                <InputFloat
-                  inputType="password"
-                  inputName="Senha"
-                  placeholder="* * * * * * * * *"
-                />
+                  />
+                  <InputFloat
+                    inputType="password"
+                    inputName="Senha"
+                    placeholder="* * * * * * * * *"
+                  />
 
-              </div>
+                </div>
 
                 <div className="password_recovery">
                   <a href="#">Esqueceu a senha?</a>
                 </div>
-                  <Link className="form-btn-login" to={"/series"}>
-               
+                <Link className="form-btn-login" to={"/series"}>
 
-                    <button className="btn-login">
-                     
-                        <FiArrowRight  className="icon-login" />
-                     
 
-                    </button>
-                
-                  </Link>
+                  <button className="btn-login">
 
-                <div className="sign-up">
-                  <span>
-                    Ainda não possui nenhuma conta?{" "}
-                    <Link className="sign-up-link" to={"/cadastro"}>
-                      Crie uma nova conta!
-                    </Link>
-                  </span>
-                </div>
+                    <FiArrowRight className="icon-login" />
+
+
+                  </button>
+
+                </Link>
+
+
+                <LinkPage text={"Ainda não possui nenhuma conta?"} linkText={"Crie uma nova conta!"} linkTo={"/cadastro"} />
+
+
+
+
               </form>
             </div>
           </div>

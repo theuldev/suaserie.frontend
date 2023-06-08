@@ -1,11 +1,10 @@
-.input-form {
-  max-width: 250px;
-}
-.input-form .inputFloat {
-  width:48vw;
-  height: 3.5rem;
-  max-width: 280px;
 
+.input-form .inputFloat {
+  width: 50vw;
+  height: 3.5rem;
+
+  max-width: 280px;
+  min-width: 200px;
   border-radius: 25px;
 
   padding-left: 30px;
@@ -57,6 +56,6 @@
 }
 
 .inputBox:focus-within input::placeholder {
-  transition: all .3s;
-  color: rgb(255, 216, 109, .5);
+  transition: all 0.3s;
+  color: rgb(255, 216, 109, 0.5);
 }
