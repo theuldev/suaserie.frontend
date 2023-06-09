@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import images from "../../../constants/images";
+import React from "react";
+
 import './UserBar.css'
-import logos from "../../../constants/logos";
-import BigButton from "../../General/BigButton/BigButton";
+
 // ícones:
 import { FiSettings } from "react-icons/fi";
 

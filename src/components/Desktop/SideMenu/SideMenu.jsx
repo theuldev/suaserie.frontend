@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import images from "../../../constants/images";
 import './SideMenu.css'
 import logos from "../../../constants/logos";
-import BigButton from "../../General/BigButton/BigButton";
 import UserBar from "../UserBar/UserBar";
 
 
@@ -28,7 +27,8 @@ const SideMenu = (props) => {
 
         <span className="side-bar-items-title">Suas listas</span>
         <hr />
-        
+
+
         <div className="side-bar-item">
           <span className="item-text">Favoritas</span>
 
