@@ -1,13 +1,18 @@
 import { React, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "./Profile.css";
+
+// ícones:
 import { SlArrowRight } from "react-icons/sl";
 import { IoArrowBackOutline, IoCheckmarkDoneSharp } from "react-icons/io5";
 import { BsFillDoorOpenFill, BsTrash } from "react-icons/bs";
 import { BiHappyAlt } from "react-icons/bi";
-import { RiEmotionUnhappyLine } from "react-icons/ri";
+import { MdOutlineSentimentVeryDissatisfied } from "react-icons/md";
 import { MdOutlineHotelClass } from "react-icons/md";
 import { AiFillLock } from "react-icons/ai";
+import { FiSettings } from "react-icons/fi";
+
+// Imagens:
 import images from "../../constants/images";
 
 const Profile = () => {
@@ -23,6 +28,11 @@ const Profile = () => {
   function dynammicPhoto(e) {
     setSelectedImage(e.target.files[0]);
   }
+
+
+// Página Profile incompleta. + Versão Mobile dos componentes ainda não feitos.
+
+
 
   return (
     <div className="body-profile">
@@ -53,11 +63,17 @@ const Profile = () => {
               <SlArrowRight />
             </span>
             <span className="nickname">Apelido</span>
+
+            <div id="settings-nickname">
+              <FiSettings />
+
+            </div>
+
           </div>
 
           <button id="btn-back" onclick="goBack()">
             <span className="material-icons">
-              <IoArrowBackOutline  />{" "}
+              <IoArrowBackOutline />{" "}
             </span>
             Voltar
           </button>
@@ -71,22 +87,16 @@ const Profile = () => {
                 <span className="profile-data">Iasmim Cristina</span>
               </div>
 
-              <span className="material-icons"> settings </span>
+              <span className="material-icons"> <FiSettings /> </span>
             </div>
             <div className="info-box">
               <div className="text">
                 <span className="profile-label">E-mail:</span>
                 <span className="profile-data">exemplo@gmail.com</span>
               </div>
-              <span className="material-icons"> settings </span>
+              <span className="material-icons"> <FiSettings /> </span>
             </div>
-            <div className="info-box">
-              <div className="text">
-                <span className="profile-label">Apelido:</span>
-                <span className="profile-data">Ias1234</span>
-              </div>
-              <span className="material-icons"> settings </span>
-            </div>
+
           </div>
           <button id="change-password">
             <span className="material-icons">
@@ -111,7 +121,7 @@ const Profile = () => {
           </div>
           <div className="series">
             <span className="material-symbols-outlined" id="disliked">
-              <RiEmotionUnhappyLine />
+              <MdOutlineSentimentVeryDissatisfied />
             </span>
             <p>Piores Séries → 09 series</p>
           </div>

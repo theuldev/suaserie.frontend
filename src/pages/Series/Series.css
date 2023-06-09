@@ -7,6 +7,22 @@
     "side content";
 }
 
+
+.body-series main {
+  grid-area: content;
+}
+
+
+.body-series main .visual {
+  display: flex;
+  justify-content: center;
+}
+
+.body-series main .visual img {
+  /* margin-top: 0vh; */
+  height: 16vh;
+}
+
 @media (max-width: 650px) {
   .body-series {
     grid-template-columns: none;
@@ -15,5 +31,19 @@
       "head"
       "content"
       "navigation";
+  }
+
+  /* ----------- */
+ 
+  /* Estilização da logo */
+
+  .body-series main .visual {
+    background-color: rgb(255, 216, 109, 0.2);
+    padding: 1rem 0;
+    /* opacity: 0.; */
+  }
+  .body-series main .visual img {
+    margin-top: 0;
+    height: 15vh;
   }
 }

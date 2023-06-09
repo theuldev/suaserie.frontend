@@ -24,19 +24,25 @@ const Series = () => {
     <div className="body-series">
 
 
-      {/* Header Web + burger Menu  Mobile*/}
+
 
       {/* DESKTOP */}
-      {/* Side Menu Desktop */}
+
       <MediaQuery minWidth={screenMobile + 1}>
-      <Header/>
-      <SideMenu/>
-        {/* <SideMenu /> */}
+        <Header />
+        <SideMenu />
+
       </MediaQuery>
+
       {/* Lista de séries - Content */}
+      <main>
+        <div class="visual">
+          <img src={logos.logoLight} alt="Projeto SóSéries logomarca." />
+        </div>
 
-{/* MOBILE */}
+      </main>
 
+      {/* MOBILE */}
       <Helmet>
         <title>Só Séries - Séries</title>
       </Helmet>

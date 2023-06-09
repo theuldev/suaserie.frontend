@@ -33,21 +33,30 @@
 }
 
 .user-bar .user-wrapper .nickname {
-  height: 40px;
+  
   font-weight: 700;
   display: flex;
-  align-items: end;
+  align-items: center;
   font-size: 0.8rem;
+ 
 }
 
 .user-bar .settings {
-  font-size: 1.4rem;
+  font-size: 1rem;
   cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .user-bar .settings:hover {
   transition: all 0.3s;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--primary-color);
 }
 
@@ -62,5 +71,5 @@
 
 .user-bar .circle-user img:hover {
   transition: all 0.3s;
-  opacity: 0.8;
+  opacity: 0.5;
 }

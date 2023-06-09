@@ -1,6 +1,5 @@
 import React from "react"
-
-import './App.css';   
+import './App.css';
 
 
 // Rotas da aplicação:
@@ -15,11 +14,14 @@ import { router } from "./Router";
 
 
 
-const App = () => (
-  <>
-   <RouterProvider router={router} />
-  </>
+const App = () => {
+  
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
 
-);
+  )
+};
 
 export default App

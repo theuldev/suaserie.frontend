@@ -1,10 +1,5 @@
 .body-error {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(36, 38, 41, 0.95) 85%,
-      rgba(36, 38, 41, 0.95) 105%
-    ),
-    url("../../assets/images/fundoGeral.png");
+ 
   background-size: 45rem;
 
   background-attachment: fixed;

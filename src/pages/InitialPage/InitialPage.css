@@ -72,8 +72,8 @@
 }
 .ContainerDireito {
   background-image: linear-gradient(
-      rgba(36, 38, 41, 0.95) 99%,
-      rgb(36, 38, 41, 0.95) 99%
+    rgba(36, 38, 41, 0.96) 85%,
+    rgba(36, 38, 41, 0.96) 105%
     ),
     url("../../assets/images/fundoGeral.png");
   background-size: 45rem;

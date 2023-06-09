@@ -6,7 +6,8 @@ import UserBar from "../UserBar/UserBar";
 import SideMenuItem from "../SideMenuItem/SideMenuItem";
 
 // ícones:
-import {MdOutlineSentimentVerySatisfied} from "react-icons/md";
+import { MdOutlineSentimentVerySatisfied, MdDoneAll, MdOutlineHotelClass, MdOutlineSentimentVeryDissatisfied } from "react-icons/md";
+
 
 
 const SideMenu = (props) => {
@@ -18,45 +19,44 @@ const SideMenu = (props) => {
   return (
     <div className="side-menu">
 
-{/* Sem a função especificada ainda. */}
-      <UserBar apelido="Iasmim" image={images.user} />
+
+      <UserBar apelido={props.apelido} image={props.imgUser} />
 
 
 
       <div className="side-bar-items">
 
 
-
-
         <span className="side-bar-items-title">Suas listas</span>
         <hr />
-<SideMenuItem >
-  ohijo
-</SideMenuItem>
 
-        <div className="side-bar-item">
-          <span className="item-text">Favoritas</span>
+        <SideMenuItem linkTo={props.checkedItem == "liked" ? "" : "/favoritas"} isChecked={props.checkedItem == "liked" ? true : false} type="liked">
+          Favoritas
+          <MdOutlineSentimentVerySatisfied />
+        </SideMenuItem>
 
-          <span className="material-symbols-outlined" id="liked">
-            sentiment_very_satisfied
-          </span>
-        </div>
-        <div className="side-bar-item">
-          <span className="item-text">Já vistas</span>
 
-          <span className="material-symbols-outlined" id="watched"> done_all </span>
-        </div>
-        <div className="side-bar-item">
-          <span className="item-text">Desejo ver</span>
-          <span className="material-symbols-outlined" id="wish"> hotel_class </span>
-        </div>
-        <div className="side-bar-item">
-          <span className="item-text">Piores </span>
+        <SideMenuItem linkTo={props.checkedItem == "watched" ? "" : "/assistidas"} isChecked={props.checkedItem == "watched" ? true : false} type="watched">
+          Já vistas
+          <MdDoneAll />
+        </SideMenuItem>
+        
 
-          <span className="material-symbols-outlined" id="disliked">
-            sentiment_very_dissatisfied
-          </span>
-        </div>
+        <SideMenuItem linkTo={props.checkedItem == "wish" ? "" : "/desejoVer"} isChecked={props.checkedItem == "wish" ? true : false} type="wish">
+          Desejo ver
+          <MdOutlineHotelClass />
+        </SideMenuItem>
+
+        <SideMenuItem linkTo={props.checkedItem == "disliked" ? "" : "/piores"} isChecked={props.checkedItem == "disliked" ? true : false} type="disliked">
+          Piores
+          <MdOutlineSentimentVeryDissatisfied />
+        </SideMenuItem>
+
+
+
+
+
+
         <img
           src={logos.logoLight}
           alt="Projeto SóSéries logomarca."

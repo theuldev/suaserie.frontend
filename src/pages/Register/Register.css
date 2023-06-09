@@ -36,7 +36,8 @@ html {
   padding: auto;
   padding-top: 0;
   margin-bottom: 3%;
-  background-color: #242629;
+  background-color: rgb(36, 38, 41, .8);
+
 }
 img {
   width: auto;

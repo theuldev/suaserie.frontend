@@ -4,8 +4,6 @@ html {
 }
 
 .body-profile {
-
-
   background-attachment: fixed;
   width: 100%;
   height: 100%;
@@ -44,14 +42,14 @@ html {
   height: 15vh;
 }
 .profile {
-  margin-top:15vh;
+  margin-top: 15vh;
   width: 80%;
-  /* height: 83%; */
-  background-color: #b5c2d6;
+
+  background-color: rgb(36, 38, 41, 0.8);
   border-radius: 15px;
-  -webkit-box-shadow: -4px 14px 82px -21px rgba(0, 36, 38, 1);
-  -moz-box-shadow: -4px 14px 82px -21px rgba(0, 36, 38, 1);
-  box-shadow: -4px 14px 82px -21px rgba(0, 36, 38, 1);
+  -webkit-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
+  -moz-box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
+  box-shadow: 3px -10px 56px -6px rgb(255, 216, 109, 0.25);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 5vh;
@@ -84,7 +82,7 @@ html {
   align-items: center;
   gap: 1rem;
   position: relative;
-  bottom:50px;
+  bottom: 50px;
 }
 
 .profile .profile-pic .wrapper-profile img {
@@ -155,15 +153,12 @@ button:hover,
   font-weight: 700;
 }
 
-
 .profile .profile-pic button:hover,
 #btn-back:hover {
   border: #ffd86d solid 1px;
   background-color: #242629;
   color: #ffd86d;
 }
-
-
 
 /* Area de informações do perfil */
 
@@ -224,7 +219,8 @@ button:hover,
   border-radius: 2px;
 }
 
-.info-box .material-icons {
+.info-box .material-icons,
+#settings-nickname {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 50%;
@@ -236,7 +232,8 @@ button:hover,
   font-size: 1.2rem;
 }
 
-.info-box .material-icons:hover {
+.info-box .material-icons:hover,
+#settings-nickname:hover {
   transition: all 0.3s;
   background-color: transparent;
   border: solid 1px #ffd86d;
@@ -329,10 +326,9 @@ button:hover,
 .profile-username .material-symbols-outlined {
   font-size: 2.5rem;
   color: #ebab29;
-
 }
-.material-icons{
-    margin: 0px;
+.material-icons {
+  margin: 0px;
 }
 
 /* Responsividade */
@@ -348,12 +344,12 @@ button:hover,
 
   .profile-username {
     margin: 0 auto;
-    background-color: #ffd86d;
+    background-color: rgb(255, 216, 109, 0.1);
     text-align: center;
     display: flex;
     justify-content: center;
     margin-top: 4vh;
-    color: #242629;
+    color: #f1f1f1;
     padding: 0.5rem;
     width: 40%;
     border-radius: 35px;
@@ -431,8 +427,7 @@ button:hover,
     width: 5rem;
     font-size: 0.6rem;
   }
-  #change-password:hover .material-icons .door-icon{
-
+  #change-password:hover .material-icons .door-icon {
     background-color: #242629;
   }
 
