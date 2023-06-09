@@ -40,13 +40,17 @@ const InitialPage = () => (
 
         <div className="wrapper-buttons">
 
-          <BigButton buttonText={"Entre"} linkTo={"/login"} />
+          <BigButton linkTo={"/login"} >
+            Entre
+          </BigButton>
 
 
 
           <span>Ou</span>
 
-          <BigButton buttonText={"Cadastre-se"} linkTo={"/cadastro"} />
+          <BigButton linkTo={"/cadastro"} >
+            Cadastre-se
+          </BigButton>
 
 
 

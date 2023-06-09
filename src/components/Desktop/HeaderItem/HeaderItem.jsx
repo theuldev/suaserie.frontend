@@ -13,12 +13,17 @@ const HeaderItem = (props) => {
 
 
   return (
+    <div>
+      <Link to={props.linkTo} className="link">
+        <span class="material-icons">  {props.children[0]}    </span>
+        <span className="header-item">
+          {props.children[1]}
 
-    <Link to={props.linkTo} className="link">
-      <span class="material-icons">  {props.icon}    </span>
-      <span className="header-item">{props.text}</span>
+        </span>
 
-    </Link>
+      </Link>
+
+    </div>
   );
 };
 

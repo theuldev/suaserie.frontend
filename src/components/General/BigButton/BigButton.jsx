@@ -11,7 +11,7 @@ const BigButton = (props) => {
     <button className="button-wrapper"   >
 
     <Link to={props.linkTo}>
-        {props.buttonText}
+        {props.children}
     </Link>
 
       </button>
