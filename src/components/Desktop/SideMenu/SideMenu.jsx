@@ -3,7 +3,10 @@ import images from "../../../constants/images";
 import './SideMenu.css'
 import logos from "../../../constants/logos";
 import UserBar from "../UserBar/UserBar";
+import SideMenuItem from "../SideMenuItem/SideMenuItem";
 
+// ícones:
+import {MdOutlineSentimentVerySatisfied} from "react-icons/md";
 
 
 const SideMenu = (props) => {
@@ -27,7 +30,9 @@ const SideMenu = (props) => {
 
         <span className="side-bar-items-title">Suas listas</span>
         <hr />
-
+<SideMenuItem >
+  ohijo
+</SideMenuItem>
 
         <div className="side-bar-item">
           <span className="item-text">Favoritas</span>

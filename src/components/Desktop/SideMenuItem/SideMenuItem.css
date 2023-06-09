@@ -1,0 +1,54 @@
+ .side-bar-item {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+.side-bar-item:hover {
+  transition: all 0.3s;
+  background-color: var(--shadow);
+}
+
+
+
+
+
+ .side-bar-item .icon{
+  font-size: 2.2rem;
+}
+
+#liked {
+  color: lightgreen;
+}
+
+#watched {
+  color: rgb(0, 157, 255);
+}
+
+#wish {
+  color: yellow;
+}
+
+#disliked {
+  color: red;
+}
+
+#checkedSide {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+#checkedSide #liked,
+#checkedSide #watched,
+#checkedSide #wish,
+#checkedSide #disliked {
+  color: var(--secondary-color);
+}
+

@@ -12,11 +12,11 @@ const SideMenuItem = (props) => {
 
 
   return (
-    <div className="side-bar-item">
-    <span className="item-text">Favoritas</span>
+    <div className="side-bar-item" id={props.isChecked == true ? "checkedSide" : " "}>
+    <span className="item-text">{props.children}</span>
 
-    <span className="material-symbols-outlined" id="liked">
-      sentiment_very_satisfied
+    <span className="icon" id={props.type}>
+     {props.icon}
     </span>
   </div>
   )
