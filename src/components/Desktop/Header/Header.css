@@ -1,6 +1,6 @@
 header {
   background-color: var(--secondary-color);
-  position: absolute;
+  position: fixed;
   color: var(--primary-color);
   grid-area: head;
 
@@ -49,4 +49,43 @@ nav {
   height: 100%;
 }
 
+nav div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  width: 10rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  height: 100%;
+}
+
+nav div .link {
+  text-decoration: none !important;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  color: var(--tertiary-color);
+  border-bottom: solid 3px var(--tertiary-color);
+}
+nav div .material-icons {
+  font-size: 1rem;
+}
+
+nav div .link:hover {
+  transition: all 0.2s;
+  color: var(--secondary-color);
+  border-bottom: solid 3px var(--tertiary-color);
+  background-color: #ffd86d;
+}
+
+nav div .link:hover span {
+  transition: all 0.2s;
+  color: var(--secondary-color);
+}
 

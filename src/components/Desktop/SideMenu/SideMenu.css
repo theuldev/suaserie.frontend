@@ -1,0 +1,90 @@
+/* Estilização do side menu */
+.side-menu {
+  border-right: solid 2px var(--primary-color);
+  grid-area: side;
+  position: fixed;
+  width: 16.66%;
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+
+
+
+/* Estilização - MenuLIstas */
+
+.side-bar-items {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.side-bar-items img {
+  width: 6vw;
+}
+
+.side-bar-items .side-bar-item {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.side-bar-items .side-bar-item:hover {
+  transition: all 0.3s;
+  background-color: var(--shadow);
+}
+
+.side-bar-items .side-bar-item .material-icons,
+.material-symbols-outlined {
+  font-size: 2.2rem;
+}
+
+.side-bar-items .side-bar-items-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--tertiary-color);
+}
+
+hr {
+  border: 1px solid var(--tertiary-color);
+  opacity: 0.2;
+  width: 70%;
+  margin-top: -4vh;
+}
+
+#liked {
+  color: lightgreen;
+}
+
+#watched {
+  color: rgb(0, 157, 255);
+}
+
+#wish {
+  color: yellow;
+}
+
+#disliked {
+  color: red;
+}
+
+#checked {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+#checked #liked,
+#checked #watched,
+#checked #wish,
+#checked #disliked {
+  color: var(--secondary-color);
+}

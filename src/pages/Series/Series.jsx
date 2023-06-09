@@ -30,6 +30,7 @@ const Series = () => {
       {/* Side Menu Desktop */}
       <MediaQuery minWidth={screenMobile + 1}>
       <Header/>
+      <SideMenu/>
         {/* <SideMenu /> */}
       </MediaQuery>
       {/* Lista de séries - Content */}
