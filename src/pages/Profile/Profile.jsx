@@ -96,7 +96,7 @@ const Profile = () => {
 
           </div>
 
-          <ButtonNormal bckg={senhaButton == "Mudar senha?" ? "#242629" : "red"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} />
+          <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} />
 
           <button id="change-password">
             <span className="material-icons">
