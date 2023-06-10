@@ -1,0 +1,25 @@
+/* Estilização dos botões gerais */
+
+.button-normal{
+  width: 7.5rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 7.5rem;
+  height: 2.8rem;
+  border: none;
+  border-radius: 1.5rem;
+
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid;
+  margin: 0 auto;
+}
+
+.button-normal:hover {
+  transition: all 0.3s;
+}
+

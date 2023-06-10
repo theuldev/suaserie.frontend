@@ -14,6 +14,7 @@ import { FiSettings } from "react-icons/fi";
 
 // Imagens:
 import images from "../../constants/images";
+import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
 
 const Profile = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -30,9 +31,9 @@ const Profile = () => {
   }
 
 
-// Página Profile incompleta. + Versão Mobile dos componentes ainda não feitos.
+  // Página Profile incompleta. + Versão Mobile dos componentes ainda não feitos.
 
-
+ 
 
   return (
     <div className="body-profile">
@@ -70,13 +71,9 @@ const Profile = () => {
             </div>
 
           </div>
+          <ButtonNormal bckg={"#ffd86d"} color={"green"} text={"Voltar"}  classId={"voltar"}/>
+           
 
-          <button id="btn-back" onclick="goBack()">
-            <span className="material-icons">
-              <IoArrowBackOutline />{" "}
-            </span>
-            Voltar
-          </button>
         </div>
 
         <div className="profile-info">
@@ -98,6 +95,9 @@ const Profile = () => {
             </div>
 
           </div>
+
+          <ButtonNormal bckg={senhaButton == "Mudar senha?" ? "#242629" : "red"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} />
+
           <button id="change-password">
             <span className="material-icons">
               <AiFillLock className="door-icon" />
