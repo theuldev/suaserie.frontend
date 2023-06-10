@@ -1,18 +1,23 @@
 header {
+  background-color: var(--secondary-color);
+  position: fixed;
+  color: var(--primary-color);
+  grid-area: head;
+
   top: 0%;
   width: 700px;
   height: 5vh;
-
+  
   left: 50%;
   /* margin-top: -2.5vh; Negative half of height. */
-  margin-left: -350px; /* Negative half of width. */
+margin-left: -350px; /* Negative half of width. */
   /* left: 16.5vw; */
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   /* border: solid 1px yellow; */
-  border-top: none;
-  border-top-left-radius: none;
-  border-top-right-radius: none;
+border-top: none;
+  border-top-left-radius:none ;
+  border-top-right-radius:none ;
   -webkit-box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);
   -moz-box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);
   box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);

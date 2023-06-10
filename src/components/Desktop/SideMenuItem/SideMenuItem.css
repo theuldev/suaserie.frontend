@@ -1,7 +1,7 @@
  .side-bar-item {
   height: 10vh;
   width: 100%;
-  display: block;
+  display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
@@ -15,7 +15,6 @@
 .side-bar-item:hover {
   transition: all 0.3s;
   background-color: var(--shadow);
-  
 }
 
 
@@ -25,12 +24,7 @@
 }
 
  .side-bar-item .icon{
- padding: 0px 20px 0px 20px;
- position: relative;
- top: 10px;
-font-size: 2.2rem;
-transition:all .3s ease;
-
+  font-size: 2.2rem;
 }
 
 #liked {

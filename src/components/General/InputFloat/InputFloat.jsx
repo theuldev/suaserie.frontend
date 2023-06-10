@@ -25,6 +25,7 @@ const InputFloat = (props) => {
         onChange={(e) => handleTextChange(e.target.value)}
         placeholder={props.placeholder}
         required
+
       />
       <label className={isActive ? "active" : ""} htmlFor="inputFloat">
         {props.inputName}

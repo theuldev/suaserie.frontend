@@ -16,6 +16,7 @@
   background: transparent;
   border-radius: 2rem !important;
   border-color: transparent;
+
   height: 3.5rem;
 
   margin-left: auto;
@@ -31,10 +32,6 @@
 .button-wrapper a {
   text-decoration: none;
   color: var(--tertiary-color);
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-
 }
 
 .button-wrapper:hover a {

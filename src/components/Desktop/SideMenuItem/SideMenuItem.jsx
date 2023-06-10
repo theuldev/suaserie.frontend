@@ -20,7 +20,6 @@ const SideMenuItem = (props) => {
       <span className="icon" id={props.type}>
         {props.children[1]}
       </span>
-         <span className="item-text">{props.children[0]}</span>
     </Link>
   )
 
