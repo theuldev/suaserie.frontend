@@ -7,6 +7,8 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { RiMovieLine } from "react-icons/ri";
 import { FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import UserBar from "../UserBar/UserBar";
+import logos from "../../../constants/logos";
 
 
 
@@ -19,7 +21,9 @@ const Header = () => {
       <div class="navbar">
         <nav>
 
-
+          <div className="logo-wrapper">
+            <img src={logos.logoLight} className="logo" alt="Projeto Só Séries Logomarca" />
+          </div>
 
           <div>
 
@@ -37,7 +41,7 @@ const Header = () => {
           </div>
 
           <div>
-            <Link to={"/"} className="link"> <span class="material-icons"> <FiLogOut /> </span><span className="header-item">Sair</span> </Link>
+            <UserBar apelido={"Iasmim"} />
           </div>
         </nav>
       </div>

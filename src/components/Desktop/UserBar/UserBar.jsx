@@ -1,7 +1,9 @@
 import React from "react";
 import './UserBar.css'
 // ícones:
-import { FiSettings } from "react-icons/fi";
+import { FiLogOut } from "react-icons/fi";
+import { AiOutlineUser } from "react-icons/ai";
+
 // Funções:
 import { useNavigate } from 'react-router-dom';
 
@@ -18,6 +20,10 @@ const UserBar = (props) => {
   const goProfile = () => {
     navigate('/profile');
   }
+  const goLogOut = () => {
+    navigate('/');
+
+  };
   return (
 
 
@@ -26,11 +32,16 @@ const UserBar = (props) => {
         <div className="circle-user">
           <img src={props.image} alt="Perfil do usuário" onClick={goProfile} />
         </div>
-<div className="info-wrapper">
-        <span className="nickname">{props.apelido}</span>
-        <span onClick={goProfile} className={`material-icons settings ${props.isSettingVisible}`}> <FiSettings /> </span>
 
-</div>
+        <span className="nickname">{props.apelido}</span>
+
+
+
+      </div>
+      <div className="dropbox">
+        <li onClick={goProfile} ><AiOutlineUser />Perfil</li>
+        <li onClick={goLogOut}><FiLogOut />Sair </li>
+
       </div>
     </div>
 

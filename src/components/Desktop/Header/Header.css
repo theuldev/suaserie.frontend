@@ -5,27 +5,26 @@ header {
   grid-area: head;
   transition: all ease-in-out 0.3s;
 
-  top: 0%;
-  width: 80%;
-  height: 5vh;
+  top: 1%;
+width: 70%;
+  min-width: 620px;
+  height: 6vh;
 
-  left: -25%;
-  /* margin-top: -2.5vh;  */
-  /*Negative half of height. */
-  /* margin-left: 40%;  */
-  /* Negative half of width. */
-  /* left: 16.5vw; */
+ 
+ 
   left: 50%;
   transform: translateX(-50%);
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
-  border: solid 1px rgb(255, 216, 109, 0.5);
-  border-top: none;
-  border-top-left-radius: none;
-  border-top-right-radius: none;
-  -webkit-box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);
-  box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);
+  border-radius: 15px;
+
+  
+  -webkit-box-shadow: 0px -5px 125px -18px rgba(255,216,109,1);
+  -moz-box-shadow: 0px -5px 125px -18px rgba(255,216,109,1);
+  box-shadow: 0px -5px 125px -18px rgba(255,216,109,1);
+
+
+ 
+
+
 }
 
 .navbar {
@@ -64,11 +63,29 @@ nav div {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 15px;
-  width: 10rem;
+
+  width: 9rem;
   font-weight: 700;
   font-size: 0.75rem;
   height: 100%;
+}
+
+nav .logo-wrapper  {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  height: 100%;
+
+}
+
+nav div .logo {
+  margin: 0 auto;
+  width: 2rem;
+  height: 2rem;
+  /* margin-right: -1rem; */
+  
 }
 
 nav div .link {

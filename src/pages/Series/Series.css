@@ -14,6 +14,9 @@
 .body-series main .visual {
   display: flex;
   justify-content: center;
+  /* background-color: aqua; */
+  margin-top: 5vh;
+
 }
 
 .body-series main .visual img {
@@ -39,6 +42,7 @@
     background-color: rgb(255, 216, 109, 0.2);
     padding: 1rem 0;
     /* opacity: 0.; */
+    margin-top: 0;
   }
   .body-series main .visual img {
     margin-top: 0;

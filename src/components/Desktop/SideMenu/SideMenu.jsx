@@ -29,7 +29,7 @@ const SideMenu = (props) => {
       </div>
 
       <div className="user-wrapper user-hidden">
-        <UserBar apelido={""} image={props.imgUser} isSettingVisible={"invisible"} />
+        <UserBar apelido={""} image={props.imgUser}  />
 
       </div>
 
