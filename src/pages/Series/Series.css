@@ -1,17 +1,15 @@
 .body-series {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  /* grid-template-columns: 7.6rem auto; */
   grid-template-rows: 5vh 95vh;
   grid-template-areas:
-    "side head"
-    "side content";
+    "head"
+    "content";
 }
-
 
 .body-series main {
   grid-area: content;
 }
-
 
 .body-series main .visual {
   display: flex;
@@ -34,7 +32,7 @@
   }
 
   /* ----------- */
- 
+
   /* Estilização da logo */
 
   .body-series main .visual {

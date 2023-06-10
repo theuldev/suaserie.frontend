@@ -14,6 +14,9 @@ const SideMenuItem = (props) => {
 
   return (
     <Link to={props.linkTo} className="side-bar-item" id={props.isChecked == true ? "checkedSide" : " "}>
+    
+      <span className="item-text">{props.children[0]}</span>
+
       <span className="icon" id={props.type}>
         {props.children[1]}
       </span>

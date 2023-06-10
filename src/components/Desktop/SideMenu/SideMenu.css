@@ -44,8 +44,8 @@ img {
   transition: all 2s;
 }
 
-.side-bar-items img {
-  width: 6vw;
+.side-menu .push {
+  color: var(--tertiary-color);
 }
 .side-menu .side-bar-items .side-bar-items-title,
 hr,
@@ -59,8 +59,15 @@ img {
 }
 
 .side-bar-items .side-bar-items-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
   font-weight: 700;
   color: var(--tertiary-color);
+}
+
+hr {
+  border: 1px solid var(--tertiary-color);
+  opacity: 0.2;
+  width: 70%;
+  margin-top: -4vh;
 }

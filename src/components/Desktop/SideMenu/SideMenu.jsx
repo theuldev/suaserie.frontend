@@ -7,7 +7,7 @@ import SideMenuItem from "../SideMenuItem/SideMenuItem";
 
 // ícones:
 import { MdOutlineSentimentVerySatisfied, MdDoneAll, MdOutlineHotelClass, MdOutlineSentimentVeryDissatisfied } from "react-icons/md";
-
+import {GiClick} from "react-icons/gi";
 
 
 const SideMenu = (props) => {
@@ -18,11 +18,14 @@ const SideMenu = (props) => {
 
   return (
     <div className="side-menu">
-
+<div className="user-wrapper"></div>
 
       <UserBar apelido={props.apelido} image={props.imgUser} />
 
 
+<div className="push">
+<GiClick/>
+</div>
 
       <div className="side-bar-items">
 

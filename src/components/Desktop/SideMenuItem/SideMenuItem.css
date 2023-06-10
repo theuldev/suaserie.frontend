@@ -20,6 +20,9 @@
 
 
 
+.side-bar-item .item-text {
+  font-size: .8rem;
+}
 
  .side-bar-item .icon{
  padding: 0px 20px 0px 20px;

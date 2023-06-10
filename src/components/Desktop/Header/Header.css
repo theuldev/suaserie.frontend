@@ -83,11 +83,13 @@ nav div .material-icons {
 }
 
 nav div .link:hover {
-  color: var(--tertiary-color);
-   transition: all ease-in-out .2s;
+  transition: all 0.2s;
+  /* color: var(--secondary-color); */
+
+  background-color: rgb(255, 216, 109, 0.2);
 }
 
 nav div .link:hover span {
   transition: all 0.2s;
-  color: #ffd86d;
+  /* color: var(--secondary-color); */
 }
