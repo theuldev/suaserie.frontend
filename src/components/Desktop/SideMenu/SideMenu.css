@@ -1,15 +1,14 @@
 /* Estilização do side menu */
 .side-menu {
   position: fixed;
-  
-  height: 100%;
-  width: 7.6rem;
 
-  
-  background-color: var(--secondary-color);
-  -webkit-box-shadow: 16px 12px 61px -10px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 16px 12px 61px -10px rgba(0, 0, 0, 1 );
-  box-shadow: 16px 12px 61px -10px rgba(0, 0, 0, 1 );
+  height: 100%;
+  width: 5rem;
+  transition: all ease-in-out 0.3s;
+  /* border-right: solid 1px rgb(255, 216, 109, 0.5); */
+  -webkit-box-shadow: 9px 2px 49px -20px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 9px 2px 49px -20px rgba(0, 0, 0, 1);
+  box-shadow: 9px 2px 49px -20px rgba(0, 0, 0, 1);
 }
 
 /* Estilização - MenuLIstas */
@@ -18,13 +17,78 @@
   height: 95%;
   display: flex;
   flex-direction: column;
+  transition: all ease-in-out 0.3s;
 
   justify-content: space-evenly;
   align-items: center;
 }
 
-.side-menu .push {
-  color: var(--tertiary-color);
+/* Estilização do hover dos componentes: */
+
+.side-menu:hover {
+  width: 12rem;
+  background-color: var(--secondary-color);
+  border-right: solid 1px rgb(255, 216, 109,.5);
+}
+.side-menu .user-wrapper {
+  display: none;
+  transition: all ease-in-out 0.3s;
+}
+
+.side-menu .user-wrapper.user-hidden {
+  display: flex;
+
+  justify-content: center;
+}
+
+.side-menu:hover .user-wrapper.user-hidden {
+  display: none;
+}
+
+.side-menu:hover .user-wrapper {
+  transition: all ease-in-out 0.3s;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-bar-items .side-item-wrapper {
+  /* background-color: aqua; */
+  transition: all ease-in-out 0.3s;
+
+  width: 100%;
+}
+
+.side-menu:hover .side-bar-items-title {
+  transition: all ease-in-out 0.3s;
+
+  display: block;
+}
+.side-menu:hover hr {
+  transition: all ease-in-out 0.3s;
+
+  display: block;
+}
+
+.side-menu:hover .side-bar-items .side-item-wrapper.wrapper-not-hidden {
+  display: block;
+}
+
+.side-menu .side-bar-items .side-item-wrapper.wrapper-not-hidden {
+  transition: all ease-in-out 0.3s;
+
+  display: none;
+}
+
+.side-menu:hover .side-bar-items .side-item-wrapper.wrapper-hidden {
+  transition: all ease-in-out 0.3s;
+
+  display: none;
+}
+
+.side-menu .side-bar-items .side-item-wrapper.wrapper-hidden {
+  display: block;
 }
 
 .side-bar-items img {
@@ -32,10 +96,13 @@
 }
 
 .side-bar-items .side-bar-items-title {
-  font-size: 1.25rem;
+  font-size: 100%;
+  transition: all ease-in-out 0.3s;
+
   text-align: center;
   font-weight: 700;
   color: var(--tertiary-color);
+  display: none;
 }
 
 hr {
@@ -43,4 +110,7 @@ hr {
   opacity: 0.2;
   width: 70%;
   margin-top: -4vh;
+  display: none;
 }
+
+

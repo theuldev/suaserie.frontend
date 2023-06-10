@@ -26,9 +26,11 @@ const UserBar = (props) => {
         <div className="circle-user">
           <img src={props.image} alt="Perfil do usuário" onClick={goProfile} />
         </div>
-
+<div className="info-wrapper">
         <span className="nickname">{props.apelido}</span>
-        <span onClick={goProfile} className="material-icons settings"> <FiSettings /> </span>
+        <span onClick={goProfile} className={`material-icons settings ${props.isSettingVisible}`}> <FiSettings /> </span>
+
+</div>
       </div>
     </div>
 
