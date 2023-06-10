@@ -1,25 +1,21 @@
 header {
-  background-color: var(--secondary-color);
-  position: fixed;
-  color: var(--primary-color);
-  grid-area: head;
-
-  top: 0;
-  width: 83.5%;
-  height: 6vh;
-  left: 16.5vw;
-  border-radius: 10px;
-  margin: 10px;
-   -webkit-box-shadow: 3px -10px 56px -6px  #0f1011;
-  -moz-box-shadow: 3px -10px 56px -6px  #0f1011;
-  box-shadow: 3px -10px 56px -6px  #0f1011;
-
-  /* position: fixed;
-
-  top: 0;
-  width: 83.5%;
+  top: 0%;
+  width: 700px;
   height: 5vh;
-  left: 16.5vw; */
+
+  left: 50%;
+  /* margin-top: -2.5vh; Negative half of height. */
+  margin-left: -350px; /* Negative half of width. */
+  /* left: 16.5vw; */
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  /* border: solid 1px yellow; */
+  border-top: none;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
+  -webkit-box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);
+  box-shadow: 1px 12px 61px -10px rgba(0, 0, 0, 1);
 }
 
 .navbar {
@@ -73,7 +69,6 @@ nav div .link {
   display: flex;
   align-items: center;
   justify-content: center;
-
 
   gap: 1.5rem;
   color: var(--tertiary-color);

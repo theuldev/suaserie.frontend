@@ -1,19 +1,17 @@
 /* Estilização do side menu */
 .side-menu {
-     -webkit-box-shadow: 3px -10px 20px -6px  #0f1011;
-  -moz-box-shadow: 3px -10px 20px -6px  #0f1011;
-  box-shadow: 3px -10px 56px -6px  #0f1011;
-  grid-area: side;
   position: fixed;
-  width: 4%;
-  height: 99%;
-  background-color: var(--secondary-color); 
-  border-bottom-right-radius: 10px;
+  
+  height: 100%;
+  width: 7.6rem;
+
+  
+  background-color: var(--secondary-color);
+  -webkit-box-shadow: 16px 12px 61px -10px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 16px 12px 61px -10px rgba(0, 0, 0, 1 );
+  box-shadow: 16px 12px 61px -10px rgba(0, 0, 0, 1 );
 }
-.side-menu:hover {
-  width: 16.66%;
-  transition: 0.4s;
-}
+
 
 /* Estilização - MenuLIstas */
 
@@ -25,38 +23,15 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.side-menu:hover .side-bar-items .side-bar-items-title,
-img {
-  visibility: visible;
-  opacity: 1;
-  transition: all 2s;
-}
-.side-menu:hover .side-bar-items hr {
-  border: 1px solid var(--tertiary-color);
-  opacity: 0.2;
-  visibility: visible;
-  width: 70%;
-  margin-top: -4vh;
-}
-.side-menu:hover .side-bar-items:hover .side-bar-item .item-text {
-  visibility: visible;
-  opacity: 1;
-  transition: all 2s;
-}
 
+.side-bar-items img {
+  width: 6vh;
+
+}
 .side-menu .push {
   color: var(--tertiary-color);
 }
-.side-menu .side-bar-items .side-bar-items-title,
-hr,
-img {
-  opacity: 0;
-  visibility: hidden;
-}
-.side-menu .side-bar-items .side-bar-item .item-text {
-  opacity: 0;
-  visibility: hidden;
-}
+
 
 .side-bar-items .side-bar-items-title {
   font-size: 1.25rem;
