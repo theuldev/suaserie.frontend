@@ -33,7 +33,7 @@ const Profile = () => {
 
   // Página Profile incompleta. + Versão Mobile dos componentes ainda não feitos.
 
- 
+
 
   return (
     <div className="body-profile">
@@ -71,8 +71,8 @@ const Profile = () => {
             </div>
 
           </div>
-          <ButtonNormal bckg={"#ffd86d"} color={"green"} text={"Voltar"}  classId={"voltar"}/>
-           
+          <ButtonNormal bckg={"#ffd86d"} color={"#242629"} text={"Voltar"} classId={"voltar"} icon={<IoArrowBackOutline />} />
+
 
         </div>
 
@@ -98,20 +98,10 @@ const Profile = () => {
 
           <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} />
 
-          <button id="change-password">
-            <span className="material-icons">
-              <AiFillLock className="door-icon" />
-            </span>
-            Mudar senha?
-          </button>
+
         </div>
         <div className="profile-series">
-          <button className="logout-button" id="logout">
-            <span className="material-icons">
-              <BsFillDoorOpenFill />
-            </span>
-            Sair
-          </button>
+          <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} />
 
           <div className="series">
             <span className="material-symbols-outlined" id="liked">
@@ -138,13 +128,8 @@ const Profile = () => {
             <p>Desejo Ver → 09 series</p>
           </div>
 
-          <button className="delete-button">
-            <span className="material-symbols-outlined">
-              {" "}
-              <BsTrash />{" "}
-            </span>
-            Deletar conta?
-          </button>
+          <ButtonNormal bckg={"red"} color={"#242629"} classId={"deletar"} icon={<BsTrash />} text={"Deletar conta?"} />
+
         </div>
       </div>
     </div>

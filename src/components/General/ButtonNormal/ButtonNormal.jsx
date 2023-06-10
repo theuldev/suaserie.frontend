@@ -18,7 +18,7 @@ const ButtonNormal = (props) => {
 
 
   return (
-    <button className= {`button-normal ${props.classId}`}  >
+    <button className={`button-normal ${props.classId}`} onClick={props.function} >
       <style>
         {css}
 
@@ -27,7 +27,10 @@ const ButtonNormal = (props) => {
       <span className="icon-button">
         {props.icon}
       </span>
+      <span className='text'>
       {props.text}
+
+      </span>
     </button>
   )
 }

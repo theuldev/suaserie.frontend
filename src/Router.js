@@ -9,6 +9,7 @@ import Register from './pages/Register/Register.jsx';
 import Profile from "./pages/Profile/Profile";
 import Series from "./pages/Series/Series";
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
+import SerieView from './pages/SerieView/SerieView.jsx';
 
 // Rotas:
 export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
   {
     path: '/profile',
     element: <Profile/>
+  },
+  {
+    path: '/serie',
+    element: <SerieView/>
   },
   {
     path: '/series',
