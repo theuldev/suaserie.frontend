@@ -21,9 +21,7 @@ const Header = () => {
       <div class="navbar">
         <nav>
 
-          <div className="logo-wrapper">
-            <img src={logos.logoLight} className="logo" alt="Projeto Só Séries Logomarca" />
-          </div>
+    
 
           <div>
 
@@ -40,7 +38,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div>
+          <div >
             <UserBar apelido={"Iasmim"} />
           </div>
         </nav>

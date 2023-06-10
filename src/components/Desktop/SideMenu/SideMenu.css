@@ -21,14 +21,14 @@
 
   justify-content: space-evenly;
   align-items: center;
+  background-color: var(--secondary-color);
 }
 
 /* Estilização do hover dos componentes: */
 
 .side-menu:hover {
-  width: 12rem;
+  width: 17rem;
   background-color: var(--secondary-color);
-  border-right: solid 1px rgb(255, 216, 109,.5);
 }
 .side-menu .user-wrapper {
   display: none;

@@ -17,9 +17,10 @@ width: 70%;
   border-radius: 15px;
 
   
-  -webkit-box-shadow: 0px -5px 125px -18px rgba(255,216,109,1);
-  -moz-box-shadow: 0px -5px 125px -18px rgba(255,216,109,1);
-  box-shadow: 0px -5px 125px -18px rgba(255,216,109,1);
+ 
+  -webkit-box-shadow: 0px -10px 56px -6px  #0f1011;
+  -moz-box-shadow: 0px -10px 56px -6px  #0f1011;
+  box-shadow: 0px -10px 56px -6px  #0f1011;
 
 
  
@@ -43,6 +44,7 @@ width: 70%;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-radius: 5px;
 }
 
 .link .header-item {
@@ -57,6 +59,7 @@ nav {
   margin: 0;
   align-items: end;
   height: 100%;
+  gap: 25px;
 }
 
 nav div {
@@ -108,7 +111,8 @@ nav div .link:hover {
   transition: all 0.2s;
   /* color: var(--secondary-color); */
 
-  background-color: rgb(255, 216, 109, 0.2);
+   background-color: #1c1e20;
+   color: #ffd86d;
 }
 
 nav div .link:hover span {
