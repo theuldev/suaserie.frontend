@@ -47,7 +47,7 @@
   font-size: 10rem;
   font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 200, "opsz" 48;
 }
-.mensagem {
+#mensagem {
   margin-top: 25%;
   margin-bottom: 10%;
   display: grid;
@@ -59,7 +59,7 @@
   padding: 0 1rem;
 }
 
-.mensagem h2 {
+#mensagem span {
   font-weight: 700;
 }
 .divisao {
@@ -144,13 +144,14 @@
     margin-bottom: 0%;
   }
 
-  .mensagem {
+  #mensagem {
     display: grid;
     margin-top: 0vh;
     font-size: clamp(0.5em, 1.7vw + 1vh, 1.1em);
     margin-bottom: 2vh;
     width: 100%;
     height: auto;
+   
   }
   .ilustracao {
     width: 30%;
