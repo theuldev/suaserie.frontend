@@ -150,7 +150,7 @@
   text-align: center;
 
   padding: 2.5rem;
-  background-color: var(--shadow);
+ 
   text-decoration: none !important;
   
   width: 100%;
@@ -166,9 +166,9 @@
 
 .mobile-side nav .link:hover {
   transition: all 0.2s;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 border-radius: none;
-  background-color: rgb(255, 216, 109);
+background-color: var(--shadow);
 }
 
 
