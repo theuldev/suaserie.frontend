@@ -29,7 +29,7 @@
   cursor: pointer;
   position: relative;
   display: block;
-  width: 50px;
+  width: 35px;
 
   appearance: none;
   background: none;
@@ -141,18 +141,18 @@
   margin-top: 7vh;
   display: flex;
   flex-direction: column;
-  
+
   height: 70vh;
-  
+
   justify-content: center;
 }
 .mobile-side nav .link {
   text-align: center;
 
   padding: 2.5rem;
-  background-color: var(--shadow);
+
   text-decoration: none !important;
-  
+
   width: 100%;
   cursor: pointer;
   display: flex;
@@ -160,35 +160,30 @@
   justify-content: center;
   gap: 1rem;
   color: var(--tertiary-color);
-  
+
   font-size: 1.2rem;
 }
 
 .mobile-side nav .link:hover {
   transition: all 0.2s;
-  color: var(--secondary-color);
-border-radius: none;
-  background-color: rgb(255, 216, 109);
+  color: var(--primary-color);
+  border-radius: none;
+  background-color: var(--shadow);
 }
-
-
 
 .mobile-side nav .link span {
   font-size: 2rem;
   display: flex;
 }
 
-
 .mobile-side .image-wrapper {
-  background-color: rgb(255, 216, 109, .5);
+  background-color: rgb(255, 216, 109, 0.5);
   height: 23vh;
   display: flex;
-  
-  align-items: center;
 
+  align-items: center;
 }
 .mobile-side img {
-  
   height: 15vh;
   margin: 0 auto;
 }

@@ -27,7 +27,7 @@ const SerieSelected = () => (
       <SideMenu />
     </MediaQuery>
     <main>
-      <section className="main-content">
+      <section className="main-content-selected">
         <div className="title-wrapper"> 
           <span className="material-symbols-outlined">
             {" "}

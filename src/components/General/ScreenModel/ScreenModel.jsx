@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import "./Series.css";
+import "./ScreenModel.css";
 import MediaQuery from 'react-responsive'
 
-import logos from "../../constants/logos";
+import logos from "../../../constants/logos";
 
-import Burger from "../../components/Mobile/Burger/Burger";
-import SideMenu from "../../components/Desktop/SideMenu/SideMenu";
+import Burger from "../../Mobile/Burger/Burger";
+import SideMenu from "../../Desktop/SideMenu/SideMenu";
 import { Outlet } from "react-router-dom";
-import Header from "../../components/Desktop/Header/Header";
-import Navigation from "../../components/Mobile/Navigation/Navigation";
+import Header from "../../Desktop/Header/Header";
+import Navigation from "../../Mobile/Navigation/Navigation";
 
 // ícones:
 
 // Componentes:
 
-
-const Series = () => {
+// Esssa "página" será movida par aum componente pois só é a base!
+const ScreenModel = () => {
 
   let screenMobile = 650;
 
 
   return (
-    <div className="body-series">
+    <div className="body-screenModel">
 
 
 
@@ -59,4 +59,4 @@ const Series = () => {
   );
 };
 
-export default Series;
+export default ScreenModel;

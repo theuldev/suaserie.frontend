@@ -22,10 +22,10 @@ const InitialPage = () => (
         </div>
 
 
-        <div className="mensagem">
-          <h2>Crie e gerencie</h2>
-          <h2>as listas das suas séries favoritas</h2>
-          <h2>em um só lugar!</h2>
+        <div id="mensagem">
+          <span>Crie e gerencie</span>
+          <span>as listas das suas séries favoritas</span>
+          <span>em um só lugar!</span>
         </div>
 
         <div className="ilustracao">
