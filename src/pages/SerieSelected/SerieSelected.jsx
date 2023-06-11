@@ -13,6 +13,11 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoArrowBackOutline } from "react-icons/io5";
 import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
 import { SlArrowRight } from "react-icons/sl";
+import { Outlet } from "react-router-dom";
+import Burger from "../../components/Mobile/Burger/Burger";
+import { Helmet } from "react-helmet";
+import Navigation from "../../components/Mobile/Navigation/Navigation";
+
 
 let screenMobile = 650;
 const SerieSelected = () => (
@@ -173,6 +178,21 @@ const SerieSelected = () => (
         </div>
       </section>
     </main>
+
+
+    
+      {/* MOBILE */}
+      <Helmet>
+        <title>Só Séries - Séries</title>
+      </Helmet>
+      <Outlet />
+      {/*  Fim do content ---------------- */}
+      <MediaQuery maxWidth={screenMobile} >
+        <Burger />
+        <Navigation />
+
+      </MediaQuery>
+      {/* Navigation Mobile */}
   </div>
 );
 export default SerieSelected;

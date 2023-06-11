@@ -47,7 +47,7 @@ main .main-content .title-wrapper h1 {
   align-items: center;
   justify-content: center;
   border-top: none;
-  margin-top: 10rem;
+  margin-top: 1rem;
 }
 
 .serie-selected hr {
@@ -271,4 +271,30 @@ li:hover #add-serie,
 
 .icons #eps-temps {
   color: #f1f1f1;
+}
+
+@media (max-width: 650px) {
+  main .main-content .title-wrapper {
+    height: 5vh;
+    width: 75%;
+
+  }
+  .serie-selected {
+    width: 90%;
+    padding-top: 15vh;
+    margin-top: 45%;
+  }
+  .serie-selected .img-streaming {
+    position: relative;
+    bottom: 90px;
+  }
+  .info h1 {
+    width: 40%;
+  }
+
+  .text .date {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
 }
