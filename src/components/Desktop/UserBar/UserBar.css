@@ -11,12 +11,12 @@
   cursor: pointer;
   position: relative;
   margin: 0 auto;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 .user-bar:hover {
   transition: all 0.3s;
-  background-color: rgba(255, 216, 109, 0.2);
+    background-color: #1c1e20;
 }
 
 .user-bar:hover .dropbox {
@@ -28,9 +28,9 @@
   top: 100%;
   left: 0%;
 
-  -webkit-box-shadow: 0px -10px 56px -6px  #0f1011;
-  -moz-box-shadow: 0px -10px 56px -6px  #0f1011;
-  box-shadow: 0px -10px 56px -6px  #0f1011;
+  -webkit-box-shadow: 0px -10px 56px -6px #0f1011;
+  -moz-box-shadow: 0px -10px 56px -6px #0f1011;
+  box-shadow: 0px -10px 56px -6px #0f1011;
   background-color: var(--secondary-color);
   list-style: none;
   display: none;
@@ -52,7 +52,7 @@
 
 .user-bar .dropbox li:hover {
   transition: all 0.3s;
-  background-color: #1c1e20;
+   background-color: #1c1e20;
   color: #ffd86d;
 }
 
@@ -93,7 +93,6 @@
   font-size: 0.8rem;
 }
 
-
 .user-bar .circle-user img {
   cursor: pointer;
   height: 100%;
@@ -103,3 +102,19 @@
   border-radius: 50%;
 }
 
+@media screen and (max-width: 500px) {
+  .user-bar {
+    width:10%;
+    height: 100%;
+  margin: 0;
+  }
+
+  .user-bar .user-wrapper {
+    width: 80px;
+    height: 100%;
+    align-items: center;
+  }
+  .user-bar .user-wrapper .nickname {
+    display: none;
+  }
+}

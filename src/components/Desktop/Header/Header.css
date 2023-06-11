@@ -6,26 +6,17 @@ header {
   transition: all ease-in-out 0.3s;
 
   top: 1%;
-width: 70%;
+  width: 70%;
   min-width: 620px;
   height: 6vh;
 
- 
- 
   left: 50%;
   transform: translateX(-50%);
   border-radius: 15px;
 
-  
- 
-  -webkit-box-shadow: 0px -10px 56px -6px  #0f1011;
-  -moz-box-shadow: 0px -10px 56px -6px  #0f1011;
-  box-shadow: 0px -10px 56px -6px  #0f1011;
-
-
- 
-
-
+  -webkit-box-shadow: 0px -10px 56px -6px #0f1011;
+  -moz-box-shadow: 0px -10px 56px -6px #0f1011;
+  box-shadow: 0px -10px 56px -6px #0f1011;
 }
 
 .navbar {
@@ -73,14 +64,8 @@ nav div {
   height: 100%;
 }
 
-nav .logo-wrapper  {
- display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  text-align: center;
-  height: 100%;
-
+nav .logo-wrapper {
+  display: none;
 }
 
 nav div .logo {
@@ -88,7 +73,6 @@ nav div .logo {
   width: 2rem;
   height: 2rem;
   /* margin-right: -1rem; */
-  
 }
 
 nav div .link {
@@ -111,11 +95,12 @@ nav div .link:hover {
   transition: all 0.2s;
   /* color: var(--secondary-color); */
 
-   background-color: #1c1e20;
-   color: #ffd86d;
+  background-color: #1c1e20;
+  color: #ffd86d;
 }
 
 nav div .link:hover span {
   transition: all 0.2s;
   /* color: var(--secondary-color); */
 }
+

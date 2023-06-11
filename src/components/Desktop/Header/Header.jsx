@@ -21,8 +21,6 @@ const Header = () => {
       <div class="navbar">
         <nav>
 
-    
-
           <div>
 
             <Link className="link">
@@ -38,7 +36,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div >
+          <div>
             <UserBar apelido={"Iasmim"} />
           </div>
         </nav>
