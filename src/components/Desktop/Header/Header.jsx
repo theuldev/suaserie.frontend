@@ -7,6 +7,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { RiMovieLine } from "react-icons/ri";
 import { FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
+// Componentes:
 import UserBar from "../UserBar/UserBar";
 import logos from "../../../constants/logos";
 
