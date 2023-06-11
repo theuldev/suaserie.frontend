@@ -15,7 +15,7 @@ import Navigation from "../../components/Mobile/Navigation/Navigation";
 
 // Componentes:
 
-
+// Esssa "página" será movida par aum componente pois só é a base!
 const Series = () => {
 
   let screenMobile = 650;
