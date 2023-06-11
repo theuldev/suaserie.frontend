@@ -10,6 +10,7 @@ import Profile from "./pages/Profile/Profile";
 import Series from "./pages/Series/Series";
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
 import SerieView from './pages/SerieView/SerieView.jsx';
+import SerieSelected from './pages/SerieSelected/SerieSelected.jsx';
 
 // Rotas:
 export const router = createBrowserRouter([
@@ -39,7 +40,11 @@ export const router = createBrowserRouter([
     element: <Series/>,
     // children: [
 
-    // ]
+    // ]   
+  },
+  {
+    path: '/serieSelected',
+    element:<SerieSelected/>
   }
 
 
