@@ -168,6 +168,7 @@ const SerieSelected = () => (
             text={"Voltar"}
             classId={"voltar"}
             icon={<IoArrowBackOutline />}
+            link ={"series"}
           />
         </div>
       </section>

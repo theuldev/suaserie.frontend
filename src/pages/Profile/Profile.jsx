@@ -71,7 +71,7 @@ const Profile = () => {
             </div>
 
           </div>
-          <ButtonNormal bckg={"#ffd86d"} color={"#242629"} text={"Voltar"} classId={"voltar"} icon={<IoArrowBackOutline />} />
+          <ButtonNormal bckg={"#ffd86d"} color={"#242629"} text={"Voltar"} classId={"voltar"} icon={<IoArrowBackOutline />} link="series"  />
 
 
         </div>
@@ -96,12 +96,12 @@ const Profile = () => {
 
           </div>
 
-          <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} />
+          <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} link=""  />
 
 
         </div>
         <div className="profile-series">
-          <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} />
+          <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} link=""  />
 
           <div className="series">
             <span className="material-symbols-outlined" id="liked">
@@ -128,7 +128,7 @@ const Profile = () => {
             <p>Desejo Ver → 09 series</p>
           </div>
 
-          <ButtonNormal bckg={"red"} color={"#242629"} classId={"deletar"} icon={<BsTrash />} text={"Deletar conta?"} />
+          <ButtonNormal bckg={"red"} color={"#242629"} classId={"deletar"} icon={<BsTrash />} text={"Deletar conta?"} link="" />
 
         </div>
       </div>

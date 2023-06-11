@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./ButtonNormal.css";
 
-import "./ButtonNormal.css"
 const ButtonNormal = (props) => {
+  const navigate = useNavigate();
+  const goTo = () => {
+    navigate(`/${props.link}`);
+  };
 
   let css = `
   .${props.classId} {
@@ -13,26 +18,19 @@ const ButtonNormal = (props) => {
     background-color: ${props.color};
     color: ${props.bckg};
   }
-`
-
-
+`;
 
   return (
-    <button className={`button-normal ${props.classId}`} onClick={props.function} >
-      <style>
-        {css}
+    <button
+      className={`button-normal ${props.classId}`}
+      onClick={goTo}
+    >
+      <style>{css}</style>
 
-      </style>
-
-      <span className="icon-button">
-        {props.icon}
-      </span>
-      <span className='text'>
-      {props.text}
-
-      </span>
+      <span className="icon-button">{props.icon}</span>
+      <span className="text">{props.text}</span>
     </button>
-  )
-}
+  );
+};
 
 export default ButtonNormal;
