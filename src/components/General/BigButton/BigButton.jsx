@@ -8,13 +8,16 @@ const BigButton = (props) => {
 
   return (
     
-    <button className="button-wrapper"   >
+    
+    <Link className="button-wrapper"  to={props.linkTo}>
+    <button   >
 
-    <Link to={props.linkTo}>
         {props.children}
-    </Link>
 
       </button>
+
+    </Link>
+
   );
 };
 

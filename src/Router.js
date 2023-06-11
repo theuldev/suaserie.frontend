@@ -36,6 +36,10 @@ export const router = createBrowserRouter([
     element: <SerieView/>
   },
   {
+    path: '/serieSelected',
+    element: <SerieSelected/>
+  },
+  {
     path: '/series',
     element: <Series/>,
     // children: [

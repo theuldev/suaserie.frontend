@@ -1,4 +1,4 @@
-header {
+.hdr-desktop {
   background-color: var(--secondary-color);
   position: fixed;
   color: var(--primary-color);
@@ -99,6 +99,4 @@ nav div .link:hover {
 
 nav div .link:hover span {
   transition: all 0.2s;
-  /* color: var(--secondary-color); */
 }
-

@@ -9,6 +9,7 @@ import Burger from "../../components/Mobile/Burger/Burger";
 import SideMenu from "../../components/Desktop/SideMenu/SideMenu";
 import { Outlet } from "react-router-dom";
 import Header from "../../components/Desktop/Header/Header";
+import Navigation from "../../components/Mobile/Navigation/Navigation";
 
 // ícones:
 
@@ -50,7 +51,7 @@ const Series = () => {
       {/*  Fim do content ---------------- */}
       <MediaQuery maxWidth={screenMobile} >
         <Burger />
-
+        <Navigation />
 
       </MediaQuery>
       {/* Navigation Mobile */}

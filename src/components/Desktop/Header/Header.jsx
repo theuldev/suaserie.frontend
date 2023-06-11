@@ -16,7 +16,7 @@ const Header = () => {
 
 
   return (
-    <header>
+    <header className="hdr-desktop">
 
       <div class="navbar">
         <nav>

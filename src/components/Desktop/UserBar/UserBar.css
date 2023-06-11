@@ -102,19 +102,4 @@
   border-radius: 50%;
 }
 
-@media screen and (max-width: 500px) {
-  .user-bar {
-    width:10%;
-    height: 100%;
-  margin: 0;
-  }
 
-  .user-bar .user-wrapper {
-    width: 80px;
-    height: 100%;
-    align-items: center;
-  }
-  .user-bar .user-wrapper .nickname {
-    display: none;
-  }
-}

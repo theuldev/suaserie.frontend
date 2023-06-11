@@ -1,0 +1,116 @@
+/* Configuração do header mobile */
+.hdr-mobile-wrapper {
+  grid-area: head;
+
+  position: fixed;
+  /* overflow: hidden; */
+  top: 0;
+  width: 100%;
+  height: 7vh;
+  left: 0vw;
+  z-index: 100;
+}
+
+.hdr-mobile-wrapper .header-mobile {
+  display: flex;
+ 
+  background-color: var(--secondary-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  border-bottom: 2px solid var(--tertiary-color);
+}
+
+/* Estilização e animação do menu hambúrguer */
+
+.hdr-mobile-wrapper .header-mobile .hamburger {
+  z-index: 9999;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 50px;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hdr-mobile-wrapper .header-mobile .hamburger .bar,
+.hdr-mobile-wrapper .header-mobile .hamburger::before,
+.hdr-mobile-wrapper .header-mobile .hamburger::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 5px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+/* Animação do menu  */
+.hdr-mobile-wrapper .header-mobile .hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-3px, 6px);
+}
+
+.hdr-mobile-wrapper .header-mobile .hamburger.is-active:after {
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+.hdr-mobile-wrapper .header-mobile .hamburger.is-active .bar {
+  opacity: 0;
+}
+/* -------- */
+
+
+.hdr-mobile-wrapper .header-mobile #user-bar-mobile {
+  color: var(--secondary-color);
+  /* height: 5vh; */
+  display: flex;
+
+  color: var(--tertiary-color);
+  justify-content: center;
+}
+
+.hdr-mobile-wrapper .header-mobile #user-bar-mobile .user-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.hdr-mobile-wrapper .header-mobile #user-bar-mobile .user-wrapper .circle-user {
+  background-color: var(--tertiary-color);
+  color: var(--tertiary-color);
+  
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  
+}
+
+.hdr-mobile-wrapper .header-mobile #user-bar-mobile .user-wrapper .circle-user:hover {
+  transition: all 0.3s;
+  background-color: var(--primary-color);
+}
+
+.hdr-mobile-wrapper .header-mobile #user-bar-mobile .user-wrapper .nickname {
+  height: 3vh;
+  font-weight: 700;
+  display: flex;
+  align-items: end;
+}
+
+.hdr-mobile-wrapper .header-mobile #user-bar-mobile .user-wrapper .circle-user img {
+  cursor: pointer;
+ 
+  margin: 0 auto;
+
+}
+
+.hdr-mobile-wrapper .header-mobile .circle-user img:hover {
+  transition: all 0.3s;
+  opacity: 0.8;
+}

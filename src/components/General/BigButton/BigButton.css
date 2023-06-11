@@ -10,7 +10,7 @@
   cursor: pointer;
   text-align: center;
   color: #f1f1f1;
-  font-weight: 700;
+
   align-items: center;
   justify-content: center;
   background: transparent;
@@ -26,7 +26,16 @@
   border: 2px solid #f1f1f1;
   width: 45%;
   max-width: 35rem;
+  text-decoration: none;
+}
+
+.button-wrapper button {
+  font-weight: 700;
   font-size: 2rem;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: #f1f1f1;
 }
 
 .button-wrapper a {
@@ -37,17 +46,20 @@
   padding-top: 10px;
 }
 
-.button-wrapper:hover a {
-  
+.button-wrapper:hover button {
   transition: all 0.3s;
   color: var(--secondary-color);
 }
 
 @media (max-width: 950px) {
   .button-wrapper {
-    font-size: 1.2rem;
+   width: 37%;
     padding-top: 5px;
     padding-bottom: 5px;
     height: 2.5rem;
+  }
+
+  .button-wrapper button{
+    font-size: 1rem;
   }
 }
