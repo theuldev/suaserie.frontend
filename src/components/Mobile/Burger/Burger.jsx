@@ -7,19 +7,26 @@ const Burger = (props) => {
   //  Criando componetes mobile.
 
   return (
-    <header className="">
-      <div class="header-mobile">
-        <div className="logo-wrapper">
-          <img
-            src={logos.logoLight}
-            className="logo"
-            alt="Projeto Só Séries Logomarca"
-          />
+    <header className="hdr-mobile-wrapper">
+     
+     <div class="header-mobile">
+      <div class="user-bar">
+        <div class="user-wrapper">
+
+          <div class="circle-user">
+
+            <img src="../../public/images/user.png" alt="Foto do usuário"/>
+
+          </div>
+
+          <span class="nickname">Apelido</span>
+
         </div>
         <UserBar></UserBar>
         <button class="hamburger ">
           <div class="bar"></div>
         </button>
+        </div>
       </div>
     </header>
   );

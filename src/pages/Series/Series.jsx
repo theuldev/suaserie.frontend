@@ -30,7 +30,7 @@ const Series = () => {
 
       <MediaQuery minWidth={screenMobile + 1}>
         <Header />
-        <SideMenu apelido={"Iasmim"}  />
+        <SideMenu apelido={"Iasmim"} />
 
       </MediaQuery>
 
