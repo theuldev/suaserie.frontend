@@ -14,21 +14,21 @@ const Disliked = () => {
   return (
     <ScreenModel>
       <Carousel>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
-        <SerieCard/>
+        <SerieCard  isFirst={true} />
+        <SerieCard isFirst={false}/>
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
+        <SerieCard isFirst={false} />
 
       </Carousel>
     </ScreenModel>

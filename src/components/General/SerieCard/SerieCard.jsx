@@ -15,7 +15,7 @@ const SerieCard = (props) => {
 
   // Possuirá uma propriedade que leva à páginade visualização de série com seu id especifico
   return (
-    <div class="card-slide va-card">
+    <div className={`card-slide va-card `}  ref={props.IsFirst? vaCardFirst : vaCardAll} >
       <div class="img-title">
         <img
           src={images.anne}
