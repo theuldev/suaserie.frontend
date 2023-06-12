@@ -38,7 +38,7 @@ const Burger = (props) => {
                 <img src={props.userPic} alt="Foto de perfil do usuário"  />
               </div>
 
-              <span class="nickname">Apelido</span>
+              <span className="nickname">{props.apelido}</span>
             </div>
           </div>
           <button ref={btn} onClick={dynamicBurger} class="hamburger">
@@ -46,7 +46,7 @@ const Burger = (props) => {
           </button>
         </div>
       </header>
-      <div ref={menu} class="mobile-side">
+      <div ref={menu} className="mobile-side">
         <nav>
           <Link to={"/series"} className="link">
             <span class="material-icons"> <AiOutlineUser/> </span> Minhas listas

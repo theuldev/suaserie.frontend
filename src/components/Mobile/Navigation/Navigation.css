@@ -52,19 +52,14 @@
   display: block;
 }
 
-#nav-list  .side-bar-item li{
-width: 100%;
-height: 100%;
+#nav-list .side-bar-item li {
+  width: 100%;
+  height: 100%;
 }
 
 #checkedNav .item-text {
   display: block;
 }
-
-/* #checkedNav {
-  width: 100%;
-  height: 100%;
-} */
 
 #checkedNav:hover {
   background-color: var(--primary-color);

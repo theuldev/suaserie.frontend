@@ -1,6 +1,5 @@
 .body-screenModel {
   display: grid;
-  /* grid-template-columns: 7.6rem auto; */
   grid-template-rows: 5vh 95vh;
   grid-template-areas:
     "head"
@@ -14,14 +13,42 @@
 .body-screenModel main .visual {
   display: flex;
   justify-content: center;
-  /* background-color: aqua; */
-  margin-top: 5vh;
 
+  margin-top: 5vh;
 }
 
 .body-screenModel main .visual img {
-  /* margin-top: 0vh; */
   height: 16vh;
+}
+
+.body-screenModel main .main-content {
+  color: var(--tertiary-color);
+}
+
+.body-screenModel main .main-content .title-wrapper {
+  color: var(--primary-color);
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  width: 50%;
+
+  margin-left: 15vw;
+}
+
+.body-screenModel main .main-content .title-wrapper :first-child {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 8vh;
+
+  text-decoration: none;
+}
+
+.body-screenModel main .main-content .title-wrapper :last-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-top: 1rem;
 }
 
 @media (max-width: 650px) {
@@ -41,11 +68,33 @@
   .body-screenModel main .visual {
     background-color: rgb(255, 216, 109, 0.2);
     padding: 1rem 0;
-   
+
     margin-top: 0;
   }
   .body-screenModel main .visual img {
     margin-top: 0;
     height: 15vh;
   }
+
+  /* Estilizaçãp do título */
+
+  main .main-content .title-wrapper {
+    height: 5vh;
+    width: 75%;
+
+    margin-bottom: 8vh;
+    margin-top: 2vh;
+  }
+  main .main-content .title-wrapper :first-child {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  main .main-content .title-wrapper :last-child {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 1rem;
+  }
+
+  /* ----- */
 }

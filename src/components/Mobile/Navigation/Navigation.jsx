@@ -13,16 +13,13 @@ import { Link, useNavigate } from 'react-router-dom';
 // O navigation é colocado abaixo do main!
 const Navigation = (props) => {
 
-  const navigate = useNavigate();
-  function goToPage(page) {
-    navigate(`${page} `);
-  }
+ 
 
   return (
     <div id="navigation-mobile">
       <ul id='nav-list'>
-        <Link className="side-bar-item">
-          <li  id={props.isChecked == "liked" ? "checkedNav" : " "}>
+        <Link to={"/favoritas"} className="side-bar-item">
+          <li id={props.checkedItem == "liked" ? "checkedNav" : " "}>
             <span className="item-text">Favoritas</span>
 
             <span className="material-symbols-outlined" id="liked">
@@ -31,23 +28,23 @@ const Navigation = (props) => {
           </li>
 
         </Link>
-        <Link className="side-bar-item">
-          <li  id={props.isChecked == "watched" ? "checkedNav" : " "}>
+        <Link to={"/assistidas"} className="side-bar-item">
+          <li id={props.checkedItem == "watched" ? "checkedNav" : " "}>
             <span className="item-text">Já vistas</span>
 
             <span className="material-symbols-outlined" id="watched"> <MdDoneAll /> </span>
           </li>
 
         </Link>
-        <Link className="side-bar-item">
-          <li  id={props.isChecked == "wish" ? "checkedNav" : " "}>
+        <Link to={"/desejoVer"} className="side-bar-item">
+          <li id={props.checkedItem == "wish" ? "checkedNav" : " "}>
             <span className="item-text">Desejo ver</span>
             <span className="material-symbols-outlined" id="wish"><MdOutlineHotelClass /> </span>
           </li>
 
         </Link>
-        <Link className="side-bar-item">
-          <li  id={props.isChecked == "disliked" ? "checkedNav" : " "}>
+        <Link to={"/piores"} className="side-bar-item">
+          <li id={props.checkedItem == "disliked" ? "checkedNav" : " "}>
             <span className="item-text">Piores </span>
 
             <span className="material-symbols-outlined" id="disliked">
