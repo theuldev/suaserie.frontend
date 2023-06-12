@@ -11,6 +11,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
 import SerieView from './pages/SerieView/SerieView.jsx';
 // import InfoSerie from './pages/InfoSerie/InfoSerie.jsx';
 import ScreenModel from './components/General/ScreenModel/ScreenModel.jsx';
+import Disliked from './pages/MyListsPages/Disliked/Disliked.jsx';
 
 // Rotas:
 export const router = createBrowserRouter([
@@ -46,10 +47,10 @@ export const router = createBrowserRouter([
 
     // ]   
   },
-  // {
-  //   path: '/serieSelected',
-  //   element: <SerieSelected />
-  // }
+  {
+    path: '/piores',
+    element: <Disliked  />
+  }
 
 
 ]);
