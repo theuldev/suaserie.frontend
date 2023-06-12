@@ -41,7 +41,9 @@ const InitialPage = () => (
         <div className="wrapper-buttons">
 
           <BigButton linkTo={"/login"} >
+
             Entre
+            
           </BigButton>
 
 

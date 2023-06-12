@@ -1,5 +1,4 @@
 .body-error {
- 
   background-size: 45rem;
 
   background-attachment: fixed;
@@ -48,7 +47,7 @@
   color: var(--tertiary-color);
   align-items: center;
   justify-content: space-between;
-  
+
   max-width: 335px;
 }
 .error-box .warning-msg .icon {
@@ -82,10 +81,12 @@
   border: 2px solid var(--tertiary-color);
   background-color: transparent;
   font-size: 1rem;
-  padding: 0.3rem;
+  padding: 0.4rem 0.3rem;
   display: flex;
   gap: 0.5vw;
   font-weight: 700;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .error-box button:hover {
@@ -113,8 +114,5 @@
     width: 75%;
     line-height: 1.5rem;
     margin-top: 5vh;
-   
-   
-   
   }
 }

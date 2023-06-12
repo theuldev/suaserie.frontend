@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import './App.css';
 
 
@@ -8,11 +8,6 @@ import { router } from "./Router";
 
 
 // -------
-
-
-
-
-
 
 const App = () => {
   
@@ -24,4 +19,4 @@ const App = () => {
   )
 };
 
-export default App
+export default App;

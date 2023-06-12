@@ -1,14 +1,14 @@
 /* Estilização do side menu */
 .side-menu {
   position: fixed;
-
   height: 100%;
   width: 5rem;
   transition: all ease-in-out 0.3s;
-  /* border-right: solid 1px rgb(255, 216, 109, 0.5); */
+  border-right: solid 1px rgb(255, 216, 109, 0.5);
   -webkit-box-shadow: 9px 2px 49px -20px rgba(0, 0, 0, 1);
   -moz-box-shadow: 9px 2px 49px -20px rgba(0, 0, 0, 1);
   box-shadow: 9px 2px 49px -20px rgba(0, 0, 0, 1);
+ 
 }
 
 /* Estilização - MenuLIstas */
@@ -21,7 +21,7 @@
 
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--secondary-color);
+  
 }
 
 /* Estilização do hover dos componentes: */
@@ -32,7 +32,7 @@
 }
 
 .side-bar-items .side-item-wrapper {
-  /* background-color: aqua; */
+  
   transition: all ease-in-out 0.3s;
 
   width: 100%;
@@ -83,7 +83,7 @@
   display: none;
 }
 
-hr {
+.side-menu hr {
   border: 1px solid var(--tertiary-color);
   opacity: 0.2;
   width: 70%;

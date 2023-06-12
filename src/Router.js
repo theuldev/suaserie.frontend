@@ -9,15 +9,16 @@ import Register from './pages/Register/Register.jsx';
 import Profile from "./pages/Profile/Profile";
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
 import SerieView from './pages/SerieView/SerieView.jsx';
-import SerieSelected from './pages/SerieSelected/SerieSelected.jsx';
+// import InfoSerie from './pages/InfoSerie/InfoSerie.jsx';
 import ScreenModel from './components/General/ScreenModel/ScreenModel.jsx';
+import Disliked from './pages/MyListsPages/Disliked/Disliked.jsx';
 
 // Rotas:
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <InitialPage />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/login',
@@ -29,26 +30,26 @@ export const router = createBrowserRouter([
   },
   {
     path: '/profile',
-    element: <Profile/>
+    element: <Profile />
   },
   {
     path: '/serie',
-    element: <SerieView/>
+    element: <SerieView />
   },
-  {
-    path: '/serieSelected',
-    element: <SerieSelected/>
-  },
+  // {
+  //   path: '/serieSelected',
+  //   element: <SerieSelected />
+  // },
   {
     path: '/series',
-    element: <ScreenModel/>,
+    element: <ScreenModel />,
     // children: [
 
     // ]   
   },
   {
-    path: '/serieSelected',
-    element:<SerieSelected/>
+    path: '/piores',
+    element: <Disliked  />
   }
 
 

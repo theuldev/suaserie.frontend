@@ -30,7 +30,7 @@ const UserBar = (props) => {
     <div className="user-bar">
       <div className="user-wrapper">
         <div className="circle-user">
-          <img src={props.image} alt="Perfil do usuário"/>
+          <img src={props.userPic} alt="Perfil do usuário"/>
         </div>
 
         <span className="nickname">{props.apelido}</span>

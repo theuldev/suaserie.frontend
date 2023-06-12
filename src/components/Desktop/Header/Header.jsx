@@ -13,7 +13,7 @@ import logos from "../../../constants/logos";
 
 
 
-const Header = () => {
+const Header = (props) => {
 
 
   return (
@@ -38,7 +38,7 @@ const Header = () => {
           </div>
 
           <div>
-            <UserBar apelido={"Iasmim"} />
+            <UserBar apelido={props.apelido} userPic={props.userPic} />
           </div>
         </nav>
       </div>
