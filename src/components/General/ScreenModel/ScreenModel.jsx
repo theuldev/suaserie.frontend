@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import "./ScreenModel.css";
-import MediaQuery from 'react-responsive'
+import MediaQuery from 'react-responsive';
 
 import logos from "../../../constants/logos";
 
