@@ -14,6 +14,7 @@ import {
 } from "react-icons/md";
 
 const SideMenu = (props) => {
+//  Propriedades
   // Dizer qual item checked do menu é.
   // O side bar item muda com um ID.
 
@@ -113,6 +114,7 @@ const SideMenu = (props) => {
         <hr />
 
         <img src={logos.logoLight} alt="Projeto SóSéries logomarca." />
+        
       </div>
     </div>
   );

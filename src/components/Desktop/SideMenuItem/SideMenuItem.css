@@ -43,15 +43,17 @@
   color: red;
 }
 
-#checkedSide {
+#checkedNav, #checkedNav:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
-#checkedSide #liked,
-#checkedSide #watched,
-#checkedSide #wish,
-#checkedSide #disliked {
+
+
+#checkedNav #liked,
+#checkedNav #watched,
+#checkedNav #wish,
+#checkedNav #disliked {
   color: var(--secondary-color);
 }
 
