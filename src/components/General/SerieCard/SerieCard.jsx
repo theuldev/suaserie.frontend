@@ -10,17 +10,35 @@ import {
   MdOutlineHotelClass,
   MdOutlineSentimentVeryDissatisfied,
 } from "react-icons/md";
+import { Link, useNavigate } from 'react-router-dom';
 
 const SerieCard = (props) => {
 
   // Possuirá uma propriedade que leva à páginade visualização de série com seu id especifico
+
+// -----------
+
+
+
+
+// ------
+
+
+
+// Usará o id da série.
+
+
   return (
-    <div className={`card-slide va-card `}  ref={props.IsFirst? vaCardFirst : vaCardAll} >
+    <div className={`card-slide va-card `}   >
       <div class="img-title">
+      <Link to={"/serieSelected"} className='serie-link'>
         <img
           src={images.anne}
           alt="Imagem promocional da série"
+        
         />
+
+      </Link>
 
         <span class="series-title">Lupin</span>
       </div>

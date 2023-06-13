@@ -7,7 +7,7 @@ import logos from "../../../constants/logos";
 
 import Burger from "../../Mobile/Burger/Burger";
 import SideMenu from "../../Desktop/SideMenu/SideMenu";
-import { Outlet } from "react-router-dom";
+
 import Header from "../../Desktop/Header/Header";
 import Navigation from "../../Mobile/Navigation/Navigation";
 import { SlArrowRight } from "react-icons/sl";
@@ -24,10 +24,31 @@ const ScreenModel = (props) => {
 
   return (
     <div className="body-screenModel">
+      <main>
+        <div class="visual">
+          <img src={logos.logoLight} alt="Projeto SóSéries logomarca." />
+        </div>
+
+
+        <section className="main-content">
+          <div id="title-wrapper">
+
+            <SlArrowRight className="icon-title" />
+
+            <h1 id="main-title-page">{props.titlePage}</h1>
+          </div>
+
+          {/* Conteúdo específico de cada página - Content */}
+          {props.children}
+        </section>
+
+      </main>
 
       <Helmet>
-        <title>{`Só Séries ${props.titlePage}`}</title>
+        <title>{`Só Séries - ${props.titlePage}`}</title>
       </Helmet>
+
+      {/* Componentes colcoados por ultimo para que sobreponham os anteriores. */}
       {/* DESKTOP */}
       <MediaQuery minWidth={screenMobile + 1}>
         <Header apelido={props.apelido} userPic={props.userPic} />
@@ -39,29 +60,6 @@ const ScreenModel = (props) => {
         <Burger apelido={props.apelido} userPic={props.userPic} />
         <Navigation />
       </MediaQuery>
-
-
-      <main>
-        <div class="visual">
-          <img src={logos.logoLight} alt="Projeto SóSéries logomarca." />
-        </div>
-
-
-        <section className="main-content">
-          <div className="title-wrapper">
-
-            <SlArrowRight />{" "}
-
-            <h1>{`${props.titlePage}`}</h1>
-          </div>
-
-          {/* Conteúdo específico de cada página - Content */}
-          {props.children}
-        </section>
-
-      </main>
-
-
 
     </div>
   );

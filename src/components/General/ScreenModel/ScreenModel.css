@@ -25,7 +25,7 @@
   color: var(--tertiary-color);
 }
 
-.body-screenModel main .main-content .title-wrapper {
+.body-screenModel main .main-content #title-wrapper {
   color: var(--primary-color);
 
   display: flex;
@@ -34,21 +34,21 @@
 
   width: 50%;
 
-  margin-left: 15vw;
+  margin-left: 24vw;
+  margin-bottom: 8vh;
 }
 
-.body-screenModel main .main-content .title-wrapper :first-child {
+.body-screenModel main .main-content #title-wrapper :first-child {
   font-size: 3rem;
   font-weight: bolder;
-  margin-bottom: 8vh;
 
   text-decoration: none;
 }
 
-.body-screenModel main .main-content .title-wrapper :last-child {
+.body-screenModel main .main-content #title-wrapper :last-child {
   font-size: 2.5rem;
   font-weight: 700;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 @media (max-width: 650px) {
@@ -78,22 +78,34 @@
 
   /* Estilizaçãp do título */
 
-  main .main-content .title-wrapper {
-    height: 5vh;
+  main .main-content #title-wrapper {
+    height: 0vh;
     width: 75%;
-
-    margin-bottom: 8vh;
-    margin-top: 2vh;
+background-color: aqua;
+    margin-bottom: 0vh;
+    /* margin-top: 2vh; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+padding: 0;
   }
-  main .main-content .title-wrapper :first-child {
-    font-size: 2.5rem;
-    font-weight: bolder;
+  main .main-content #title-wrapper :first-child {
+   display: none;
+   
   }
 
-  main .main-content .title-wrapper :last-child {
-    font-size: 2rem;
+  main .main-content #title-wrapper #main-title-page {
+    font-size: 1rem ;
     font-weight: 700;
-    padding-top: 1rem;
+    background-color: #242629;
+    color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .5rem 2.5rem;
+    border-radius: 5px;
   }
 
   /* ----- */

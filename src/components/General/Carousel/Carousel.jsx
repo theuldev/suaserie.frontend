@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Carousel.css";
-import "./Carousel.js";
+// import "./Carousel.js";
 import { useRef } from 'react';
 
 // ícones:
@@ -12,34 +12,44 @@ const Carousel = ({ children }) => {
 
   // Após a conexao com o banco, o carrossél irá aceitar uma array. O MAP será contido nele.
   // Talvez nao seja uma boa ideia, coloque o MAP fora do componente mesmo. Assim, há mais controle das propriedade da série card.
-// ------------
-const vaCarrouselFlexbox = useRef();
-const vaCardFirst = useRef();
-const vaCardAll = useRef([]);
-const dealsScrollLeft = useRef();
-const dealsScrollRight = useRef();
+  // ------------
+  const carousel = useRef(null);
+
+  const handleLeftClick = (e) => {
+    e.preventDefault();
+    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+
+  }
+
+  const handleRightClick = (e) => {
+
+    e.preventDefault();
+
+    carousel.current.scrollLeft += carousel.current.offsetWidth;
+  }
 
 
 
 
 
 
-// ------------
+  // ------------
 
 
   return (
     //  Carrossél 
     <div class="card-slider-wrapper" id="va_container">
-      <button   ref={dealsScrollLeft} class="deals-scroll-left deals-paddle">
+
+      <button onClick={handleLeftClick} class="deals-scroll-left deals-paddle">
         <span class="material-symbols-outlined"> <AiOutlineArrowLeft /> </span>
       </button>
 
-      <div class="slide-content va-carrousel-flexbox" ref={vaCarrouselFlexbox}>
+      <div class="slide-content " ref={carousel}>
 
         {children}
       </div>
 
-      <button  ref={dealsScrollRight}  class="deals-scroll-right deals-paddle">
+      <button onClick={handleRightClick} class="deals-scroll-right deals-paddle">
         <span class="material-symbols-outlined"> <AiOutlineArrowRight /> </span>
       </button>
     </div>

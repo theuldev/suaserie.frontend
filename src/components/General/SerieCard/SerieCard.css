@@ -4,24 +4,56 @@
   background-color: var(--shadow);
   color: var(--primary-color);
   height: 405px;
-  width: 255px;
+  width: 13.5rem;
+
   border-radius: 5px;
   border: solid 2px var(--primary-color);
   /* padding: .5rem; */
   cursor: pointer;
+  flex: none;
+
 }
 
 .card-slide:hover {
   transition: all 0.3s;
   border-radius: 0px;
   background-color: black;
-  border: solid 3px var(--tertiary-color);
+
+  border: solid 2px var(--shadow);
 
   height: 425px;
-  width: 275px;
+  width: 255px;
+  
 }
 
-.card-slide img {
+
+
+
+
+
+.card-slide:hover .serie-link {
+  background-color: transparent;
+}
+
+.card-slide:hover .serie-link  img{
+ 
+}
+
+.card-slide .serie-link {
+  border-radius: 5px;
+
+  padding-top: 0;
+  background-color: var(--primary-color);
+  height: 17rem;
+  display: flex;
+  width: 100%;
+  margin-bottom: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-slide .serie-link img {
   height: 17rem;
   width: 13.5rem;
   user-select: none;
@@ -35,6 +67,7 @@
   font-weight: 700;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 
 .card-slide .info-series {
@@ -96,22 +129,24 @@
   .card-slide {
     background-color: var(--shadow);
     color: var(--primary-color);
-    height: 305px;
-    width: 155px;
+    height: 375px;
+    width: 175px;
     border-radius: 5px;
     border: solid 2px var(--primary-color);
     /* padding: .5rem; */
     cursor: pointer;
+    border-top: none;
   }
 
   .card-slide:hover {
     transition: all 0.3s;
     border-radius: 0px;
     background-color: black;
-    border: solid 3px var(--tertiary-color);
-
-    height: 320px;
-    width: 170px;
+    border: solid 3px var(--shadow);
+    height: 390px;
+    width: 200px;
+    border-top: none;
+   
   }
 
   .card-slide img {
