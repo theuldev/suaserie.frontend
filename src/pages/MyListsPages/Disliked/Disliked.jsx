@@ -1,10 +1,9 @@
 import React from 'react';
-import "./Disliked.css";
 import ScreenModel from '../../../components/General/ScreenModel/ScreenModel';
 
 import SerieCard from '../../../components/General/SerieCard/SerieCard';
 import Carousel from '../../../components/General/Carousel/Carousel';
-
+import EmptyInfo from '../../../components/General/EmptyInfo/EmptyInfo';
 
 
 
@@ -12,28 +11,37 @@ import Carousel from '../../../components/General/Carousel/Carousel';
 
 
 const Disliked = () => {
+
+
+  const series = [
+    // <SerieCard serieLista={"piores/"} serieId={"1"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"2"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"3"} />,
+    // <SerieCard serieLista={"piores/"} serieId={"1"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"2"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"3"} />,
+    // <SerieCard serieLista={"piores/"} serieId={"1"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"2"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"3"} />,
+    // <SerieCard serieLista={"piores/"} serieId={"1"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"2"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"3"} />,
+    // <SerieCard serieLista={"piores/"} serieId={"1"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"2"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"3"} />,
+    // <SerieCard serieLista={"piores/"} serieId={"1"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"2"} />,
+    // <SerieCard serieLista={"piores/"}  serieId={"3"} />,
+    
+  ]
   return (
  
-    <ScreenModel  titlePage={"Iasmim"}>
-    <Carousel>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-     <SerieCard/>
-    </Carousel>
+    <ScreenModel  checkedItem={"disliked"}  apelido={"Akemi"} titlePage={"Piores"}>
+   
+    {
+   series.length == 0 ? <EmptyInfo/> :  <Carousel> {series} </Carousel>
+    }
+   
     </ScreenModel>
 
  

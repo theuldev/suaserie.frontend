@@ -5,7 +5,15 @@ import "./ButtonNormal.css";
 const ButtonNormal = (props) => {
   const navigate = useNavigate();
   const goTo = () => {
-    navigate(`/${props.link}`);
+
+    if (props.classId == "voltar") {
+      window.history.back();
+
+    } else {
+
+      navigate(`/${props.link}`);
+    }
+
   };
 
   let css = `
