@@ -8,14 +8,14 @@ import Login from './pages/Login/Login.jsx';
 import Register from './pages/Register/Register.jsx';
 import Profile from "./pages/Profile/Profile";
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
-import SerieView from './pages/SerieView/SerieView.jsx';
+import SerieView from './pages/SeriesView/SerieView.jsx';
 // import InfoSerie from './pages/InfoSerie/InfoSerie.jsx';
 import ScreenModel from './components/General/ScreenModel/ScreenModel.jsx';
 import Disliked from './pages/MyListsPages/Disliked/Disliked.jsx';
 import Liked from './pages/MyListsPages/Liked/Liked.jsx';
 import Wish from './pages/MyListsPages/Wish/Wish.jsx';
 import Watched from './pages/MyListsPages/Watched/Watched.jsx';
-import SerieSelected from './components/General/SerieSelected/SerieSelected.jsx';
+import SerieSelected from './pages/SerieSelected/SerieSelected.jsx';
 // Rotas:
 export const router = createBrowserRouter([
   {
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
  
   {
     path: '/series',
-    element: <ScreenModel />,
+    element: <SerieView />,
     // children: [
 
     // ]   

@@ -1,38 +1,26 @@
 import { React } from "react";
-import MediaQuery from "react-responsive";
+
 import "./SerieSelected.css";
-import Header from "../../Desktop/Header/Header";
-import SideMenu from "../../Desktop/SideMenu/SideMenu";
+
+// ícones:
 import {
-  MdSentimentVerySatisfied,
-  MdSentimentVeryDissatisfied,
+  MdOutlineSentimentVerySatisfied,
   MdPlaylistAdd,
-  MdDoneAll,
+  MdOutlineSentimentVeryDissatisfied,
 } from "react-icons/md";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoArrowBackOutline } from "react-icons/io5";
-import ButtonNormal from "../ButtonNormal/ButtonNormal";
-import { SlArrowRight } from "react-icons/sl";
-import { Outlet } from "react-router-dom";
-import Burger from "../../Mobile/Burger/Burger";
-import { Helmet } from "react-helmet";
-import Navigation from "../../Mobile/Navigation/Navigation";
+import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
 
 
-let screenMobile = 650;
+
 const SerieSelected = (props) => {
   return (
     <div className="body-serie-selected">
 
       <main>
         <section className="main-content-selected">
-          <div className="title-wrapper">
-            <span className="material-symbols-outlined">
-              {" "}
-              <SlArrowRight />{" "}
-            </span>
-            <h1>Séries</h1>
-          </div>
+
 
           <div className="serie-selected">
             <div className="img-streaming">
@@ -65,27 +53,21 @@ const SerieSelected = (props) => {
               <div className="streaming-icon">
                 <span>Disponível em</span>
                 <div className="streaming-plataforms">
-                  <img
-                    src="https://cdn.icon-icons.com/icons2/2657/PNG/256/disney_plus_icon_161064.png"
-                    alt="Disney Plus"
-                  />
+
                   <img
                     src="https://cdn.icon-icons.com/icons2/183/PNG/256/HBO_22554.png"
                     alt="HBO Max"
                   />
-                  <img
-                    src="https://cdn.icon-icons.com/icons2/2657/PNG/256/netflix_icon_161073.png"
-                    alt="NetFlix"
-                  />
+
                 </div>
               </div>
 
               <div className="like-dislike">
                 <span className="material-symbols-outlined" id="liked">
-                  <MdSentimentVerySatisfied />
+                  <MdOutlineSentimentVerySatisfied />
                 </span>
                 <span className="material-symbols-outlined" id="disliked">
-                  <MdSentimentVeryDissatisfied />
+                  <MdOutlineSentimentVeryDissatisfied />
                 </span>
               </div>
             </div>
@@ -159,12 +141,13 @@ const SerieSelected = (props) => {
                   <li id="see">
                     <span className="material-icons">
                       {" "}
-                      <MdDoneAll />{" "}
+                      Assistir{" "}
                     </span>
                   </li>
                 </a>
               </ul>
             </div>
+
             <ButtonNormal
               bckg={"#ffd86d"}
               color={"#242629"}

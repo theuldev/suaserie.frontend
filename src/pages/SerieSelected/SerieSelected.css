@@ -1,41 +1,12 @@
-main {
-  grid-area: content;
-}
 main .main-content-selected {
+  margin-top: 20vh;
   color: var(--tertiary-color);
-}
-
-/* Estilizaçãp do título */
-
-main .main-content-selected .title-wrapper {
-  width: 100%;
-  height: 7vh;
-  position: relative;
-  top: 120px;
-  padding-left: 15%;
-  margin-bottom: 14%;
-  align-items: center;
-  align-content: center;
-  display: flex;
-}
-main .main-content-selected .title-wrapper :first-child {
-  font-size: 3rem;
-  font-weight: bolder;
-  color: #ffd86d;
-}
-
-main .main-content-selected .title-wrapper :last-child {
-  font-size: 2.5rem;
-  font-weight: 700;
-  padding-top: 1rem;
-}
-main .main-content-selected .title-wrapper h1 {
-  border-bottom: solid 1px #ffd86d;
 }
 
 .serie-selected {
   background-color: var(--secondary-color);
-  width: 55%;
+  width: 75%;
+  max-width: 60rem;
   margin: 0 auto;
   border-radius: 15px;
   -webkit-box-shadow: 0px -10px 56px -6px #0f1011;
@@ -43,7 +14,7 @@ main .main-content-selected .title-wrapper h1 {
   box-shadow: 0px -10px 56px -6px #0f1011;
   display: flex;
   flex-direction: column;
-  gap: 1vh;
+  /* gap: 1vh; */
   align-items: center;
   justify-content: center;
   border-top: none;
@@ -78,12 +49,13 @@ main .main-content-selected .title-wrapper h1 {
 
 .like-dislike {
   width: 100%;
-  height: 6rem;
+  height: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5vw;
   margin: 2rem 0;
+  /* background-color: aqua; */
 }
 
 .like-dislike span {
@@ -91,8 +63,9 @@ main .main-content-selected .title-wrapper h1 {
   font-size: 3rem;
   background-color: var(--secondary-color);
   padding: 0.5rem;
-  border-radius: 20%;
+  border-radius: 35px;
   border: solid 1px var(--primary-color);
+  display: flex;
 }
 
 .like-dislike span:hover,
@@ -182,16 +155,29 @@ main .main-content-selected .title-wrapper h1 {
   padding: 0.5vw;
 }
 
-.info h1,
-h2 {
+.info h1 {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--primary-color);
-  border-radius: 35px;
   border: solid 1px var(--primary-color);
   width: 20vw;
+}
+
+.info h1,
+.info .date h2 {
+  border-radius: 35px;
+
   font-size: 1.8rem;
 }
 
-h2 {
+.info .date h2 {
+  width: 15vw;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.3rem;
   border: solid 1px var(--tertiary-color);
   color: var(--tertiary-color);
@@ -212,12 +198,12 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+
   border: solid 1px var(--primary-color);
   border-radius: 5px;
 }
 
-#see a {
+.icons a {
   text-decoration: none;
 }
 
@@ -229,6 +215,18 @@ h2 {
 li:hover #add-serie,
 #see:hover {
   color: var(--secondary-color);
+  transition: all 0.3s;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+li #add-serie {
+  width: 100%;
+}
+
+li #add-serie,
+#see {
+  cursor: pointer;
 }
 
 #add-serie {
@@ -250,11 +248,7 @@ li:hover #add-serie,
   height: 100%;
 }
 
-.info .icons li:hover {
-  transition: all 0.3s;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
+
 .text .date {
   display: flex;
   flex-direction: column;
@@ -274,15 +268,10 @@ li:hover #add-serie,
 }
 
 @media (max-width: 650px) {
-  main .main-content .title-wrapper {
-    height: 5vh;
-    width: 75%;
-
-  }
   .serie-selected {
     width: 90%;
-    padding-top: 15vh;
-    margin-top: 45%;
+
+    padding-top: 10vh;
   }
   .serie-selected .img-streaming {
     position: relative;

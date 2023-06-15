@@ -45,21 +45,25 @@ const SerieCard = (props) => {
 
       <div class="info-series">
         <div class="avaliacao">
-          <span class="material-icons-outlined" id="star-checked">
+         
+          <AiFillStar fill='yellow' />
 
-            <AiOutlineStar fill='red' />
-          </span>
-          <span class="material-icons-outlined" id="star-checked">
-            <AiOutlineStar fill='yellow' />
-          </span>
-          <span class="material-icons-outlined" id="star-checked">
-            <AiOutlineStar fill='yellow' />
+        
 
-          </span>
-          <span class="material-icons-outlined" id="">         <AiOutlineStar fill='red' />
-          </span>
-          <span class="material-icons-outlined" id="">         <AiOutlineStar fill='red' />
-          </span>
+         
+          <AiFillStar fill='yellow' />
+
+         
+
+         
+            <AiFillStar fill='yellow' />
+
+         
+
+              <AiOutlineStar  />
+          
+                  <AiOutlineStar  />
+        
         </div>
         <span class="year-interval">Início: 2019</span>
       </div>

@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiMovieLine } from "react-icons/ri";
 import { FiLogOut } from "react-icons/fi";
-import {BsFillPersonVcardFill} from "react-icons/bs";
+import { BsFillPersonVcardFill } from "react-icons/bs";
 
 const Burger = (props) => {
   //  Criando componetes mobile.
@@ -35,7 +35,7 @@ const Burger = (props) => {
           <div id="user-bar-mobile">
             <div class="user-wrapper">
               <div class="circle-user" onClick={goToProfile}>
-                <img src={props.userPic} alt="Foto de perfil do usuário"  />
+                <img src={props.userPic} alt="Foto de perfil do usuário" />
               </div>
 
               <span className="nickname">{props.apelido}</span>
@@ -49,23 +49,23 @@ const Burger = (props) => {
       <div ref={menu} className="mobile-side">
         <nav>
           <Link to={"/favoritas"} className="link">
-            <span class="material-icons"> <AiOutlineUser/> </span> Minhas listas
+            <span class="material-icons"> <AiOutlineUser /> </span> Minhas listas
           </Link>
-          <Link to={"/series"}  className="link">
-            <span class="material-icons"> <RiMovieLine/> </span>Mais séries
+          <Link to={"/series"} className="link">
+            <span class="material-icons"> <RiMovieLine /> </span>Mais séries
           </Link>
-          <Link to={"profile"}  className="link">
-            <span class="material-icons"> <BsFillPersonVcardFill/> </span>Visualizar perfil
+          <Link to={"profile"} className="link">
+            <span class="material-icons"> <BsFillPersonVcardFill /> </span>Visualizar perfil
           </Link>
-          <Link to={"/"} className="link"> <span class="material-icons"> <FiLogOut/> </span>Sair </Link>
+          <Link to={"/"} className="link"> <span class="material-icons"> <FiLogOut /> </span>Sair </Link>
         </nav>
-       <div className="image-wrapper">
-        <img
-          src={logos.logoDark}
-          alt="Logomarca Projeto SóSéries"
-        />
+        <div className="image-wrapper">
+          <img
+            src={logos.logoDark}
+            alt="Logomarca Projeto SóSéries"
+          />
+        </div>
       </div>
-       </div>
     </div>
   );
 };

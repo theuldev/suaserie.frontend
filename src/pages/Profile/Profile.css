@@ -217,26 +217,30 @@
 /* Responsividade */
 
 @media (max-width: 980px) {
-  /* Grid da lista */
-
+ 
   .profile {
     height: auto;
     display: flex;
     flex-direction: column;
   }
-
+.profile-pic {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #ebab29; */
+  gap: 45px;
+}
   .profile-username {
     margin: 0 auto;
     background-color: rgb(255, 216, 109, 0.1);
     text-align: center;
     display: flex;
     justify-content: center;
-    margin-top: 3vh;
+    margin-top: 0vh;
     color: #f1f1f1;
     padding: 0.5rem;
     width: 40%;
     border-radius: 35px;
-    margin-bottom: -4vh;
+   
   }
 
   .profile-username .nickname {
@@ -253,42 +257,32 @@
     padding-top: 0;
   }
 
+  .profile-info .change-pass {
+    
+  margin-bottom: 5vh;
+   
+  } 
+
+  .profile-series .log-out-exit {
+   margin-top: 5vh;
+
+  }
+
   .profile-info .info-boxes {
     /* justify-content: center; */
     align-items: center;
     /* gap: 1vh; */
   }
   .profile-info .info-boxes .info-box {
-    font-size: 0.6rem;
+    font-size: .75rem;
     width: 90%;
   }
 
   .profile-series .series {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
-  #logout {
-    margin-left: 130px;
-    margin-top: -35px;
-  }
-
-  #change-password {
-    margin-top: 0%;
-    margin-right: 130px;
-  }
-
-  #change-password .material-icons {
-    margin-left: 0.7rem;
-  }
-
-  #change-password:hover .material-icons .door-icon {
-    background-color: #242629;
-  }
-
-  #btn-back .material-icons {
-    margin-left: 0rem;
-  }
-
+  
   .profile-series {
     gap: 2.5vh;
     padding-bottom: 1vh;
