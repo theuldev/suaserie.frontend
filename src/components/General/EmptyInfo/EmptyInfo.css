@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -6vh;
+ height: 35vh;
 }
 .tutorial .warning-wrapper {
   font-size: 1.2rem;
@@ -74,10 +74,8 @@
   color: #b88700;
   font-weight: bolder;
   font-size: 2rem;
-  background-color: var(--tertiary-color);
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
+ 
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,8 +86,35 @@
   display: none;
 }
 
+
+.order .text-wrapper {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 5px;
+}
+
+.order .text-wrapper.side {
+  display: flex;
+  align-items: center;
+}
+
+.order a {
+  color: rgb(120, 194, 255);
+  margin: 10px 0;
+  
+  text-decoration: none;
+}
+.order a:hover {
+  transition: all .3s;
+  color: #b88700;
+  text-decoration: underline;
+}
+
+
 @media (max-width: 650px) {
-   /* ----- */
+  /* ----- */
   /* Tutorial - Mobile */
   .tutorial {
     width: 80%;

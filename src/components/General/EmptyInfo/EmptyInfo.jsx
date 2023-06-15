@@ -1,11 +1,12 @@
 import React from 'react'
 import "./EmptyInfo.css";
+import { MdNorth, MdWest, MdNorthEast, MdSouth, MdSentimentDissatisfied } from 'react-icons/md';
 const EmptyInfo = () => {
   return (
     //  No caso da lista estar vazia. 
     <div className="tutorial">
       <div className="warning-wrapper">
-        <span className="material-icons"> sentiment_dissatisfied </span>
+        <span className="material-icons"> <MdSentimentDissatisfied/> </span>
 
         <span className="warning">Lista vazia!</span>
       </div>
@@ -13,9 +14,9 @@ const EmptyInfo = () => {
       <div className="explanation">
         <div className="desktop">
           <div className="order">
-            <span
+            <span className='text-wrapper'
             >Acesse o <span id="menu">menu acima</span>
-              <span className="material-icons"> north </span>
+              <span className="material-icons"> <MdNorth/> </span>
             </span>
 
 
@@ -25,11 +26,11 @@ const EmptyInfo = () => {
             </span>
 
           </div>
-          <hr id="warning-separator" />
+          
           <div className="order">
-            <span
-            >Acesse o <span id="menu">menu lateral</span>
-              <span className="material-icons"> west </span>
+            <span className='text-wrapper side'
+            > <span className="material-icons"> <MdWest/> </span> Acesse o <span id="menu">menu lateral</span>
+              
             </span>
 
 
@@ -42,7 +43,7 @@ const EmptyInfo = () => {
           <div className="order">
             <span
             >Acesse o <span id="menu">menu acima</span>
-              <span className="material-icons"> north_east </span></span>
+              <span className="material-icons"> <MdNorthEast/> </span></span>
 
 
             <span>
@@ -51,11 +52,11 @@ const EmptyInfo = () => {
             </span>
 
           </div>
-          <hr id="warning-separator" />
+        
           <div className="order">
             <span
             >Acesse o <span id="menu">menu abaixo</span>
-              <span className="material-icons"> south </span></span>
+              <span className="material-icons"> <MdSouth/> </span></span>
 
 
             <span> para navegar pelas suas listas de séries!</span>
