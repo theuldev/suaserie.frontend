@@ -16,61 +16,44 @@ const SerieCard = (props) => {
 
   // Possuirá uma propriedade que leva à páginade visualização de série com seu id especifico
 
-// -----------
 
 
-
-
-// ------
-
-
-
-// Usará o id da série.
+  // Usará o id da série.
 
 
   return (
     <div className={`card-slide va-card `}   >
       <div class="img-title">
-      <Link to={"/series/" + props.serieLista+ props.serieId} className='serie-link'>
-        <img
-          src={images.anne}
-          alt="Imagem promocional da série"
-        
-        />
+        <Link to={"/series/" + props.serieLista + props.serieId} className='serie-link'>
+          <img
+            src={props.promoImage}
+            alt="Imagem promocional da série"
 
-      </Link>
+          />
+
+        </Link>
 
         <span class="series-title">Lupin</span>
       </div>
 
       <div class="info-series">
         <div class="avaliacao">
-         
-          <AiFillStar fill='yellow' />
 
-        
-
-         
-          <AiFillStar fill='yellow' />
-
-         
-
-         
-            <AiFillStar fill='yellow' />
+          {props.avaliation >= 1 ? <AiFillStar fill='yellow' /> : <AiOutlineStar />}
+          {props.avaliation >= 2 ? <AiFillStar fill='yellow' /> : <AiOutlineStar />}
+          {props.avaliation >= 3 ? <AiFillStar fill='yellow' /> : <AiOutlineStar />}
+          {props.avaliation >= 4 ? <AiFillStar fill='yellow' /> : <AiOutlineStar />}
+          {props.avaliation == 5 ? <AiFillStar fill='yellow' /> : <AiOutlineStar />}
 
          
 
-              <AiOutlineStar  />
-          
-                  <AiOutlineStar  />
-        
         </div>
-        <span class="year-interval">Início: 2019</span>
+        <span class="year-interval">Início: {props.year}</span>
       </div>
 
       <div class="eps-temps">
-        <span class="eps">10 ep(s)</span>
-        <span class="temps">2 temp(s)</span>
+        <span class="eps">{props.episodes} ep(s)</span>
+        <span class="temps">{props.seasons} temp(s)</span>
       </div>
 
       <div class="series-icons">

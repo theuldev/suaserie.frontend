@@ -54,9 +54,9 @@ const Login = () => {
                 </div>
 
                 <div className="password_recovery">
-                <LinkPage linkTo="/"
-                linkText="Esqueceu a senha?"/>
-                  
+                  <LinkPage linkTo="/"
+                    linkText="Esqueceu a senha?" />
+
                 </div>
                 <Link className="form-btn-login" to={"/series"}>
 
