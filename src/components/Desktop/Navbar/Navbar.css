@@ -1,0 +1,8 @@
+.navbar{
+background-color: red;
+width: 95%;
+height: 20vh; 
+border-radius: 10px;
+border: 1px solid red;
+margin: 0 auto;
+}

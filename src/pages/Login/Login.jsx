@@ -10,9 +10,15 @@ import { Link } from "react-router-dom";
 import InputFloat from "../../components/General/InputFloat/InputFloat";
 import userEvent from "@testing-library/user-event";
 import LinkPage from "../../components/General/LinkPage/LinkPage";
-
 const Login = () => {
 
+
+
+   
+
+function onSubmit(){
+  
+}
 
   return (
     <div className="body-login">
@@ -35,7 +41,7 @@ const Login = () => {
                 </div>
                 <h1>Login</h1>
               </div>
-              <form className="form_login">
+              <form className="form_login" onSubmit={onSubmit()}>
 
                 <div className="inputs">
 
@@ -58,7 +64,7 @@ const Login = () => {
                 linkText="Esqueceu a senha?"/>
                   
                 </div>
-                <Link className="form-btn-login" to={"/series"}>
+                <div className="form-btn-login">
 
 
                   <button className="btn-login">
@@ -68,7 +74,7 @@ const Login = () => {
 
                   </button>
 
-                </Link>
+                </div>
 
 
                 <LinkPage text={"Ainda não possui nenhuma conta?"} linkText={"Crie uma nova conta!"} linkTo={"/cadastro"} />
