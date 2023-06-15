@@ -48,7 +48,7 @@ const SeriesView = () => {
 
   return (
 
-    <ScreenModel checkedItem={""} apelido={"Akemi"} titlePage={"Series"}>
+    <ScreenModel checkedItem={""} apelido={"Akemi"} titlePage={"Séries"}>
       <div className='list'>
         {series}
       </div>

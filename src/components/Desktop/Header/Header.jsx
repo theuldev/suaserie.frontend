@@ -31,7 +31,7 @@ const Header = (props) => {
 
           </div>
           <div>
-            <Link className="link">
+            <Link to={"/series"} className="link">
               <span class="material-icons"> <RiMovieLine /> </span>
               <span className="header-item">Mais séries</span>
             </Link>

@@ -37,9 +37,11 @@ const Profile = () => {
 
   return (
     <div className="body-profile">
-      <Helmet>SóSeries</Helmet>
+      <Helmet>Só Séries - Perfil</Helmet>
 
       <div className="profile">
+
+      
         <div className="profile-pic">
           <div className="wrapper-profile">
             {imageUrl && selectedImage ? (
@@ -72,7 +74,7 @@ const Profile = () => {
 
           </div>
 
-          <ButtonNormal bckg={"#ffd86d"} color={"#242629"} text={"Voltar"} classId={"voltar"} icon={<IoArrowBackOutline />} link="series" />
+          <ButtonNormal bckg={"#ffd86d"} color={"#242629"} text={"Voltar"} classId={"voltar"} icon={<IoArrowBackOutline />} link="" />
 
 
         </div>
@@ -103,6 +105,8 @@ const Profile = () => {
 
 
         </div>
+
+
         <div className="profile-series">
         <div className="log-out-exit">
           <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} link="" />
@@ -137,6 +141,7 @@ const Profile = () => {
           <ButtonNormal bckg={"red"} color={"#242629"} classId={"deletar"} icon={<BsTrash />} text={"Deletar conta?"} link="" />
 
         </div>
+
       </div>
     </div>
   );

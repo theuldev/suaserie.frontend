@@ -21,16 +21,19 @@
   margin-top: 15vh;
   width: 80%;
   max-width: 75rem;
-  background-color: rgb(36, 38, 41, 0.8);
+  background-color: rgb(36, 38, 41, 0.5);
   border-radius: 15px;
-
+  height: 60vh;
   -webkit-box-shadow: 0px -10px 56px -6px #0f1011;
   -moz-box-shadow: 0px -10px 56px -6px #0f1011;
   box-shadow: 0px -10px 56px -6px #0f1011;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding-bottom: 5vh;
+ 
 }
+
+
+
 
 #uploadPicBtn {
   background-color: transparent;
@@ -51,6 +54,15 @@
   transition: all 0.3s;
   border: solid 1px #f1f1f1;
   color: #f1f1f1;
+}
+
+
+.profile-pic {
+  background-color: var(--shadow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:5vh;
 }
 
 .profile .profile-pic .wrapper-profile {
@@ -92,13 +104,14 @@
   flex-direction: column;
   align-items: center;
   padding-top: 5rem;
+  
 }
 
 /* Caixas de info - Perfil */
 
 .profile-info .info-boxes {
   color: #f1f1f1;
-  height: 15rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -217,18 +230,17 @@
 /* Responsividade */
 
 @media (max-width: 980px) {
- 
   .profile {
     height: auto;
     display: flex;
     flex-direction: column;
   }
-.profile-pic {
-  display: flex;
-  flex-direction: column;
-  /* background-color: #ebab29; */
-  gap: 45px;
-}
+  .profile-pic {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #ebab29; */
+    gap: 45px;
+  }
   .profile-username {
     margin: 0 auto;
     background-color: rgb(255, 216, 109, 0.1);
@@ -240,7 +252,6 @@
     padding: 0.5rem;
     width: 40%;
     border-radius: 35px;
-   
   }
 
   .profile-username .nickname {
@@ -258,14 +269,11 @@
   }
 
   .profile-info .change-pass {
-    
-  margin-bottom: 5vh;
-   
-  } 
+    margin-bottom: 5vh;
+  }
 
   .profile-series .log-out-exit {
-   margin-top: 5vh;
-
+    margin-top: 5vh;
   }
 
   .profile-info .info-boxes {
@@ -274,7 +282,7 @@
     /* gap: 1vh; */
   }
   .profile-info .info-boxes .info-box {
-    font-size: .75rem;
+    font-size: 0.75rem;
     width: 90%;
   }
 
@@ -282,7 +290,6 @@
     font-size: 0.8rem;
   }
 
-  
   .profile-series {
     gap: 2.5vh;
     padding-bottom: 1vh;
