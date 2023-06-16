@@ -1,5 +1,5 @@
 import { React } from "react";
-
+import { useParams } from "react-router-dom";
 import "./SerieSelected.css";
 
 // ícones:
@@ -15,6 +15,10 @@ import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
 
 
 const SerieSelected = (props) => {
+
+
+  // Pegando o id da séries para fazer a conexão com o banco.
+const {id} = useParams();
   return (
     <div className="body-serie-selected">
 
