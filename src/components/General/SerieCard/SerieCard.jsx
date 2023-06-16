@@ -33,7 +33,7 @@ const SerieCard = (props) => {
 
         </Link>
 
-        <span class="series-title">Lupin</span>
+        <span class="series-title">{props.title}</span>
       </div>
 
       <div class="info-series">
