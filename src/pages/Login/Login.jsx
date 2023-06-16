@@ -10,17 +10,18 @@ import { Link } from "react-router-dom";
 import InputFloat from "../../components/General/InputFloat/InputFloat";
 import userEvent from "@testing-library/user-event";
 import LinkPage from "../../components/General/LinkPage/LinkPage";
-import loginService from "../../services/loginservice";
+
+import login from "../../services/loginapi";
 const Login = () => {
- 
-  const [data, setData] = useState({Email:'',Senha:''});
+  const [data, setData] = useState({ Email: "", Senha: "" });
   const handleCallback = (e) => {
-   setData({[e.name]:e.target.value})
+    data[e.name] = e.value;
+    setData({ ...data });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(data);
+    login(data);
   };
 
   return (
