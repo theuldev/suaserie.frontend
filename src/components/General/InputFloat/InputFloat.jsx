@@ -6,9 +6,16 @@ const InputFloat = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [value, setValue] = useState("");
 
+
+ const handleFocus = (e) =>{
+    e.name = props.inputName
+    e.value = value
+    
+  props.parentCallback(e)
+}
+
   function handleTextChange(text) {
     setValue(text);
-
     if (text !== "") {
       setIsActive(true);
     } else {
@@ -25,6 +32,7 @@ const InputFloat = (props) => {
         onChange={(e) => handleTextChange(e.target.value)}
         placeholder={props.placeholder}
         required
+        onFocus={handleFocus}
 
       />
       <label className={isActive ? "active" : ""} htmlFor="inputFloat">
