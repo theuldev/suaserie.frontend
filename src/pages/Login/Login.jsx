@@ -11,9 +11,9 @@ import InputFloat from "../../components/General/InputFloat/InputFloat";
 import userEvent from "@testing-library/user-event";
 import LinkPage from "../../components/General/LinkPage/LinkPage";
 
-import login from "../../services/loginapi";
+import login from "../../services/loginService";
 const Login = () => {
-  const [data, setData] = useState({ Email: "", Senha: "" });
+  const [data, setData] = useState({ email: "", password: "" });
   const handleCallback = (e) => {
     data[e.name] = e.value;
     setData({ ...data });
@@ -49,16 +49,16 @@ const Login = () => {
                 <div className="inputs">
                   <InputFloat
                     inputType="email"
-                    inputName="Email"
+                    inputName="email"
                     placeholder="soseries@series.com"
-                    value={data.Email}
+                    value={data.email}
                     parentCallback={handleCallback}
                   />
                   <InputFloat
                     inputType="password"
-                    inputName="Senha"
+                    inputName="password"
                     placeholder="* * * * * * * * *"
-                    value={data.Senha}
+                    value={data.password}
                     parentCallback={handleCallback}
                   />
                 </div>
