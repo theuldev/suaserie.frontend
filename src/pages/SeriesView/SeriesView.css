@@ -1,0 +1,62 @@
+/* Grid da lista */
+
+.list {
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* gap: 1vw; */
+  /* background-color: blanchedalmond; */
+  justify-items: center;
+  align-items: center;
+}
+
+.list .list-item {
+  /* background-color: aqua; */
+  height: 28rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ------------------ */
+
+/* Responsividade */
+
+@media (max-width: 1650px) {
+  /* Grid da lista */
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1350px) {
+  /* Grid da lista */
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1150px) {
+  /* Grid da lista */
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .list-item {
+    height: 21rem;
+  }
+
+  /* Grid da lista */
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 350px) {
+  /* Grid da lista */
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

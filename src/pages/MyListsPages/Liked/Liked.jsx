@@ -3,6 +3,7 @@ import ScreenModel from '../../../components/General/ScreenModel/ScreenModel';
 
 import SerieCard from '../../../components/General/SerieCard/SerieCard';
 import Carousel from '../../../components/General/Carousel/Carousel';
+import EmptyInfo from '../../../components/General/EmptyInfo/EmptyInfo';
 
 
 
@@ -36,9 +37,9 @@ const Liked = () => {
   return (
  
     <ScreenModel  checkedItem={"liked"}  apelido={"Akemi"} titlePage={"Favoritas"}>
-    <Carousel>
-    {series}
-    </Carousel>
+    {
+   series.length == 0 ? <EmptyInfo/> :  <Carousel> {series} </Carousel>
+    }
     </ScreenModel>
 
  

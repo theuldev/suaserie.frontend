@@ -37,9 +37,11 @@ const Profile = () => {
 
   return (
     <div className="body-profile">
-      <Helmet>SóSeries</Helmet>
+      <Helmet>Só Séries - Perfil</Helmet>
 
       <div className="profile">
+
+      
         <div className="profile-pic">
           <div className="wrapper-profile">
             {imageUrl && selectedImage ? (
@@ -71,7 +73,8 @@ const Profile = () => {
             </div>
 
           </div>
-          <ButtonNormal bckg={"#ffd86d"} color={"#242629"} text={"Voltar"} classId={"voltar"} icon={<IoArrowBackOutline />} link="series"  />
+
+          <ButtonNormal bckg={"#ffd86d"} color={"#242629"} text={"Voltar"} classId={"voltar"} icon={<IoArrowBackOutline />} link="" />
 
 
         </div>
@@ -95,13 +98,20 @@ const Profile = () => {
             </div>
 
           </div>
+          <div className="change-pass">
+            <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} link="" />
 
-          <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} link=""  />
+          </div>
 
 
         </div>
+
+
         <div className="profile-series">
-          <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} link=""  />
+        <div className="log-out-exit">
+          <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} link="" />
+
+        </div>
 
           <div className="series">
             <span className="material-symbols-outlined" id="liked">
@@ -131,6 +141,7 @@ const Profile = () => {
           <ButtonNormal bckg={"red"} color={"#242629"} classId={"deletar"} icon={<BsTrash />} text={"Deletar conta?"} link="" />
 
         </div>
+
       </div>
     </div>
   );
