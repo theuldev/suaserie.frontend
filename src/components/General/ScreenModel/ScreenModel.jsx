@@ -58,7 +58,7 @@ const ScreenModel = (props) => {
       {/* MOBILE */}
       <MediaQuery maxWidth={screenMobile} >
         <Burger apelido={props.apelido} userPic={props.userPic} />
-        <Navigation />
+        <Navigation  checkedItem={props.checkedItem} />
       </MediaQuery>
 
     </div>

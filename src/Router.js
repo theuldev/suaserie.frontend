@@ -12,8 +12,10 @@ import SerieView from './pages/SerieView/SerieView.jsx';
 // import InfoSerie from './pages/InfoSerie/InfoSerie.jsx';
 import ScreenModel from './components/General/ScreenModel/ScreenModel.jsx';
 import Disliked from './pages/MyListsPages/Disliked/Disliked.jsx';
+import Liked from './pages/MyListsPages/Liked/Liked.jsx';
+import Wish from './pages/MyListsPages/Wish/Wish.jsx';
+import Watched from './pages/MyListsPages/Watched/Watched.jsx';
 import SerieSelected from './components/General/SerieSelected/SerieSelected.jsx';
-
 // Rotas:
 export const router = createBrowserRouter([
   {
@@ -37,10 +39,7 @@ export const router = createBrowserRouter([
     path: '/serie',
     element: <SerieView />
   },
-   {
-     path: '/serieSelected',
-     element: <SerieSelected />
-   },
+ 
   {
     path: '/series',
     element: <ScreenModel />,
@@ -49,9 +48,42 @@ export const router = createBrowserRouter([
     // ]   
   },
   {
+    path: '/series/:id',
+    element: <SerieSelected />
+  },
+  {
     path: '/piores',
     element: <Disliked  />
-  }
+  },
+  {
+    path: '/series/piores/:id',
+    element: <SerieSelected />
+  },
+
+  {
+    path: '/favoritas',
+    element: <Liked  />
+  },
+  {
+    path: '/series/favoritas/:id',
+    element: <SerieSelected />
+  },
+  {
+    path: '/desejoVer',
+    element: <Wish  />
+  },
+  {
+    path: '/series/desejoVer/:id',
+    element: <SerieSelected />
+  },
+  {
+    path: '/assistidas',
+    element: <Watched  />
+  },
+  {
+    path: '/series/assistidas/:id',
+    element: <SerieSelected />
+  },
 
 
 ]);

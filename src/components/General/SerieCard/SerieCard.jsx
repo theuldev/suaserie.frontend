@@ -31,7 +31,7 @@ const SerieCard = (props) => {
   return (
     <div className={`card-slide va-card `}   >
       <div class="img-title">
-      <Link to={"/serieSelected"} className='serie-link'>
+      <Link to={"/series/" + props.serieLista+ props.serieId} className='serie-link'>
         <img
           src={images.anne}
           alt="Imagem promocional da série"

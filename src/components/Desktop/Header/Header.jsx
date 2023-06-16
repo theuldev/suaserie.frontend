@@ -24,7 +24,7 @@ const Header = (props) => {
 
           <div>
 
-            <Link className="link">
+            <Link to={"/favoritas"} className="link">
               <span class="material-icons">  <BsFillPersonFill />    </span> <span className="header-item">Minhas listas</span>
 
             </Link>

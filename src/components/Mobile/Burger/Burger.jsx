@@ -48,7 +48,7 @@ const Burger = (props) => {
       </header>
       <div ref={menu} className="mobile-side">
         <nav>
-          <Link to={"/series"} className="link">
+          <Link to={"/favoritas"} className="link">
             <span class="material-icons"> <AiOutlineUser/> </span> Minhas listas
           </Link>
           <Link to={"/series"}  className="link">

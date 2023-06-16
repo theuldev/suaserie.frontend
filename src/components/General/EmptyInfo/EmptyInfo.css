@@ -1,0 +1,129 @@
+/* Tutorial - Estilização */
+
+.tutorial a {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.tutorial {
+  color: var(--tertiary-color);
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: solid 2px var(--primary-color);
+  padding: 0rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ height: 35vh;
+}
+.tutorial .warning-wrapper {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 6rem;
+  border-radius: 0px;
+  padding: 0 0.5rem;
+}
+
+.tutorial .warning-wrapper .material-icons {
+  font-size: 3.2rem;
+}
+
+#menu {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+#warning-separator {
+  margin-top: 0;
+
+  border: solid 1px var(--primary-color);
+  opacity: 1;
+}
+
+.tutorial .explanation .desktop,
+.tutorial .explanation .mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.tutorial .explanation .desktop .order,
+.tutorial .explanation .mobile .order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.tutorial .explanation .desktop .order .material-icons {
+  color: #b88700;
+  font-weight: bolder;
+  font-size: 2rem;
+ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.tutorial .explanation .mobile {
+  display: none;
+}
+
+
+.order .text-wrapper {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 5px;
+}
+
+.order .text-wrapper.side {
+  display: flex;
+  align-items: center;
+}
+
+.order a {
+  color: rgb(120, 194, 255);
+  margin: 10px 0;
+  
+  text-decoration: none;
+}
+.order a:hover {
+  transition: all .3s;
+  color: #b88700;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 650px) {
+  /* ----- */
+  /* Tutorial - Mobile */
+  .tutorial {
+    width: 80%;
+  }
+  .tutorial .explanation .desktop {
+    display: none;
+  }
+
+  .tutorial .explanation .mobile {
+    display: flex;
+  }
+}
