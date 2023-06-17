@@ -3,18 +3,20 @@ import './App.css';
 
 
 // Rotas da aplicação:
-import { RouterProvider } from 'react-router-dom';
-import { router } from "./Router";
+import AppRouter from "./AppRouter";
+import { BrowserRouter } from "react-router-dom";
 
 
 // -------
 
 const App = () => {
-  
+
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
+
+
 
   )
 };

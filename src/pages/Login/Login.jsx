@@ -5,24 +5,28 @@ import logos from "../../constants/logos";
 
 // ícones:
 import { FiArrowRight } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 // Componentes:
 import InputFloat from "../../components/General/InputFloat/InputFloat";
 import userEvent from "@testing-library/user-event";
 import LinkPage from "../../components/General/LinkPage/LinkPage";
 
 import login from "../../services/login/loginService";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState({ email: "", password: "" });
   const handleCallback = (e) => {
     data[e.target.name] = e.target.value;
     setData({ ...data });
-
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
     login(data);
+
+    navigate('/serie')
+ 
   };
 
   return (
