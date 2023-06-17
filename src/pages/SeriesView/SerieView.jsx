@@ -2,18 +2,20 @@ import React, { useEffect, useState } from "react";
 import "./SeriesView.css";
 import ScreenModel from "../../components/General/ScreenModel/ScreenModel";
 import SerieCard from "../../components/General/SerieCard/SerieCard";
-import seriesService from "../../services/series/seriesService";
+import getAllSeries from "../../services/series/seriesService";
+import api from "../../services/api";
 
-const SeriesView = async () => {
+const SeriesView = () => {
   const [series, setSeries] = useState([]);
 
+
   useEffect(() => {
-    try {
-      const seriesArray = await seriesService.getAllSeries();
-    } catch (error) {
-      console.log(error);
-    }
+    getAllSeries().then((result)=> {
+      console.log(result)
+      setSeries(result)
+    })
   }, []);
+
 
   // const series = [
   //   <div className='list-item'>
@@ -57,7 +59,19 @@ const SeriesView = async () => {
 
   return (
     <ScreenModel checkedItem={""} apelido={"Akemi"} titlePage={"Séries"}>
-      <div className="list"></div>
+      <div className="list">
+        {series.map((serie) => (
+          <div className="list-item" key={serie.id}>
+            <SerieCard
+              title={serie.name}
+              serieLista={"series/"}
+              serieId={serie.id}
+              episodes={serie.episodes}
+              seasons={serie.seasons}
+            />
+          </div>
+        ))}
+      </div>
     </ScreenModel>
   );
 };
