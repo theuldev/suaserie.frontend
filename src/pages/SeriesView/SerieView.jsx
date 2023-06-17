@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import "./SeriesView.css";
-import ScreenModel from '../../components/General/ScreenModel/ScreenModel';
-import SerieCard from '../../components/General/SerieCard/SerieCard';
-import api from '../../services/api';
-const SeriesView = () => {
+import ScreenModel from "../../components/General/ScreenModel/ScreenModel";
+import SerieCard from "../../components/General/SerieCard/SerieCard";
+import seriesService from "../../services/series/seriesService";
 
+const SeriesView = async () => {
   const [series, setSeries] = useState([]);
 
   useEffect(() => {
-    api
-      .get('/series')
-      .then((response) => setSeries(response.data))
-      .catch((err) => {
-        console.error("Ocorreu um erro: " + err);
-      });
+    try {
+      const seriesArray = await seriesService.getAllSeries();
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
-
-
-
-
-
 
   // const series = [
   //   <div className='list-item'>
@@ -61,20 +55,11 @@ const SeriesView = () => {
 
   // ]
 
-
   return (
-
     <ScreenModel checkedItem={""} apelido={"Akemi"} titlePage={"Séries"}>
-      <div className='list'>
-        {series.map(serie => (
-          <div className='list-item' key={serie.id}>
-            <SerieCard title={serie.name} serieLista={"series/"} serieId={serie.id} episodes={serie.episodes} seasons={serie.seasons} />
-          </div>
-        ))}
-      </div>
-
+      <div className="list"></div>
     </ScreenModel>
-  )
-}
+  );
+};
 
 export default SeriesView;

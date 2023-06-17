@@ -29,9 +29,10 @@ const InputFloat = (props) => {
         onChange={(e) => handleChange(e)}
         placeholder={props.placeholder}
         required
+        name = {props.name}
       />
       <label className={isActive ? "active" : ""} htmlFor="inputFloat">
-        {props.inputName}
+        {props.name}
       </label>
     </div>
   );

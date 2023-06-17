@@ -4,35 +4,31 @@ import "./Register.css";
 import logos from "../../constants/logos";
 import images from "../../constants/images";
 
-
-
 import { Link } from "react-router-dom";
 // Componentes:
 import InputFloat from "../../components/General/InputFloat/InputFloat";
 import LinkPage from "../../components/General/LinkPage/LinkPage";
 
-
-
 const Register = () => {
-
   // Lógica do preview da imagem escolhida
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
+   const [data, setData] = useState({ email: "", password: "",name: "",nickname:"",lastname:"" });
+  const handleCallback = (e) => {
+    data[e.target.name] = e.target.value;
+    setData({ ...data });
+  };
+
   useEffect(() => {
     if (selectedImage) {
       setImageUrl(URL.createObjectURL(selectedImage));
-
     }
-
   }, [selectedImage]);
-
 
   function dynammicPhoto(e) {
     setSelectedImage(e.target.files[0]);
-
   }
-
 
   return (
     <div className="body-register">
@@ -56,14 +52,19 @@ const Register = () => {
             <div className="profile-pic">
               <div className="profile-input-form">
                 <div className="wrapper-profile">
+                  {imageUrl && selectedImage ? (
+                    <img src={imageUrl} alt={selectedImage.name} id="photo" />
+                  ) : (
+                    <img src={images.user} alt="Foto do usuário" id="photo" />
+                  )}
 
-                  {imageUrl && selectedImage ? (<img src={imageUrl} alt={selectedImage.name} id="photo" />) : (<img src={images.user} alt="Foto do usuário" id="photo" />)
-                  }
-
-                  <input type="file" id="file"
+                  <input
+                    type="file"
+                    id="file"
                     accept="image/*"
                     onChange={dynammicPhoto}
-                    required />
+                    required
+                  />
                   <label htmlFor="file" id="uploadPicBtn">
                     Escolha foto
                   </label>
@@ -72,68 +73,78 @@ const Register = () => {
             </div>
 
             <div className="input-group">
-
               <div className="input-box">
-                <InputFloat inputType="text"
-                 inputName="Primeiro Nome"
-                  placeholder="Primeiro Nome" />
+                <InputFloat
+                  inputType="text"
+                  name="Primeiro Nome"
+                  placeholder="Primeiro Nome"
+                  inputName="name"
+                  parentCallback={handleCallback}
+                />
               </div>
 
-
               <div className="input-box">
-                <InputFloat inputType="text" 
-                inputName="Ultimo Nome"
-                  placeholder="Ultimo Nome" />
+                <InputFloat
+                  inputType="text"
+                  name="Ultimo Nome"
+                  placeholder="Ultimo Nome"
+                  inputName="lastname"
+                  parentCallback={handleCallback}
+                />
               </div>
-
-
 
               <div className="input-box">
                 <InputFloat
                   inputType="email"
-                  inputName="E-mail"
+                  name="E-mail"
                   placeholder="soseries@series.com"
+                  inputName="email"
+                  parentCallback={handleCallback}
                 />
               </div>
 
-
               <div className="input-box">
-                <InputFloat inputType="text" 
-                inputName="Apelido"
-                 placeholder="Apelido" />
+                <InputFloat
+                  inputType="text"
+                  name="Apelido"
+                  placeholder="Apelido"
+                  inputName="nickname"
+                  parentCallback={handleCallback}
+                />
               </div>
 
-
-
               <div className="input-box">
-                <InputFloat inputType="password" 
-                inputName="Senha"
-                 placeholder="* * * * * * * * *" />
+                <InputFloat
+                  inputType="password"
+                  name="Senha"
+                  placeholder="* * * * * * * * *"
+                  inputName="password"
+                  parentCallback={handleCallback}
+                />
               </div>
 
-
-
-
               <div className="input-box">
-                <InputFloat inputType="password"
-                 inputName="Confirme sua Senha" 
-                 placeholder="Confirme sua Senha" />
+                <InputFloat
+                  inputType="password"
+                  inputName="Confirme sua Senha"
+                  placeholder="Confirme sua Senha"
+                />
               </div>
-
             </div>
             <div className="continue-button">
               <button id="continue-btn">Criar Conta</button>
             </div>
-      
-            <LinkPage  text={"Já possui uma conta?"} linkTo={"/login"} linkText={"Conecte-se!"} /> 
 
-
-            
+            <LinkPage
+              text={"Já possui uma conta?"}
+              linkTo={"/login"}
+              linkText={"Conecte-se!"}
+            />
           </form>
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Register;

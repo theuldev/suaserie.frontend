@@ -21,12 +21,17 @@ const Login = () => {
     setData({ ...data });
   };
 
-  const onSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    login(data);
 
-    navigate('/serie')
- 
+    try {
+      var res = await login(data);
+        navigate("/series");
+       
+    } catch (error) {
+      navigate("/");
+      console.log(error);
+    }
   };
 
   return (
@@ -50,7 +55,7 @@ const Login = () => {
                 </div>
                 <h1>Login</h1>
               </div>
-              <form className="form_login" onSubmit={onSubmit}>
+              <form className="form_login" onSubmit={handleSubmit}>
                 <div className="inputs">
                   <InputFloat
                     inputType="email"
@@ -58,6 +63,7 @@ const Login = () => {
                     placeholder="soseries@series.com"
                     value={data.email}
                     parentCallback={handleCallback}
+                    name="E-mail"
                   />
                   <InputFloat
                     inputType="password"
@@ -65,6 +71,7 @@ const Login = () => {
                     placeholder="* * * * * * * * *"
                     value={data.password}
                     parentCallback={handleCallback}
+                    name="Senha"
                   />
                 </div>
 
