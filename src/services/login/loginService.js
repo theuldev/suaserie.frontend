@@ -13,8 +13,8 @@ const login = async (data) => {
   const urld = '/auth/login'
   const res = await api.post(urld, data).then((response) => {
       
-    setAuth(response);
-    return JSON.parse(response);
+    setAuth(response.data);
+    return response
   }).catch((error) => {
     if (error) {
       console.log('Não autorizado', error)

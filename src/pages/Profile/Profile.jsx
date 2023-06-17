@@ -13,6 +13,7 @@ import { AiFillLock } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
 import { removeAuth } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
+import { deleteUser } from "../../services/user/userService";
 
 // Imagens:
 import images from "../../constants/images";
@@ -21,7 +22,7 @@ import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
 const Profile = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (selectedImage) {
@@ -32,25 +33,27 @@ const Profile = () => {
   function dynammicPhoto(e) {
     setSelectedImage(e.target.files[0]);
   }
+  const deleteMe = async () => {
+    try {
+      var response = await deleteUser();
+      if (response) removeAuth();
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const goLogOut = () => {
-
-      removeAuth()
-    navigate('/');
-
+    removeAuth();
+    navigate("/");
   };
 
-
   // Página Profile incompleta. + Versão Mobile dos componentes ainda não feitos.
-
-
 
   return (
     <div className="body-profile">
       <Helmet>Só Séries - Perfil</Helmet>
 
       <div className="profile">
-
-      
         <div className="profile-pic">
           <div className="wrapper-profile">
             {imageUrl && selectedImage ? (
@@ -78,14 +81,17 @@ const Profile = () => {
 
             <div id="settings-nickname">
               <FiSettings />
-
             </div>
-
           </div>
 
-          <ButtonNormal bckg={"#ffd86d"} color={"#242629"} text={"Voltar"} classId={"voltar"} icon={<IoArrowBackOutline />} link="" />
-
-
+          <ButtonNormal
+            bckg={"#ffd86d"}
+            color={"#242629"}
+            text={"Voltar"}
+            classId={"voltar"}
+            icon={<IoArrowBackOutline />}
+            link=""
+          />
         </div>
 
         <div className="profile-info">
@@ -96,31 +102,45 @@ const Profile = () => {
                 <span className="profile-data">Iasmim Cristina</span>
               </div>
 
-              <span className="material-icons"> <FiSettings /> </span>
+              <span className="material-icons">
+                {" "}
+                <FiSettings />{" "}
+              </span>
             </div>
             <div className="info-box">
               <div className="text">
                 <span className="profile-label">E-mail:</span>
                 <span className="profile-data">exemplo@gmail.com</span>
               </div>
-              <span className="material-icons"> <FiSettings /> </span>
+              <span className="material-icons">
+                {" "}
+                <FiSettings />{" "}
+              </span>
             </div>
-
           </div>
           <div className="change-pass">
-            <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} onClick= {goLogOut}/>
-
+            <ButtonNormal
+              bckg={"#242629"}
+              color={"#f1f1f1"}
+              classId={"senha"}
+              icon={<AiFillLock />}
+              text={"Mudar senha?"}
+              onClick={goLogOut}
+            />
           </div>
-
-
         </div>
-
 
         <div className="profile-series">
-        <div className="log-out-exit">
-          <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} onClick= {goLogOut} />
-
-        </div>
+          <div className="log-out-exit">
+            <ButtonNormal
+              bckg={"#242629"}
+              color={"red"}
+              classId={"sair"}
+              icon={<BsFillDoorOpenFill />}
+              text={"Sair"}
+              onClick={goLogOut}
+            />
+          </div>
 
           <div className="series">
             <span className="material-symbols-outlined" id="liked">
@@ -147,10 +167,15 @@ const Profile = () => {
             <p>Desejo Ver → 09 series</p>
           </div>
 
-          <ButtonNormal bckg={"red"} color={"#242629"} classId={"deletar"} icon={<BsTrash />} text={"Deletar conta?"} link="" />
-
+          <ButtonNormal
+            bckg={"red"}
+            color={"#242629"}
+            classId={"deletar"}
+            icon={<BsTrash />}
+            text={"Deletar conta?"}
+          onClick={deleteMe}
+          />
         </div>
-
       </div>
     </div>
   );

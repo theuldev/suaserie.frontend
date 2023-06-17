@@ -5,7 +5,7 @@ const createUser = async (data) => {
     const urld = '/user/create'
     const res = await api.post(urld, data).then((response) => {
         setAuth(response.data.user.acessToken);
-        
+
         return response;
     }).catch((error) => {
         if (error) {
@@ -26,9 +26,9 @@ const updateUser = (data) => {
         }
     })
 }
-const deleteUser = (data) => {
+const deleteUser = () => {
     const urld = '/user/delete-me'
-    api.delete(urld,data).then((response) => {
+    api.delete(urld).then((response) => {
         console.log(response)
         return response;
     }).catch((error) => {
@@ -38,4 +38,4 @@ const deleteUser = (data) => {
     })
 }
 
-export{createUser,deleteUser,updateUser}
+export { createUser, deleteUser, updateUser }

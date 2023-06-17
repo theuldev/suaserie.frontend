@@ -7,6 +7,7 @@ const removeAuth = () => {
 }
 
 const setAuth = (response) => {
-    localStorage.setItem('authToken', JSON.stringify(response.data))
+    console.log(response)
+    localStorage.setItem('authToken', JSON.stringify(response))
 }
 export { getAuth, setAuth, removeAuth };
