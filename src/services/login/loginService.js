@@ -1,11 +1,11 @@
 import axios from "axios";
-import url from "../constants/variables";
+import url from "../../constants/variables";
 
-import api from "./api";
+import api from "../api";
 
 const login = (data) => {
+  console.log(data)
   const urld = '/auth/login'
-    console.log(data)
   api.post(urld, data).then((response) => {
     console.log(response)
   

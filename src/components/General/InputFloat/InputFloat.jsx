@@ -7,9 +7,10 @@ const InputFloat = (props) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
-    e.name = props.inputName;
+    e.target.name = props.inputName;
     e.value = value;
     props.parentCallback(e);
+    console.log(e.target.value)
 
     setValue(e.target.value);
     if (e.value !== "") {

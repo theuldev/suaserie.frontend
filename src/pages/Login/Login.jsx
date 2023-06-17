@@ -11,12 +11,13 @@ import InputFloat from "../../components/General/InputFloat/InputFloat";
 import userEvent from "@testing-library/user-event";
 import LinkPage from "../../components/General/LinkPage/LinkPage";
 
-import login from "../../services/loginService";
+import login from "../../services/login/loginService";
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
   const handleCallback = (e) => {
-    data[e.name] = e.value;
+    data[e.target.name] = e.target.value;
     setData({ ...data });
+
   };
 
   const onSubmit = (e) => {
