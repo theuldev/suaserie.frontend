@@ -114,7 +114,7 @@ const {id} = useParams();
                 </div>
 
                 <div className="date">
-                  <h2>Datas</h2>
+                  <h2>Informações</h2>
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
                     nam quo eveniet ipsum. Tenetur quasi assumenda facere ea
