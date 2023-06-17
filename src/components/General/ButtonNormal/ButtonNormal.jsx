@@ -6,13 +6,7 @@ const ButtonNormal = (props) => {
   const navigate = useNavigate();
   const goTo = () => {
 
-    if (props.classId == "voltar") {
       window.history.back();
-
-    } else {
-
-      navigate(`/${props.link}`);
-    }
 
   };
 
@@ -31,7 +25,7 @@ const ButtonNormal = (props) => {
   return (
     <button
       className={`button-normal ${props.classId}`}
-      onClick={goTo}
+      onClick={props.classId === 'voltar' ? goTo :  props.onClick}
     >
       <style>{css}</style>
 

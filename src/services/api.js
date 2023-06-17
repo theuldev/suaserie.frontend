@@ -1,6 +1,6 @@
 import axios from "axios";
 import url from "../constants/variables";
-import getAuth from "./authService";
+import { getAuth } from "./authService";
 
 const res = getAuth();
 

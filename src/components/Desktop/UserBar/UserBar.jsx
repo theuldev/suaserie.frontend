@@ -6,7 +6,7 @@ import { AiOutlineUser } from "react-icons/ai";
 
 // Funções:
 import { useNavigate } from 'react-router-dom';
-
+import {removeAuth} from '../../../services/authService'
 
 
 
@@ -18,9 +18,12 @@ const UserBar = (props) => {
   // Navegação da página:
   const navigate = useNavigate();
   const goProfile = () => {
-    navigate('/profile');
+ 
+    navigate('/perfil');
   }
   const goLogOut = () => {
+
+    removeAuth()
     navigate('/');
 
   };

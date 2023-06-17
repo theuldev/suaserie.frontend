@@ -4,20 +4,29 @@ import "./Register.css";
 import logos from "../../constants/logos";
 import images from "../../constants/images";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router";
 // Componentes:
 import InputFloat from "../../components/General/InputFloat/InputFloat";
 import LinkPage from "../../components/General/LinkPage/LinkPage";
+import { createUser } from "../../services/user/userService";
 
 const Register = () => {
   // Lógica do preview da imagem escolhida
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
-
-   const [data, setData] = useState({ email: "", password: "",name: "",nickname:"",lastname:"" });
+  const navigate = useNavigate();
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+    name: "",
+    nickname: "",
+    lastname: "",
+    confirmPassword: "",
+  });
   const handleCallback = (e) => {
     data[e.target.name] = e.target.value;
     setData({ ...data });
+    console.log(data);
   };
 
   useEffect(() => {
@@ -29,6 +38,17 @@ const Register = () => {
   function dynammicPhoto(e) {
     setSelectedImage(e.target.files[0]);
   }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      var res = await createUser(data);
+      navigate("/series");
+    } catch (error) {
+      navigate("/");
+      console.log(error);
+    }
+  };
 
   return (
     <div className="body-register">
@@ -40,8 +60,8 @@ const Register = () => {
         <div className="form-logo">
           <img src={logos.logoDark} alt="Projeto SóSeries" />
         </div>
-        <div className="form">
-          <form action="#">
+        <div className="form" >
+          <form action="#" onSubmit={handleSubmit}>
             <div className="form-header">
               <h1>
                 Cadastre-se <br />
@@ -126,8 +146,10 @@ const Register = () => {
               <div className="input-box">
                 <InputFloat
                   inputType="password"
-                  inputName="Confirme sua Senha"
+                  name="Confirme sua Senha"
                   placeholder="Confirme sua Senha"
+                  inputName="confirmPassword"
+                  parentCallback={handleCallback}
                 />
               </div>
             </div>

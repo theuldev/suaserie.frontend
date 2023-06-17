@@ -11,6 +11,8 @@ import { MdOutlineSentimentVeryDissatisfied } from "react-icons/md";
 import { MdOutlineHotelClass } from "react-icons/md";
 import { AiFillLock } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
+import { removeAuth } from "../../services/authService";
+import { useNavigate } from "react-router-dom";
 
 // Imagens:
 import images from "../../constants/images";
@@ -19,6 +21,7 @@ import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
 const Profile = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (selectedImage) {
@@ -29,6 +32,12 @@ const Profile = () => {
   function dynammicPhoto(e) {
     setSelectedImage(e.target.files[0]);
   }
+  const goLogOut = () => {
+
+      removeAuth()
+    navigate('/');
+
+  };
 
 
   // Página Profile incompleta. + Versão Mobile dos componentes ainda não feitos.
@@ -99,7 +108,7 @@ const Profile = () => {
 
           </div>
           <div className="change-pass">
-            <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} link="" />
+            <ButtonNormal bckg={"#242629"} color={"#f1f1f1"} classId={"senha"} icon={<AiFillLock />} text={"Mudar senha?"} onClick= {goLogOut}/>
 
           </div>
 
@@ -109,7 +118,7 @@ const Profile = () => {
 
         <div className="profile-series">
         <div className="log-out-exit">
-          <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} link="" />
+          <ButtonNormal bckg={"#242629"} color={"red"} classId={"sair"} icon={<BsFillDoorOpenFill />} text={"Sair"} onClick= {goLogOut} />
 
         </div>
 

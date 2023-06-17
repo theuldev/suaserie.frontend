@@ -1,10 +1,11 @@
 import api from '../api'
+import { setAuth } from '../authService'
 
-const createUser = (data) => {
+const createUser = async (data) => {
     const urld = '/user/create'
-    api.post(urld, data).then((response) => {
-        localStorage.setItem('authToken', JSON.stringify(response.data))
-        console.log(response.data)
+    const res = await api.post(urld, data).then((response) => {
+        setAuth(response.data.user.acessToken);
+        
         return response;
     }).catch((error) => {
         if (error) {

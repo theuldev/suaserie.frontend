@@ -4,6 +4,7 @@ import url from "../../constants/variables";
 import api from "../api";
 import { useNavigate } from "react-router";
 import { AiTwotoneLayout } from "react-icons/ai";
+import { setAuth } from "../authService";
 
 
 const login = async (data) => {
@@ -12,7 +13,7 @@ const login = async (data) => {
   const urld = '/auth/login'
   const res = await api.post(urld, data).then((response) => {
       
-     localStorage.setItem('authToken',JSON.stringify(response.data))
+    setAuth(response);
     return JSON.parse(response);
   }).catch((error) => {
     if (error) {
