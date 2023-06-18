@@ -59,6 +59,7 @@
 - Após o download do projeto e ter a versão indicada acima do Nodejs instalada no computador, vá para a pasta do projeto através da linha de comando e insira o comando npm install para a instalação de todas as dependências do projeto e em seguida insira o comando npm start para rodar o projeto com o Gerenciador de Pacotes do Node ou yarn start para iniciar a aplicação com o Gerenciador de Pacotes Yarn.
 
 ### 👩‍💻Comandos👩‍💻
+(Atenção: o banco deve ser iniciado antes que a inicialização do frontend.)
  BACK-END
  
     npm install
