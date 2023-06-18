@@ -13,7 +13,13 @@ import { AiFillLock } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
 import { removeAuth } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
-import { deleteUser, getAllSeriesFav } from "../../services/user/userService";
+import {
+  deleteUser,
+  getAllSeriesFav,
+  getAllSeriesWatch,
+  getAllSeriesWish,
+  getAllSeriesDisliked,
+} from "../../services/user/userService";
 import { changeToBase64Image } from "../../services/user/userService";
 // Imagens:
 import images from "../../constants/images";
@@ -29,7 +35,10 @@ const Profile = () => {
     email: "",
     name: "",
   });
-  const[countFav,SetFav] = useState()
+  const [countFav, SetFav] = useState();
+  const [countDisliked, SetcountDisliked] = useState();
+  const [countWish, SetWish] = useState();
+  const [countWatch, SetWatch] = useState();
   const navigate = useNavigate();
   useEffect(() => {
     if (selectedImage) {
@@ -42,22 +51,38 @@ const Profile = () => {
       try {
         const user = await getInfo();
 
-        getAllSeriesFav().then((result) => {
-          console.log(result)
-          const parsed = result
-           SetFav(Object.keys(parsed).length);
-           console.log(countFav)
-        });
-
         if (user) {
           SetInfo(user);
-          console.log(user);
         }
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
+    getAllSeriesFav().then((result) => {
+      console.log(result);
+      const parsed = result;
+      SetFav(Object.keys(parsed).length);
+      console.log(countFav);
+    });
+    getAllSeriesWatch().then((result) => {
+      console.log(result);
+      const parsed = result;
+      SetWatch(Object.keys(parsed).length);
+      console.log(countFav);
+    });
+    getAllSeriesDisliked().then((result) => {
+      console.log(result);
+      const parsed = result;
+      SetcountDisliked(Object.keys(parsed).length);
+      console.log(countFav);
+    });
+    getAllSeriesWish().then((result) => {
+      console.log(result);
+      const parsed = result;
+      SetWish(Object.keys(parsed).length);
+      console.log(countFav);
+    });
   }, []);
 
   function dynammicPhoto(e) {
@@ -184,19 +209,19 @@ const Profile = () => {
             <span className="material-symbols-outlined" id="disliked">
               <MdOutlineSentimentVeryDissatisfied />
             </span>
-            <p>Piores Séries → 09 series</p>
+            <p>Piores Séries → {countDisliked} series</p>
           </div>
           <div className="series">
             <span className="material-symbols-outlined" id="watched">
               <IoCheckmarkDoneSharp />
             </span>
-            <p>Já Vistas → 09 series</p>
+            <p>Já Vistas → {countWatch} series</p>
           </div>
           <div className="series">
             <span className="material-symbols-outlined" id="wish">
               <MdOutlineHotelClass />
             </span>
-            <p>Desejo Ver → 09 series</p>
+            <p>Desejo Ver → {countWish} series</p>
           </div>
 
           <ButtonNormal
