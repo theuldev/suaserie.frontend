@@ -15,16 +15,13 @@ import { Link, useNavigate } from 'react-router-dom';
 const SerieCard = (props) => {
 
   // Possuirá uma propriedade que leva à páginade visualização de série com seu id especifico
-
-
-
   // Usará o id da série.
 
 
   return (
     <div className={`card-slide va-card `}   >
       <div class="img-title">
-        <Link to={`{${props.serieId}`} className='serie-link'>
+        <Link to={`${props.id}`} className='serie-link'>
           <img
             src={props.promoImage}
             alt="Imagem promocional da série"

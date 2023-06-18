@@ -17,4 +17,20 @@ const getAllSeries = async () => {
 
     }
 }
-export default getAllSeries;
+
+
+const getSeriebyId = async(id) => {
+      try {
+        const urld = `/series/${id}`
+        var res = await api.get(urld)
+        const response = res.data
+        return response;
+
+    } catch (error) {
+        console.log(error);
+        throw error;
+
+
+    }
+}
+export {getAllSeries, getSeriebyId};

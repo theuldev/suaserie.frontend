@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SeriesView.css";
 import ScreenModel from "../../components/General/ScreenModel/ScreenModel";
 import SerieCard from "../../components/General/SerieCard/SerieCard";
-import getAllSeries from "../../services/series/seriesService";
+import { getAllSeries } from "../../services/series/seriesService";
 import api from "../../services/api";
 
 const SeriesView = () => {
@@ -65,7 +65,7 @@ const SeriesView = () => {
             <SerieCard
               title={serie.name}
               serieLista={"series/"}
-              serieId={serie.id}
+              id={serie.id}
               episodes={serie.episodes}
               seasons={serie.seasons}
             />

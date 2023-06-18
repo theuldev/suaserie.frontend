@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
 import "./SerieSelected.css";
 
@@ -11,10 +11,18 @@ import {
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoArrowBackOutline } from "react-icons/io5";
 import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
-
+import {getSeriebyId} from "../../services/series/seriesService";
 
 
 const SerieSelected = (props) => {
+ const [serie, setSerie] = useState([]);
+useEffect(() => {
+    getSeriebyId(id).then((result)=> {
+      console.log(result.serie_streaming)
+      setSerie(result)
+    })
+  }, []);
+
 
 
   // Pegando o id da séries para fazer a conexão com o banco.
@@ -30,7 +38,7 @@ const {id} = useParams();
             <div className="img-streaming">
               <img
                 className="promo"
-                src="https://macmagazine.com.br/wp-content/uploads/2014/05/15-cartaz-sherlock-holmes.jpg"
+                src={serie.img}
                 alt="Imagem promocional da série"
               />
               <div className="rating">
@@ -56,11 +64,13 @@ const {id} = useParams();
               </div>
               <div className="streaming-icon">
                 <span>Disponível em</span>
+
+                {}
                 <div className="streaming-plataforms">
 
                   <img
-                    src="https://cdn.icon-icons.com/icons2/183/PNG/256/HBO_22554.png"
-                    alt="HBO Max"
+                    src= {serie.serie_streaming}
+                    alt={serie.streamingId}
                   />
 
                 </div>
@@ -77,39 +87,13 @@ const {id} = useParams();
             </div>
 
             <div className="info">
-              <h1>Sherlock</h1>
+              <h1>{serie.name}</h1>
               <div className="text">
                 <div className="description">
                   <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Consectetur magnam soluta, esse earum dicta amet
-                    exercitationem recusandae totam, eius modi error nam veritatis
-                    ullam fugiat odio vero deleniti labore eveniet. Lorem ipsum
-                    dolor sit amet consectetur, adipisicing elit. Iusto, illum
-                    pariatur? Eligendi praesentium, ad numquam repellat autem
-                    voluptas illo veritatis est similique perferendis, magni error
-                    id ab eius placeat dolorum. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Ratione nobis esse autem veniam,
-                    earum rem, reiciendis dolores aliquam ex aspernatur dicta odio
-                    labore consequuntur iusto magnam sed necessitatibus iure
-                    recusandae? Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Atque vel dolor, est quasi similique dicta
-                    ex illo earum odio laboriosam voluptate magni dolorum et
-                    saepe. Nulla earum illo autem neque?
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid nulla harum voluptatem tempora facere velit, ipsum
-                    corrupti omnis eius veniam labore inventore. Sunt repellendus
-                    incidunt debitis exercitationem? Nihil, voluptate molestiae.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Possimus corporis quam perferendis? Quaerat ullam tenetur
-                    mollitia. Exercitationem, numquam quis dignissimos assumenda
-                    necessitatibus fuga ipsam! Explicabo mollitia eveniet itaque
-                    illum pariatur! Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Accusantium saepe ducimus architecto dolore
-                    vero deleniti ab incidunt aliquam dolores. Nemo, accusantium
-                    ipsa neque harum in eaque eos asperiores incidunt ab.
+                    {
+                      serie.summary
+                    }
                   </p>
                 </div>
 
@@ -131,8 +115,8 @@ const {id} = useParams();
               </div>
 
               <ul className="icons">
-                <li id="eps-temps">12 eps</li>
-                <li id="eps-temps">4 temps</li>
+                <li id="eps-temps">{serie.episodes} eps</li>
+                <li id="eps-temps">{serie.seasons} temps </li>
                 <li id="add">
                   <span className="material-icons" id="add-serie">
                     <MdPlaylistAdd />
