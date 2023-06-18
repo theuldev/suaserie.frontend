@@ -20,6 +20,7 @@ const SerieCard = (props) => {
   useEffect(() => {
     getSeriebyId(props.serieId).then((result) => {
       setSerie(result);
+      console.log(result)
      
     });
   }, []);
@@ -30,7 +31,7 @@ const SerieCard = (props) => {
     <div className={`card-slide va-card `}>
       <div class="img-title">
         <Link to={`${props.serieId}`} className="serie-link">
-          <img src={props.promoImage} alt="Imagem promocional da série" />
+          <img src={serie.img} alt="Imagem promocional da série" />
         </Link>
 
         <span class="series-title">{serie.name}</span>

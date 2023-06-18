@@ -14,7 +14,7 @@ import logos from "../../../constants/logos";
 
 
 const Header = (props) => {
-
+  
 
   return (
     <header className="hdr-desktop">

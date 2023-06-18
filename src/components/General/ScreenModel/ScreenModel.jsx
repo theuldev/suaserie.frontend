@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { React, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "./ScreenModel.css";
 import MediaQuery from 'react-responsive';
@@ -12,14 +12,30 @@ import Header from "../../Desktop/Header/Header";
 import Navigation from "../../Mobile/Navigation/Navigation";
 import { SlArrowRight } from "react-icons/sl";
 
+import { getInfo } from "../../../services/user/userService";
+
 // ícones:
 
 // Componentes:
 
 // Esssa "página" será movida par aum componente pois só é a base!
 const ScreenModel = (props) => {
-
+const [userInfo, SetInfo] = useState({nickname:'',photo:'',lastname:'',email:'',name:''});
   let screenMobile = 650;
+    useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const user = await getInfo();
+        if (user) {
+          SetInfo(user);
+          console.log(user)
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
 
 
   return (
@@ -51,7 +67,7 @@ const ScreenModel = (props) => {
       {/* Componentes colcoados por ultimo para que sobreponham os anteriores. */}
       {/* DESKTOP */}
       <MediaQuery minWidth={screenMobile + 1}>
-        <Header apelido={props.apelido} userPic={props.userPic} />
+        <Header apelido={userInfo.nickname} userPic={userInfo.photo} />
         <SideMenu checkedItem={props.checkedItem} />
       </MediaQuery>
 

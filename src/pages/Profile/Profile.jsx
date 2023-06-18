@@ -13,8 +13,8 @@ import { AiFillLock } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
 import { removeAuth } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
-import { deleteUser } from "../../services/user/userService";
-import {changeToBase64Image} from "../../services/user/userService";
+import { deleteUser, getAllSeriesFav } from "../../services/user/userService";
+import { changeToBase64Image } from "../../services/user/userService";
 // Imagens:
 import images from "../../constants/images";
 import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
@@ -22,9 +22,15 @@ import { getInfo } from "../../services/user/userService";
 const Profile = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
-  const [userInfo, SetInfo] = useState({nickname:'',photo:'',lastname:'',email:'',name:''});
+  const [userInfo, SetInfo] = useState({
+    nickname: "",
+    photo: "",
+    lastname: "",
+    email: "",
+    name: "",
+  });
+  const[countFav,SetFav] = useState()
   const navigate = useNavigate();
-
   useEffect(() => {
     if (selectedImage) {
       setImageUrl(URL.createObjectURL(selectedImage));
@@ -35,9 +41,17 @@ const Profile = () => {
     const fetchData = async () => {
       try {
         const user = await getInfo();
+
+        getAllSeriesFav().then((result) => {
+          console.log(result)
+          const parsed = result
+           SetFav(Object.keys(parsed).length);
+           console.log(countFav)
+        });
+
         if (user) {
           SetInfo(user);
-          console.log(user)
+          console.log(user);
         }
       } catch (error) {
         console.log(error);
@@ -164,7 +178,7 @@ const Profile = () => {
             <span className="material-symbols-outlined" id="liked">
               <BiHappyAlt />
             </span>
-            <p>Favoritas → 05 series</p>
+            <p>Favoritas → {countFav} series</p>
           </div>
           <div className="series">
             <span className="material-symbols-outlined" id="disliked">
