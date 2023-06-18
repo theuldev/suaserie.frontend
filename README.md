@@ -42,6 +42,15 @@
 - SQLite
 - Axios
 
+## ✅Informações sobre o projeto✅
+- **O projeto possui scrollagem personalizada.**
+- **O site disponibiliza várias séries em "Mais séries" ou "Séries cadastradas". Dessa forma, o usuário poderá escolher as séries que quer adicionar às suas listas. Ao selecionar uma série, ele poderá ver mais informações sobre ela e clicar em um link que o redireciona para a série em sua respectiva plataforma de streaming. O site tem como objetivo melhor organização das séries favoritas, piores ou já assistidas na visão do usuário.**
+- **A série selecionada muda de estilo quando o usuário está nela no sistema, além de todos os botoes possuírem hover e estilizações dinâmicas.**
+- **O fluxo de uso começa pela tela que dá a possibilidade do usuário logar ou se cadastrar.**
+- **Quando o usuário entra pela primeira vez, ou sua lista está vazia, um alerta na página explica brevemente como navegar pelo site.**
+- **O usuário também pode acessar a sua área de perfil de mudar seus dados, se desejar. Ele entra nessa tela ao clicar na sua foto nas telas, contida no canto superior do site.**
+- **Todas as telas estão responsivas.**
+
 ## 3. Requisitos para a execução do projeto
 
 - Nodejs - Versão: 18.16.0
