@@ -118,4 +118,20 @@ const getAllSeriesWish= async () => {
 
     }
 }
-export { createUser, deleteUser, updateUser, getAllSeriesFav, getInfo ,getAllSeriesWatch,getAllSeriesDisliked,getAllSeriesWish}
+
+const getRating = async (id) => {
+    try {
+        const urld = `/user/rating/${id}`
+        var res = await api.get(urld)
+        const response = res.data
+        console.log(response);
+        return response;
+
+    } catch (error) {
+        console.log(error);
+        throw error;
+
+
+    }
+}
+export { createUser, deleteUser, updateUser, getAllSeriesFav, getInfo ,getAllSeriesWatch,getAllSeriesDisliked,getAllSeriesWish,getRating}
