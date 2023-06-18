@@ -10,6 +10,33 @@ import { getAllSeriesDisliked } from "../../../services/user/userService";
 const Disliked = () => {
   const [series, setSeries] = useState([]);
 
+  // const [userInfo, SetInfo] = useState({
+  //   nickname: "",
+  //   photo: "",
+  //   lastname: "",
+  //   email: "",
+  //   name: "",
+  // });
+
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const user = await getInfo();
+
+  //       if (user) {
+  //         SetInfo(user);
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   fetchData();
+   
+  // }, []);
+
+
+
   useEffect(() => {
     getAllSeriesDisliked().then((result) => {
       console.log(result);
