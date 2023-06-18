@@ -1,13 +1,13 @@
 const getAuth = () => {
-    return JSON.parse(localStorage.getItem('authToken'))
+    return localStorage.getItem('acessToken')
 }
 
 const removeAuth = () => {
-    localStorage.removeItem('authToken')
+    localStorage.removeItem('acessToken')
 }
 
 const setAuth = (response) => {
     console.log(response)
-    localStorage.setItem('authToken', JSON.stringify(response))
+    localStorage.setItem('acessToken', JSON.stringify(response))
 }
 export { getAuth, setAuth, removeAuth };

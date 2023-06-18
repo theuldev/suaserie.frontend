@@ -12,8 +12,7 @@ const login = async (data) => {
   console.log(data)
   const urld = '/auth/login'
   const res = await api.post(urld, data).then((response) => {
-      
-    setAuth(response.data);
+    setAuth(response.data.acessToken);
     return response
   }).catch((error) => {
     if (error) {

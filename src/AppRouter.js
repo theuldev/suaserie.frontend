@@ -26,7 +26,6 @@ const AppRouter = () => {
         <Routes>
             <Route exact path='/' element={<InitialPage />} />
             <Route exact path='/login' element={<Login />} />
-
             <Route exact path='/cadastro' element={<Register />} />
 
             <Route element={<AuthGuard />}>

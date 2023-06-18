@@ -2,13 +2,17 @@ import axios from "axios";
 import url from "../constants/variables";
 import { getAuth } from "./authService";
 
-const res = getAuth();
-const acessToken = res.acessToken
-console.log(acessToken)
+const acesstoken = getAuth()
+
+console.log(`bearer ${JSON.parse(acesstoken)}`)
 const api = axios.create({
   baseURL: url, withCredentials: true,
-  headers: {
-    'Authorization':`bearer ${acessToken}`,
+   headers: {
+    'Authorization': `bearer ${JSON.parse(acesstoken) }`,
   }
+ 
 });
-export default api;
+
+
+export default api ;
+

@@ -26,8 +26,8 @@ const Login = () => {
 
     try {
       var res = await login(data);
-        navigate("/series");
-       
+
+      navigate("/series");
     } catch (error) {
       navigate("/");
       console.log(error);
