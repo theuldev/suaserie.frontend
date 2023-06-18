@@ -1,10 +1,9 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
-import { getAuth } from "../authService";
 
 
 const AuthGuard = () => {
-    const authToken = getAuth();
+    const authToken = JSON.parse(localStorage.getItem('acessToken'))
     return authToken ? <Outlet /> : <Navigate to={'/'} replace />
 }
 
