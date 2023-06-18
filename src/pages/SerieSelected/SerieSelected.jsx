@@ -18,8 +18,8 @@ const SerieSelected = (props) => {
  const [serie, setSerie] = useState([]);
 useEffect(() => {
     getSeriebyId(id).then((result)=> {
-      console.log(result.serie_streaming)
       setSerie(result)
+  
     })
   }, []);
 
@@ -100,16 +100,10 @@ const {id} = useParams();
                 <div className="date">
                   <h2>Informações</h2>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
-                    nam quo eveniet ipsum. Tenetur quasi assumenda facere ea
-                    ratione quibusdam reiciendis ad rem qui odit quam, repellat,
-                    molestiae, excepturi tempora.
+                    Elenco: {serie.cast}
                   </p>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
-                    nam quo eveniet ipsum. Tenetur quasi assumenda facere ea
-                    ratione quibusdam reiciendis ad rem qui odit quam, repellat,
-                    molestiae, excepturi tempora.
+                       Avaliações: {serie.rottenTomatoes}
                   </p>
                 </div>
               </div>

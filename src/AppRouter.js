@@ -37,13 +37,15 @@ const AppRouter = () => {
 
                 <Route exact path='/piores' element={<Disliked />} />
                 <Route exact path='/series/piores/:id' element={<SerieSelected />} />
-                <Route exact path='/favoritas' element={<Wish />} />
-
-                <Route exact path='/gostei' element={<Liked />} />
-                <Route exact path='/gostei/:id' element={<SerieSelected />} />
+                <Route exact path='/favoritas' element={<Liked />} />
+                <Route exact path='/favoritas/:id' element={<SerieSelected />} />
 
                 <Route exact path='/assistidas' element={<Watched />} />
                 <Route exact path='/assistidas/:id' element={<SerieSelected />} />
+
+                <Route exact path='/desejoVer' element={<Wish />} />
+                <Route exact path='/desejoVer/:id' element={<SerieSelected />} />
+
 
             </Route>
         </Routes>

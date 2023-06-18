@@ -14,14 +14,15 @@ import { FiSettings } from "react-icons/fi";
 import { removeAuth } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
 import { deleteUser } from "../../services/user/userService";
-
+import {changeToBase64Image} from "../../services/user/userService";
 // Imagens:
 import images from "../../constants/images";
 import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
-
+import { getInfo } from "../../services/user/userService";
 const Profile = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
+  const [userInfo, SetInfo] = useState({nickname:'',photo:'',lastname:'',email:'',name:''});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -29,6 +30,21 @@ const Profile = () => {
       setImageUrl(URL.createObjectURL(selectedImage));
     }
   }, [selectedImage]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const user = await getInfo();
+        if (user) {
+          SetInfo(user);
+          console.log(user)
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   function dynammicPhoto(e) {
     setSelectedImage(e.target.files[0]);
@@ -59,7 +75,7 @@ const Profile = () => {
             {imageUrl && selectedImage ? (
               <img src={imageUrl} alt={selectedImage.name} id="photo" />
             ) : (
-              <img src={images.user} alt="Foto do usuário" id="photo" />
+              <img src={userInfo.photo} alt="Foto do usuário" id="photo" />
             )}
             <input
               type="file"
@@ -77,7 +93,7 @@ const Profile = () => {
             <span className="material-symbols-outlined">
               <SlArrowRight />
             </span>
-            <span className="nickname">Apelido</span>
+            <span className="nickname">{userInfo.nickname}</span>
 
             <div id="settings-nickname">
               <FiSettings />
@@ -99,7 +115,9 @@ const Profile = () => {
             <div className="info-box">
               <div className="text">
                 <span className="profile-label">Nome completo:</span>
-                <span className="profile-data">Iasmim Cristina</span>
+                <span className="profile-data">
+                  {userInfo.name} {userInfo.lastname}{" "}
+                </span>
               </div>
 
               <span className="material-icons">
@@ -110,7 +128,7 @@ const Profile = () => {
             <div className="info-box">
               <div className="text">
                 <span className="profile-label">E-mail:</span>
-                <span className="profile-data">exemplo@gmail.com</span>
+                <span className="profile-data">{userInfo.email}</span>
               </div>
               <span className="material-icons">
                 {" "}
@@ -173,7 +191,7 @@ const Profile = () => {
             classId={"deletar"}
             icon={<BsTrash />}
             text={"Deletar conta?"}
-          onClick={deleteMe}
+            onClick={deleteMe}
           />
         </div>
       </div>
