@@ -42,8 +42,10 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      var res = await createUser(data);
-      navigate("/series");
+    await createUser(data).then((data)=> {
+         navigate("/series");
+      })
+  
     } catch (error) {
       navigate("/");
       console.log(error);
@@ -60,7 +62,7 @@ const Register = () => {
         <div className="form-logo">
           <img src={logos.logoDark} alt="Projeto SóSeries" />
         </div>
-        <div className="form" >
+        <div className="form">
           <form action="#" onSubmit={handleSubmit}>
             <div className="form-header">
               <h1>

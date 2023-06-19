@@ -21,8 +21,8 @@ const getInfo = async () => {
 }
 const createUser = async (data) => {
     const urld = '/user/create'
-    const res = await api.post(urld, data).then((response) => {
-        setAuth(response.data.user.acessToken);
+    await api.post(urld, data).then((response) => {
+        setAuth(response.data.user.acessToken.acessToken);
 
         return response;
     }).catch((error) => {
@@ -194,6 +194,7 @@ const getRating = async (id) => {
 
     }
 }
+
 
 
 

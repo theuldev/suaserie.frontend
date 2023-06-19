@@ -45,6 +45,8 @@ main .main-content-selected {
   border-bottom: none;
   border-top: none;
   border-radius: 5px;
+  width: 500px;
+   width: 400px;
 }
 
 .like-dislike {

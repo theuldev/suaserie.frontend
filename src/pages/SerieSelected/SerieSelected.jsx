@@ -24,6 +24,7 @@ const SerieSelected = (props) => {
   useEffect(() => {
     getSeriebyId(id).then((result) => {
       setSerie(result);
+     
     });
   }, []);
 
