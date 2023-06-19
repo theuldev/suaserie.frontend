@@ -4,9 +4,10 @@ import "./SerieSelected.css";
 
 // ícones:
 import {
-  MdOutlineSentimentVerySatisfied,
+ 
   MdPlaylistAdd,
-  MdOutlineSentimentVeryDissatisfied,
+ 
+  MdOutlinePlaylistRemove,
 } from "react-icons/md";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoArrowBackOutline } from "react-icons/io5";
@@ -82,11 +83,9 @@ const SerieSelected = (props) => {
               </div>
 
               <div className="like-dislike">
-                <span className="material-symbols-outlined" id="liked">
-                  <MdOutlineSentimentVerySatisfied />
-                </span>
+      
                 <span className="material-symbols-outlined" id="disliked">
-                  <MdOutlineSentimentVeryDissatisfied />
+                  <MdOutlinePlaylistRemove />
                 </span>
               </div>
             </div>
