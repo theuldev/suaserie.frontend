@@ -1,4 +1,4 @@
-import { React, useEffect,useState } from "react";
+import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./SerieSelected.css";
 
@@ -11,29 +11,31 @@ import {
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoArrowBackOutline } from "react-icons/io5";
 import ButtonNormal from "../../components/General/ButtonNormal/ButtonNormal";
-import {getSeriebyId} from "../../services/series/seriesService";
-
+import { getSeriebyId } from "../../services/series/seriesService";
+import { getRating } from "../../services/user/userService";
 
 const SerieSelected = (props) => {
- const [serie, setSerie] = useState([]);
-useEffect(() => {
-    getSeriebyId(id).then((result)=> {
-      setSerie(result)
-  
-    })
+  const { id } = useParams();
+  console.log(props);
+  const [serie, setSerie] = useState([]);
+  const [avaliation, setAvaliation] = useState(0);
+
+  useEffect(() => {
+    getSeriebyId(id).then((result) => {
+      setSerie(result);
+    });
   }, []);
 
-
+  getRating(id).then((result) => {
+    setAvaliation(result);
+  });
 
   // Pegando o id da séries para fazer a conexão com o banco.
-const {id} = useParams();
+
   return (
     <div className="body-serie-selected">
-
       <main>
         <section className="main-content-selected">
-
-
           <div className="serie-selected">
             <div className="img-streaming">
               <img
@@ -42,24 +44,32 @@ const {id} = useParams();
                 alt="Imagem promocional da série"
               />
               <div className="rating">
-                <span className="material-icons" id="star-checked">
-                  {" "}
-                  <AiFillStar />{" "}
-                </span>
-                <span className="material-icons" id="star-checked">
-                  {" "}
-                  <AiFillStar />{" "}
-                </span>
-                <span className="material-icons" id="star-checked">
-                  {" "}
-                  <AiFillStar />{" "}
-                </span>
-                <span className="material-icons" id="star-checked">
-                  {" "}
-                  <AiFillStar />{" "}
-                </span>
                 <span className="material-icons">
-                  <AiOutlineStar />{" "}
+                  {avaliation >= 1 ? (
+                    <AiFillStar fill="yellow" />
+                  ) : (
+                    <AiOutlineStar />
+                  )}
+                  {avaliation >= 2 ? (
+                    <AiFillStar fill="yellow" />
+                  ) : (
+                    <AiOutlineStar />
+                  )}
+                  {avaliation >= 3 ? (
+                    <AiFillStar fill="yellow" />
+                  ) : (
+                    <AiOutlineStar />
+                  )}
+                  {avaliation >= 4 ? (
+                    <AiFillStar fill="yellow" />
+                  ) : (
+                    <AiOutlineStar />
+                  )}
+                  {avaliation == 5 ? (
+                    <AiFillStar fill="yellow" />
+                  ) : (
+                    <AiOutlineStar />
+                  )}
                 </span>
               </div>
               <div className="streaming-icon">
@@ -67,12 +77,7 @@ const {id} = useParams();
 
                 {}
                 <div className="streaming-plataforms">
-
-                  <img
-                    src= {serie.serie_streaming}
-                    alt={serie.streamingId}
-                  />
-
+                  <img src={serie.serie_streaming} alt={serie.streamingId} />
                 </div>
               </div>
 
@@ -90,21 +95,13 @@ const {id} = useParams();
               <h1>{serie.name}</h1>
               <div className="text">
                 <div className="description">
-                  <p>
-                    {
-                      serie.summary
-                    }
-                  </p>
+                  <p>{serie.summary}</p>
                 </div>
 
                 <div className="date">
                   <h2>Informações</h2>
-                  <p>
-                    Elenco: {serie.cast}
-                  </p>
-                  <p>
-                       Avaliações: {serie.rottenTomatoes}
-                  </p>
+                  <p>Elenco: {serie.cast}</p>
+                  <p>Avaliações: {serie.rottenTomatoes}</p>
                 </div>
               </div>
 
@@ -121,10 +118,7 @@ const {id} = useParams();
                   target="_blank"
                 >
                   <li id="see">
-                    <span className="material-icons">
-                      {" "}
-                      Assistir{" "}
-                    </span>
+                    <span className="material-icons"> Assistir </span>
                   </li>
                 </a>
               </ul>
@@ -141,11 +135,7 @@ const {id} = useParams();
           </div>
         </section>
       </main>
-
-
-
-
     </div>
-  )
+  );
 };
 export default SerieSelected;

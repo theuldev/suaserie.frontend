@@ -88,6 +88,12 @@ const Profile = () => {
   function dynammicPhoto(e) {
     setSelectedImage(e.target.files[0]);
   }
+  function Delete() {
+    var confirm = confirm("Tem certeza de que deseja excluir sua conta?");
+    if (confirm) {
+      deleteMe();
+    }
+  }
   const deleteMe = async () => {
     try {
       var response = await deleteUser();
@@ -230,7 +236,7 @@ const Profile = () => {
             classId={"deletar"}
             icon={<BsTrash />}
             text={"Deletar conta?"}
-            onClick={deleteMe}
+            onClick={Delete}
           />
         </div>
       </div>

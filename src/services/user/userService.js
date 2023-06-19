@@ -9,8 +9,7 @@ const getInfo = async () => {
     try {
         var res = await api.get(urld)
         const response = res.data
-
-
+        console.log(response)
         return response;
 
     } catch (error) {
@@ -88,7 +87,7 @@ const getAllSeriesWatch = async () => {
 
     }
 }
-const getAllSeriesDisliked= async () => {
+const getAllSeriesDisliked = async () => {
     try {
         const urld = '/user/series-disliked'
         var res = await api.get(urld)
@@ -103,7 +102,7 @@ const getAllSeriesDisliked= async () => {
 
     }
 }
-const getAllSeriesWish= async () => {
+const getAllSeriesWish = async () => {
     try {
         const urld = '/user/series-desired'
         var res = await api.get(urld)
@@ -118,6 +117,67 @@ const getAllSeriesWish= async () => {
 
     }
 }
+const addDislikedSeries = async (id) => {
+    try {
+        const urld = `/user/series-disliked/${id}`
+        var res = await api.post(urld)
+        const response = res.data
+        console.log(response);
+        return response;
+
+    } catch (error) {
+        console.log(error);
+        throw error;
+
+
+    }
+}
+const addWatchedSeries = async (id) => {
+    try {
+        const urld = `/user/series-watched/${id}`
+        var res = await api.post(urld)
+        const response = res.data
+        console.log(response);
+        return response;
+
+    } catch (error) {
+        console.log(error);
+        throw error;
+
+
+    }
+}
+const addFavSeries = async (id) => {
+    try {
+        const urld = `/user/series-fav/${id}`
+        var res = await api.post(urld)
+        const response = res.data
+        console.log(response);
+        return response;
+
+    } catch (error) {
+        console.log(error);
+        throw error;
+
+
+    }
+}
+const addWishSeries = async (id) => {
+    try {
+        const urld = `/user/series-desired/${id}`
+        var res = await api.post(urld)
+        const response = res.data
+        console.log(response);
+        return response;
+
+    } catch (error) {
+        console.log(error);
+        throw error;
+
+
+    }
+}
+
 
 const getRating = async (id) => {
     try {
@@ -134,4 +194,14 @@ const getRating = async (id) => {
 
     }
 }
-export { createUser, deleteUser, updateUser, getAllSeriesFav, getInfo ,getAllSeriesWatch,getAllSeriesDisliked,getAllSeriesWish,getRating}
+
+
+
+
+export {
+    createUser, deleteUser, updateUser,
+    getAllSeriesFav, getInfo, getAllSeriesWatch,
+    getAllSeriesDisliked, getAllSeriesWish,
+    getRating, addDislikedSeries, addWishSeries,
+    addWatchedSeries, addFavSeries
+}
